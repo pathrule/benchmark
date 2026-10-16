@@ -1,0 +1,5 @@
+{
+  "max-header-bytes": 8192,
+  "max-route-count": 500,
+  "log-line-bytes": 2048
+}

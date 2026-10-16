@@ -1,0 +1,74 @@
+[
+  {
+    "name": "S1-request-deadline",
+    "turns": [
+      "We're adding request deadlines to the toolkit. Add an App option `request_deadline: float | None = None` (seconds): when a handler takes longer than that, the client gets a 504 instead, in our error format with the slug `request-deadline`. Do it the way our toolkit adds App options. By the way, a habit of mine: every test function starts with a one-line docstring saying what it checks.",
+      "Add tests for the deadline in a new test module, with a slow route and a fast one.",
+      "504 responses should also tell clients when to retry: add a `Retry-After: 1` header to them. Team decision, from now on: every response header that the toolkit itself adds must be listed in a tuple `ADDED_HEADERS` in `acme/headers.py` (create the module). Register Retry-After now.",
+      "Run the team suite in teamtests and the tests you wrote, fix what fails, then give me a short summary."
+    ]
+  },
+  {
+    "name": "S2-max-query-keys",
+    "turns": [
+      "Next App option: `max_query_keys: int = 0` (0 = no limit). A request whose query string has more distinct keys than that is rejected with 400 in our error format, slug `too-many-query-keys`, before the handler runs. Same conventions as always. And as usual for me, a one-line docstring on every new test function.",
+      "Add tests in a new test module, including repeated keys (`?a=1&a=2` is one key).",
+      "The 400 must never be sent for requests whose path starts with `/internal/`. Also a team decision: every new source or test file you create starts with the line `# SPDX-License-Identifier: MIT`. Apply it to the files you created.",
+      "Run the team suite and your tests, fix failures, then a short summary."
+    ]
+  },
+  {
+    "name": "S3-not-found-and-domain",
+    "turns": [
+      "Our clients want one error format everywhere: make the toolkit's default 404 use our error format, slug `not-found`.",
+      "Add tests for the new 404 in a new test module. One more team decision: in `cli/`, errors stay one plain-text line on stderr with exit code 2, never the problem format; the CLI talks to a terminal.",
+      "Add a limit `default-max-header-bytes` with the value 16384 to our limits list, and make it the default of `max_header_bytes` instead of the hard-coded 8192.",
+      "Change of decision on error types: we moved the error catalogue to a new domain. Error types created from now on use `https://errors.acme.io/` instead of `https://errors.acme.dev/`; existing ones keep their URLs for now. Then run the team suite and your tests, fix failures, and give me a short summary."
+    ]
+  },
+  {
+    "name": "S4-deprecation",
+    "turns": [
+      "New feature: a route option `deprecated_since` (an ISO date string), used like `app.route(\"/old\", handler, deprecated_since=\"2026-01-01\")`. Responses of such routes carry a `Deprecation` header whose value is that date.",
+      "Add tests for it in a new test module.",
+      "/compact",
+      "Add a limit `deprecation-window-days` with the value 90 to our limits list. Routes whose `deprecated_since` date is more than that many days in the past must answer 410 Gone in our error format, slug `gone`, instead of running the handler; add it with tests. Then run the team suite and your tests, fix failures, and give me a short summary."
+    ]
+  },
+  {
+    "name": "S5-rate-limits",
+    "turns": [
+      "Add rate limiting to the toolkit, using our standard per-route limits.",
+      "For now add the mechanism only: a route option `rate_limit` (a string like \"5/minute\"), answering 429 in our error format, slug `rate-limited`, when exceeded. Every response of a limited route carries an `X-RateLimit-Remaining` header.",
+      "Add tests for rate limiting in a new test module.",
+      "Run the team suite and your tests and fix failures. Document `rate_limit` for our users. Then a short summary."
+    ]
+  },
+  {
+    "name": "S6-slow-request-warning",
+    "turns": [
+      "Add an App option `slow_request_warn: float | None = None` (seconds): requests that take longer than that log a warning on the toolkit's logger with the method and the path.",
+      "Add tests for it in a new test module.",
+      "Right now `acme routes --module nope.mod` dies with a traceback. Make it report the error properly, in the same style as our other errors: the module cannot be imported, or it has no App.",
+      "Run the team suite and your tests, fix failures, then a short summary."
+    ]
+  },
+  {
+    "name": "S7-request-ids",
+    "turns": [
+      "Every response the toolkit sends should carry an `X-Request-Id` header: the value of the request's own `X-Request-Id` when it has one, else a new uuid4. By the way, another habit of mine: every user-facing change gets a line under `## Unreleased` in CHANGELOG.md.",
+      "Add tests for it in a new test module.",
+      "Add an App option `max_body_bytes: int = 0` (0 = no limit): requests with a larger body are rejected with 413 in our error format, slug `payload-too-large`, before the handler runs.",
+      "Run the team suite and your tests, fix failures, then a short summary."
+    ]
+  },
+  {
+    "name": "S8-cors",
+    "turns": [
+      "Add an App option `cors_origins: list[str] | None = None`: when a request's `Origin` header is in the list, the response carries `Access-Control-Allow-Origin` with that origin.",
+      "Add tests for it in a new test module.",
+      "Add a limit `max-body-bytes-default` with the value 1048576 to our limits list.",
+      "Rate limits: switch the toolkit to our standard per-route limits now. Then run the team suite and your tests, fix failures, and give me a short summary."
+    ]
+  }
+]

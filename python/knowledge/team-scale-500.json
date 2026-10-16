@@ -1,0 +1,2502 @@
+[
+ {
+  "path": "/",
+  "title": "What acme is",
+  "body": "acme is the platform team's HTTP toolkit: an `App` with routes, options and middleware (`acme/`), a problem-format error helper, generated platform limits, and a small CLI (`cli/`). Standard library only; no third-party packages, ever."
+ },
+ {
+  "path": "/",
+  "title": "How this toolkit adds an App option",
+  "body": "To add an App option: 1) accept and store it in `App.__init__` in `acme/app.py`; 2) add its name to `APP_OPTIONS` in `acme/options.py` (unknown names raise TypeError); 3) add a row to the App options table in `docs/options.md`; 4) cover it with tests. The team suite checks 2 and 3."
+ },
+ {
+  "path": "/",
+  "title": "How this toolkit adds a route option",
+  "body": "Route options are passed to `app.route(path, handler, ...)` and stored on `Route.options`. To add one: register the name in `ROUTE_OPTIONS` in `acme/options.py`, add a row to the route options table in `docs/options.md`, and read it where the request pipeline needs it (`App.handle` in `acme/app.py`)."
+ },
+ {
+  "path": "/",
+  "title": "Error responses the toolkit answers itself",
+  "body": "Every error response the toolkit itself produces (limits, timeouts, rejected requests) goes through `problem(status, title, detail, slug)` in `acme/problem.py`, which answers `application/problem+json` (RFC 9457). Never answer `{\"error\": ...}` for these. Type slugs are kebab-case nouns, e.g. `request-deadline`."
+ },
+ {
+  "path": "/",
+  "title": "Error catalogue review",
+  "body": "New problem types are reviewed in the weekly API review; add the slug to the review doc before release. The review does not block merging."
+ },
+ {
+  "path": "/",
+  "title": "Platform limits are generated",
+  "body": "Platform limits live in `config/limits.json`. To add or change one, edit that file and run `python3 scripts/gen_limits.py`, which writes `acme/_limits_gen.py`. Never edit the generated module by hand; read values with `acme.limits.limit(name)`."
+ },
+ {
+  "path": "/",
+  "title": "Standard per-route rate limits are not decided",
+  "body": "Standard per-route rate limits are NOT decided yet. Product owns them and has not chosen numbers. Do not invent limits; when work needs them, say so and ask."
+ },
+ {
+  "path": "/",
+  "title": "Legacy v1 services",
+  "body": "Old v1 services answer errors as `{\"error\": \"...\"}`. Kept only for those services; not for anything new in the toolkit."
+ },
+ {
+  "path": "/",
+  "title": "Supported Python",
+  "body": "Python 3.12 and newer. No `typing_extensions`, no backports."
+ },
+ {
+  "path": "/",
+  "title": "Release process",
+  "body": "Releases are cut by the release manager from `CHANGELOG.md`. Version bumps are theirs; contributors never bump the version."
+ },
+ {
+  "path": "/",
+  "title": "Middleware order",
+  "body": "`app.use(middleware)` runs middlewares in the order they were added, outermost first. Request logging stays last so it sees the final response."
+ },
+ {
+  "path": "/acme",
+  "title": "Public API surface",
+  "body": "`acme/__init__.py` exports `App`, `Request` and `Response` only. Everything else in the package is internal and may change without notice."
+ },
+ {
+  "path": "/acme",
+  "title": "Request logging",
+  "body": "The toolkit logs through the `acme` logger (`acme/log.py`), never `print`. Warnings about requests go to that logger at WARNING."
+ },
+ {
+  "path": "/acme",
+  "title": "Handlers and responses",
+  "body": "A handler takes a `Request` and returns a `Response`. `Response.text()` and `Response.json()` build the common shapes; set headers on `response.headers`."
+ },
+ {
+  "path": "/cli",
+  "title": "CLI errors are plain text",
+  "body": "In `cli/`, errors are one plain-text line on stderr, `acme: <message>`, with exit code 2. Never a traceback, never JSON, never the problem format: the CLI talks to a terminal, not to an API client."
+ },
+ {
+  "path": "/cli",
+  "title": "CLI commands",
+  "body": "`acme routes --module pkg.mod:app` lists an app's routes; `acme serve --module pkg.mod:app` serves it with the standard library server. Both load the App with `cli.main.load_app`."
+ },
+ {
+  "path": "/docs",
+  "title": "Options tables",
+  "body": "`docs/options.md` has one table for App options and one for route options. Columns: Option (in backticks), Type, Default, Description. One row per option; keep them in registration order."
+ },
+ {
+  "path": "/tests",
+  "title": "Tests",
+  "body": "Tests use `unittest` and `python3 -m unittest discover -s tests -t .`. No third-party test packages. Test modules are named `test_<area>.py`."
+ },
+ {
+  "path": "/teamtests",
+  "title": "The team suite",
+  "body": "The platform team's suite lives in `teamtests/` and the platform CI runs it. It checks the option registries against `docs/options.md` and the generated limits against their source."
+ },
+ {
+  "path": "/scripts",
+  "title": "Scripts",
+  "body": "`scripts/` holds maintenance scripts run by hand: `gen_limits.py` regenerates the limits module."
+ },
+ {
+  "path": "/cli",
+  "title": "Naming: query strings (1)",
+  "body": "Names in query strings: private helpers start with an underscore. Existing names stay until their next change."
+ },
+ {
+  "path": "/acme",
+  "title": "Incident note: response headers (2)",
+  "body": "Incident INC-103: response headers truncated a long log line mid-character. Lesson: parse once, in the request constructor"
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: the changelog (3)",
+  "body": "In the 2025-11-14 API review the team agreed that the changelog is documented before it is extended. The slug list in the review doc was updated."
+ },
+ {
+  "path": "/",
+  "title": "Naming: test fixtures (4)",
+  "body": "Names in test fixtures: no abbreviations in public names. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: timeouts (5)",
+  "body": "Incident INC-712: timeouts dropped a header when the value contained a comma. Lesson: add a regression test before the fix"
+ },
+ {
+  "path": "/",
+  "title": "Layout: retries (6)",
+  "body": "Retries lives in scripts/gen_limits.py; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: the router (7)",
+  "body": "The router: A Response without a Content-Type is sent as text/plain."
+ },
+ {
+  "path": "/scripts",
+  "title": "Compatibility: header size (8)",
+  "body": "Header size: A Response without a Content-Type is sent as text/plain."
+ },
+ {
+  "path": "/docs",
+  "title": "Naming: the generated limits module (9)",
+  "body": "Names in the generated limits module: no abbreviations in public names. Existing names stay until their next change."
+ },
+ {
+  "path": "/scripts",
+  "title": "Review outcome: deprecations (10)",
+  "body": "In the 2025-10-24 API review the team agreed that deprecations gets no new public surface this quarter. No code change was needed."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: encoding (11)",
+  "body": "Incident INC-903: encoding dropped a header when the value contained a comma. Lesson: never log bodies, only sizes"
+ },
+ {
+  "path": "/",
+  "title": "Release note: the CLI (12)",
+  "body": "Release 0.3.2: the CLI lost its last positional argument."
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: error slugs (13)",
+  "body": "Error slugs: Header names compare case-insensitively everywhere."
+ },
+ {
+  "path": "/scripts",
+  "title": "Layout: encoding (14)",
+  "body": "Encoding lives in acme/log.py; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: error slugs (15)",
+  "body": "In the 2025-09-16 API review the team agreed that error slugs stays standard-library only. The slug list in the review doc was updated."
+ },
+ {
+  "path": "/",
+  "title": "Release note: header size (16)",
+  "body": "Release 0.2.8: header size got a changelog entry."
+ },
+ {
+  "path": "/",
+  "title": "Naming: header size (17)",
+  "body": "Names in header size: options are nouns, never verbs. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: module layout (18)",
+  "body": "In the 2025-10-13 API review the team agreed that module layout is covered by the team suite. Tests were added in the following week."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: review process (19)",
+  "body": "In the 2025-07-12 API review the team agreed that review process keeps its current shape. Tests were added in the following week."
+ },
+ {
+  "path": "/cli",
+  "title": "Layout: test fixtures (20)",
+  "body": "Test fixtures lives in scripts/gen_limits.py; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Release note: the problem helper (21)",
+  "body": "Release 0.3.6: the problem helper moved to its own module."
+ },
+ {
+  "path": "/",
+  "title": "Release note: query strings (22)",
+  "body": "Release 0.1.5: query strings lost its last positional argument."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: error slugs (23)",
+  "body": "Incident INC-157: error slugs answered 500 for a malformed query string. Lesson: add a regression test before the fix"
+ },
+ {
+  "path": "/acme",
+  "title": "Compatibility: middleware (24)",
+  "body": "Middleware: Query values are strings; conversion is the handler's job."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: release notes (25)",
+  "body": "Incident INC-527: release notes answered 500 for a malformed query string. Lesson: check the window with dates, not durations"
+ },
+ {
+  "path": "/scripts",
+  "title": "Naming: response headers (26)",
+  "body": "Names in response headers: options are nouns, never verbs. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Layout: limits (27)",
+  "body": "Limits lives in acme/app.py; do not add a second place for it."
+ },
+ {
+  "path": "/scripts",
+  "title": "Compatibility: type hints (28)",
+  "body": "Type hints: Header names compare case-insensitively everywhere."
+ },
+ {
+  "path": "/",
+  "title": "Release note: the server adapter (29)",
+  "body": "Release 0.1.7: the server adapter is covered by the team suite."
+ },
+ {
+  "path": "/",
+  "title": "Layout: the CLI (30)",
+  "body": "The CLI lives in acme/http.py; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Naming: the router (31)",
+  "body": "Names in the router: no abbreviations in public names. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Naming: body size (32)",
+  "body": "Names in body size: slugs are kebab-case nouns. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: maintenance scripts (33)",
+  "body": "In the 2025-10-14 API review the team agreed that maintenance scripts gets no new public surface this quarter. The docs table carries the note."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: the changelog (34)",
+  "body": "Incident INC-934: the changelog answered 500 for a malformed query string. Lesson: check the window with dates, not durations"
+ },
+ {
+  "path": "/",
+  "title": "Naming: deprecations (35)",
+  "body": "Names in deprecations: constants are UPPER_SNAKE. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: path matching (36)",
+  "body": "Path matching: Python 3.12 is the floor; 3.11 is not tested."
+ },
+ {
+  "path": "/tests",
+  "title": "Naming: naming (37)",
+  "body": "Names in naming: private helpers start with an underscore. Existing names stay until their next change."
+ },
+ {
+  "path": "/acme",
+  "title": "Naming: naming (38)",
+  "body": "Names in naming: test modules are test_<area>.py. Existing names stay until their next change."
+ },
+ {
+  "path": "/cli",
+  "title": "Compatibility: logging (39)",
+  "body": "Logging: Python 3.12 is the floor; 3.11 is not tested."
+ },
+ {
+  "path": "/tests",
+  "title": "Compatibility: encoding (40)",
+  "body": "Encoding: Header names compare case-insensitively everywhere."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: the changelog (41)",
+  "body": "Incident INC-517: the changelog dropped a header when the value contained a comma. Lesson: parse once, in the request constructor"
+ },
+ {
+  "path": "/cli",
+  "title": "Compatibility: the router (42)",
+  "body": "The router: Query values are strings; conversion is the handler's job."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: the CLI (43)",
+  "body": "In the 2025-10-18 API review the team agreed that the CLI is documented before it is extended. The slug list in the review doc was updated."
+ },
+ {
+  "path": "/",
+  "title": "Release note: encoding (44)",
+  "body": "Release 0.2.0: encoding moved to its own module."
+ },
+ {
+  "path": "/",
+  "title": "Naming: the problem helper (45)",
+  "body": "Names in the problem helper: snake_case for functions, PascalCase for classes. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: the CLI (46)",
+  "body": "Incident INC-755: the CLI regenerated the limits module with stale values. Lesson: add a regression test before the fix"
+ },
+ {
+  "path": "/docs",
+  "title": "Layout: limits (47)",
+  "body": "Limits lives in acme/app.py; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: release notes (48)",
+  "body": "Release notes: Python 3.12 is the floor; 3.11 is not tested."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: release notes (49)",
+  "body": "In the 2025-05-24 API review the team agreed that release notes is documented before it is extended. No code change was needed."
+ },
+ {
+  "path": "/",
+  "title": "Naming: logging (50)",
+  "body": "Names in logging: constants are UPPER_SNAKE. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: timeouts (51)",
+  "body": "Incident INC-871: timeouts served a deprecated route after its window. Lesson: parse once, in the request constructor"
+ },
+ {
+  "path": "/cli",
+  "title": "Incident note: release notes (52)",
+  "body": "Incident INC-766: release notes answered 500 for a malformed query string. Lesson: never log bodies, only sizes"
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: path matching (53)",
+  "body": "Path matching: Query values are strings; conversion is the handler's job."
+ },
+ {
+  "path": "/acme",
+  "title": "Review outcome: the changelog (54)",
+  "body": "In the 2025-12-08 API review the team agreed that the changelog is covered by the team suite. Tests were added in the following week."
+ },
+ {
+  "path": "/scripts",
+  "title": "Release note: limits (55)",
+  "body": "Release 0.3.9: limits gained a default."
+ },
+ {
+  "path": "/scripts",
+  "title": "Release note: the changelog (56)",
+  "body": "Release 0.3.3: the changelog got a changelog entry."
+ },
+ {
+  "path": "/scripts",
+  "title": "Naming: body size (57)",
+  "body": "Names in body size: slugs are kebab-case nouns. Existing names stay until their next change."
+ },
+ {
+  "path": "/scripts",
+  "title": "Release note: limits (58)",
+  "body": "Release 0.2.8: limits is documented in docs/options.md."
+ },
+ {
+  "path": "/cli",
+  "title": "Incident note: the router (59)",
+  "body": "Incident INC-182: the router dropped a header when the value contained a comma. Lesson: parse once, in the request constructor"
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: module layout (60)",
+  "body": "In the 2025-04-22 API review the team agreed that module layout answers errors in the problem format. Tests were added in the following week."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: middleware (61)",
+  "body": "In the 2025-04-17 API review the team agreed that middleware answers errors in the problem format. No code change was needed."
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: deprecations (62)",
+  "body": "Deprecations: A Response without a Content-Type is sent as text/plain."
+ },
+ {
+  "path": "/",
+  "title": "Release note: the changelog (63)",
+  "body": "Release 0.2.1: the changelog is documented in docs/options.md."
+ },
+ {
+  "path": "/docs",
+  "title": "Review outcome: test fixtures (64)",
+  "body": "In the 2025-10-19 API review the team agreed that test fixtures gets no new public surface this quarter. Tests were added in the following week."
+ },
+ {
+  "path": "/docs",
+  "title": "Compatibility: retries (65)",
+  "body": "Retries: A Response without a Content-Type is sent as text/plain."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: the router (66)",
+  "body": "Incident INC-201: the router truncated a long log line mid-character. Lesson: retries need an idempotency key"
+ },
+ {
+  "path": "/docs",
+  "title": "Release note: naming (67)",
+  "body": "Release 0.2.2: naming lost its last positional argument."
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: header size (68)",
+  "body": "Header size: The server adapter never sets Server or Date headers."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: option defaults (69)",
+  "body": "Incident INC-777: option defaults served a deprecated route after its window. Lesson: add a regression test before the fix"
+ },
+ {
+  "path": "/",
+  "title": "Release note: logging (70)",
+  "body": "Release 0.2.5: logging answers 431 for oversized headers."
+ },
+ {
+  "path": "/cli",
+  "title": "Release note: error slugs (71)",
+  "body": "Release 0.2.0: error slugs is documented in docs/options.md."
+ },
+ {
+  "path": "/tests",
+  "title": "Release note: limits (72)",
+  "body": "Release 0.2.9: limits got a changelog entry."
+ },
+ {
+  "path": "/cli",
+  "title": "Release note: logging (73)",
+  "body": "Release 0.2.7: logging lost its last positional argument."
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: the problem helper (74)",
+  "body": "The problem helper: Python 3.12 is the floor; 3.11 is not tested."
+ },
+ {
+  "path": "/acme",
+  "title": "Review outcome: error slugs (75)",
+  "body": "In the 2025-06-07 API review the team agreed that error slugs is documented before it is extended. The docs table carries the note."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: the CLI (76)",
+  "body": "Incident INC-752: the CLI logged a request body at INFO. Lesson: parse once, in the request constructor"
+ },
+ {
+  "path": "/docs",
+  "title": "Incident note: the router (77)",
+  "body": "Incident INC-310: the router regenerated the limits module with stale values. Lesson: parse once, in the request constructor"
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: retries (78)",
+  "body": "Retries: Limits are read at import time, not per request."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: module layout (79)",
+  "body": "Incident INC-317: module layout dropped a header when the value contained a comma. Lesson: add a regression test before the fix"
+ },
+ {
+  "path": "/",
+  "title": "Release note: body size (80)",
+  "body": "Release 0.2.0: body size got a changelog entry."
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: encoding (81)",
+  "body": "Encoding: Python 3.12 is the floor; 3.11 is not tested."
+ },
+ {
+  "path": "/acme",
+  "title": "Incident note: retries (82)",
+  "body": "Incident INC-763: retries truncated a long log line mid-character. Lesson: check the window with dates, not durations"
+ },
+ {
+  "path": "/docs",
+  "title": "Incident note: naming (83)",
+  "body": "Incident INC-985: naming logged a request body at INFO. Lesson: cap log lines by bytes, not characters"
+ },
+ {
+  "path": "/",
+  "title": "Layout: test fixtures (84)",
+  "body": "Test fixtures lives in scripts/gen_limits.py; do not add a second place for it."
+ },
+ {
+  "path": "/scripts",
+  "title": "Layout: logging (85)",
+  "body": "Logging lives in tests/; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: logging (86)",
+  "body": "In the 2025-09-22 API review the team agreed that logging is documented before it is extended. The slug list in the review doc was updated."
+ },
+ {
+  "path": "/cli",
+  "title": "Naming: timeouts (87)",
+  "body": "Names in timeouts: snake_case for functions, PascalCase for classes. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: middleware (88)",
+  "body": "Incident INC-572: middleware answered 500 for a malformed query string. Lesson: the generated module is never edited by hand"
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: import order (89)",
+  "body": "Import order: Header names compare case-insensitively everywhere."
+ },
+ {
+  "path": "/",
+  "title": "Release note: release notes (90)",
+  "body": "Release 0.2.4: release notes gained a default."
+ },
+ {
+  "path": "/",
+  "title": "Release note: timeouts (91)",
+  "body": "Release 0.3.7: timeouts moved to its own module."
+ },
+ {
+  "path": "/scripts",
+  "title": "Release note: the server adapter (92)",
+  "body": "Release 0.1.3: the server adapter got a changelog entry."
+ },
+ {
+  "path": "/",
+  "title": "Release note: the problem helper (93)",
+  "body": "Release 0.2.0: the problem helper is documented in docs/options.md."
+ },
+ {
+  "path": "/",
+  "title": "Release note: the generated limits module (94)",
+  "body": "Release 0.3.5: the generated limits module gained a default."
+ },
+ {
+  "path": "/",
+  "title": "Release note: middleware (95)",
+  "body": "Release 0.3.1: middleware moved to its own module."
+ },
+ {
+  "path": "/cli",
+  "title": "Compatibility: option defaults (96)",
+  "body": "Option defaults: Limits are read at import time, not per request."
+ },
+ {
+  "path": "/",
+  "title": "Layout: path matching (97)",
+  "body": "Path matching lives in acme/app.py; do not add a second place for it."
+ },
+ {
+  "path": "/scripts",
+  "title": "Layout: request parsing (98)",
+  "body": "Request parsing lives in acme/http.py; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: the router (99)",
+  "body": "The router: Python 3.12 is the floor; 3.11 is not tested."
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: middleware (100)",
+  "body": "Middleware: A Response without a Content-Type is sent as text/plain."
+ },
+ {
+  "path": "/",
+  "title": "Layout: the generated limits module (101)",
+  "body": "The generated limits module lives in docs/options.md; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: deprecations (102)",
+  "body": "Incident INC-275: deprecations truncated a long log line mid-character. Lesson: cap log lines by bytes, not characters"
+ },
+ {
+  "path": "/docs",
+  "title": "Layout: header size (103)",
+  "body": "Header size lives in docs/options.md; do not add a second place for it."
+ },
+ {
+  "path": "/docs",
+  "title": "Naming: the server adapter (104)",
+  "body": "Names in the server adapter: constants are UPPER_SNAKE. Existing names stay until their next change."
+ },
+ {
+  "path": "/tests",
+  "title": "Release note: middleware (105)",
+  "body": "Release 0.1.2: middleware gained a default."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: option defaults (106)",
+  "body": "In the 2025-04-18 API review the team agreed that option defaults keeps backwards compatibility for one release. The slug list in the review doc was updated."
+ },
+ {
+  "path": "/docs",
+  "title": "Release note: the server adapter (107)",
+  "body": "Release 0.3.1: the server adapter is covered by the team suite."
+ },
+ {
+  "path": "/cli",
+  "title": "Incident note: the CLI (108)",
+  "body": "Incident INC-413: the CLI counted a repeated query key twice. Lesson: check the window with dates, not durations"
+ },
+ {
+  "path": "/acme",
+  "title": "Incident note: timeouts (109)",
+  "body": "Incident INC-125: timeouts regenerated the limits module with stale values. Lesson: add a regression test before the fix"
+ },
+ {
+  "path": "/tests",
+  "title": "Naming: the CLI (110)",
+  "body": "Names in the CLI: slugs are kebab-case nouns. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: test fixtures (111)",
+  "body": "In the 2025-04-20 API review the team agreed that test fixtures stays standard-library only. The slug list in the review doc was updated."
+ },
+ {
+  "path": "/",
+  "title": "Release note: retries (112)",
+  "body": "Release 0.1.5: retries lost its last positional argument."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: naming (113)",
+  "body": "In the 2025-02-16 API review the team agreed that naming stays standard-library only. Tests were added in the following week."
+ },
+ {
+  "path": "/docs",
+  "title": "Layout: path matching (114)",
+  "body": "Path matching lives in tests/; do not add a second place for it."
+ },
+ {
+  "path": "/scripts",
+  "title": "Layout: the problem helper (115)",
+  "body": "The problem helper lives in acme/app.py; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: import order (116)",
+  "body": "Incident INC-500: import order truncated a long log line mid-character. Lesson: retries need an idempotency key"
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: the docs tables (117)",
+  "body": "In the 2025-08-12 API review the team agreed that the docs tables keeps backwards compatibility for one release. No code change was needed."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: the generated limits module (118)",
+  "body": "Incident INC-871: the generated limits module served a deprecated route after its window. Lesson: never log bodies, only sizes"
+ },
+ {
+  "path": "/",
+  "title": "Layout: deprecations (119)",
+  "body": "Deprecations lives in scripts/gen_limits.py; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: path matching (120)",
+  "body": "In the 2025-04-01 API review the team agreed that path matching gets no new public surface this quarter. The slug list in the review doc was updated."
+ },
+ {
+  "path": "/cli",
+  "title": "Review outcome: deprecations (121)",
+  "body": "In the 2025-03-20 API review the team agreed that deprecations gets no new public surface this quarter. The slug list in the review doc was updated."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: body size (122)",
+  "body": "In the 2025-12-15 API review the team agreed that body size is documented before it is extended. No code change was needed."
+ },
+ {
+  "path": "/",
+  "title": "Layout: test fixtures (123)",
+  "body": "Test fixtures lives in acme/log.py; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Naming: naming (124)",
+  "body": "Names in naming: slugs are kebab-case nouns. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Release note: limits (125)",
+  "body": "Release 0.3.7: limits is documented in docs/options.md."
+ },
+ {
+  "path": "/docs",
+  "title": "Compatibility: option defaults (126)",
+  "body": "Option defaults: The server adapter never sets Server or Date headers."
+ },
+ {
+  "path": "/acme",
+  "title": "Naming: header size (127)",
+  "body": "Names in header size: no abbreviations in public names. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: query strings (128)",
+  "body": "Incident INC-918: query strings regenerated the limits module with stale values. Lesson: the generated module is never edited by hand"
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: module layout (129)",
+  "body": "In the 2025-10-03 API review the team agreed that module layout is documented before it is extended. Tests were added in the following week."
+ },
+ {
+  "path": "/acme",
+  "title": "Release note: header size (130)",
+  "body": "Release 0.3.9: header size answers 431 for oversized headers."
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: logging (131)",
+  "body": "Logging: Header names compare case-insensitively everywhere."
+ },
+ {
+  "path": "/",
+  "title": "Layout: timeouts (132)",
+  "body": "Timeouts lives in scripts/gen_limits.py; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: response headers (133)",
+  "body": "In the 2025-12-10 API review the team agreed that response headers stays standard-library only. No code change was needed."
+ },
+ {
+  "path": "/tests",
+  "title": "Release note: request parsing (134)",
+  "body": "Release 0.3.8: request parsing is covered by the team suite."
+ },
+ {
+  "path": "/acme",
+  "title": "Release note: query strings (135)",
+  "body": "Release 0.2.4: query strings got a changelog entry."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: response headers (136)",
+  "body": "In the 2025-09-14 API review the team agreed that response headers is documented before it is extended. Tests were added in the following week."
+ },
+ {
+  "path": "/acme",
+  "title": "Naming: response headers (137)",
+  "body": "Names in response headers: no abbreviations in public names. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Release note: path matching (138)",
+  "body": "Release 0.1.2: path matching is documented in docs/options.md."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: the generated limits module (139)",
+  "body": "In the 2025-07-15 API review the team agreed that the generated limits module gets no new public surface this quarter. The slug list in the review doc was updated."
+ },
+ {
+  "path": "/tests",
+  "title": "Naming: option defaults (140)",
+  "body": "Names in option defaults: no abbreviations in public names. Existing names stay until their next change."
+ },
+ {
+  "path": "/cli",
+  "title": "Release note: release notes (141)",
+  "body": "Release 0.2.8: release notes answers 431 for oversized headers."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: the server adapter (142)",
+  "body": "Incident INC-617: the server adapter logged a request body at INFO. Lesson: cap log lines by bytes, not characters"
+ },
+ {
+  "path": "/cli",
+  "title": "Release note: header size (143)",
+  "body": "Release 0.2.3: header size got a changelog entry."
+ },
+ {
+  "path": "/",
+  "title": "Naming: the docs tables (144)",
+  "body": "Names in the docs tables: test modules are test_<area>.py. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Release note: encoding (145)",
+  "body": "Release 0.3.6: encoding moved to its own module."
+ },
+ {
+  "path": "/",
+  "title": "Release note: import order (146)",
+  "body": "Release 0.2.8: import order moved to its own module."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: timeouts (147)",
+  "body": "Incident INC-238: timeouts logged a request body at INFO. Lesson: cap log lines by bytes, not characters"
+ },
+ {
+  "path": "/",
+  "title": "Layout: the server adapter (148)",
+  "body": "The server adapter lives in docs/options.md; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: header size (149)",
+  "body": "In the 2025-06-28 API review the team agreed that header size keeps its current shape. The slug list in the review doc was updated."
+ },
+ {
+  "path": "/tests",
+  "title": "Review outcome: middleware (150)",
+  "body": "In the 2025-10-02 API review the team agreed that middleware keeps backwards compatibility for one release. The slug list in the review doc was updated."
+ },
+ {
+  "path": "/docs",
+  "title": "Compatibility: the problem helper (151)",
+  "body": "The problem helper: Python 3.12 is the floor; 3.11 is not tested."
+ },
+ {
+  "path": "/",
+  "title": "Release note: the server adapter (152)",
+  "body": "Release 0.3.5: the server adapter is covered by the team suite."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: review process (153)",
+  "body": "In the 2025-08-25 API review the team agreed that review process is documented before it is extended. The slug list in the review doc was updated."
+ },
+ {
+  "path": "/cli",
+  "title": "Release note: logging (154)",
+  "body": "Release 0.2.1: logging is documented in docs/options.md."
+ },
+ {
+  "path": "/scripts",
+  "title": "Incident note: logging (155)",
+  "body": "Incident INC-713: logging counted a repeated query key twice. Lesson: check the window with dates, not durations"
+ },
+ {
+  "path": "/",
+  "title": "Incident note: logging (156)",
+  "body": "Incident INC-848: logging logged a request body at INFO. Lesson: parse once, in the request constructor"
+ },
+ {
+  "path": "/cli",
+  "title": "Review outcome: middleware (157)",
+  "body": "In the 2025-08-05 API review the team agreed that middleware is documented before it is extended. The docs table carries the note."
+ },
+ {
+  "path": "/tests",
+  "title": "Compatibility: error slugs (158)",
+  "body": "Error slugs: The server adapter never sets Server or Date headers."
+ },
+ {
+  "path": "/scripts",
+  "title": "Incident note: the docs tables (159)",
+  "body": "Incident INC-182: the docs tables counted a repeated query key twice. Lesson: cap log lines by bytes, not characters"
+ },
+ {
+  "path": "/",
+  "title": "Release note: limits (160)",
+  "body": "Release 0.1.3: limits gained a default."
+ },
+ {
+  "path": "/",
+  "title": "Layout: release notes (161)",
+  "body": "Release notes lives in acme/log.py; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: encoding (162)",
+  "body": "Incident INC-775: encoding truncated a long log line mid-character. Lesson: check the window with dates, not durations"
+ },
+ {
+  "path": "/scripts",
+  "title": "Naming: header size (163)",
+  "body": "Names in header size: slugs are kebab-case nouns. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: the server adapter (164)",
+  "body": "In the 2025-06-09 API review the team agreed that the server adapter stays standard-library only. The slug list in the review doc was updated."
+ },
+ {
+  "path": "/docs",
+  "title": "Release note: limits (165)",
+  "body": "Release 0.3.4: limits is covered by the team suite."
+ },
+ {
+  "path": "/docs",
+  "title": "Release note: the changelog (166)",
+  "body": "Release 0.2.8: the changelog gained a default."
+ },
+ {
+  "path": "/acme",
+  "title": "Compatibility: naming (167)",
+  "body": "Naming: Python 3.12 is the floor; 3.11 is not tested."
+ },
+ {
+  "path": "/",
+  "title": "Release note: maintenance scripts (168)",
+  "body": "Release 0.2.7: maintenance scripts got a changelog entry."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: release notes (169)",
+  "body": "Incident INC-726: release notes dropped a header when the value contained a comma. Lesson: parse once, in the request constructor"
+ },
+ {
+  "path": "/",
+  "title": "Naming: timeouts (170)",
+  "body": "Names in timeouts: options are nouns, never verbs. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: test fixtures (171)",
+  "body": "Incident INC-145: test fixtures answered 500 for a malformed query string. Lesson: parse once, in the request constructor"
+ },
+ {
+  "path": "/cli",
+  "title": "Layout: the server adapter (172)",
+  "body": "The server adapter lives in acme/problem.py; do not add a second place for it."
+ },
+ {
+  "path": "/tests",
+  "title": "Release note: release notes (173)",
+  "body": "Release 0.3.9: release notes lost its last positional argument."
+ },
+ {
+  "path": "/cli",
+  "title": "Compatibility: option defaults (174)",
+  "body": "Option defaults: Python 3.12 is the floor; 3.11 is not tested."
+ },
+ {
+  "path": "/cli",
+  "title": "Incident note: naming (175)",
+  "body": "Incident INC-300: naming retried a non-idempotent request. Lesson: never log bodies, only sizes"
+ },
+ {
+  "path": "/docs",
+  "title": "Incident note: the router (176)",
+  "body": "Incident INC-757: the router regenerated the limits module with stale values. Lesson: never log bodies, only sizes"
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: the problem helper (177)",
+  "body": "In the 2025-02-03 API review the team agreed that the problem helper is covered by the team suite. The docs table carries the note."
+ },
+ {
+  "path": "/acme",
+  "title": "Naming: timeouts (178)",
+  "body": "Names in timeouts: test modules are test_<area>.py. Existing names stay until their next change."
+ },
+ {
+  "path": "/docs",
+  "title": "Incident note: deprecations (179)",
+  "body": "Incident INC-479: deprecations served a deprecated route after its window. Lesson: parse once, in the request constructor"
+ },
+ {
+  "path": "/cli",
+  "title": "Release note: the changelog (180)",
+  "body": "Release 0.3.1: the changelog answers 431 for oversized headers."
+ },
+ {
+  "path": "/",
+  "title": "Layout: encoding (181)",
+  "body": "Encoding lives in tests/; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: release notes (182)",
+  "body": "In the 2025-08-20 API review the team agreed that release notes gets no new public surface this quarter. Tests were added in the following week."
+ },
+ {
+  "path": "/acme",
+  "title": "Incident note: limits (183)",
+  "body": "Incident INC-966: limits logged a request body at INFO. Lesson: retries need an idempotency key"
+ },
+ {
+  "path": "/docs",
+  "title": "Compatibility: deprecations (184)",
+  "body": "Deprecations: Python 3.12 is the floor; 3.11 is not tested."
+ },
+ {
+  "path": "/scripts",
+  "title": "Compatibility: retries (185)",
+  "body": "Retries: Header names compare case-insensitively everywhere."
+ },
+ {
+  "path": "/scripts",
+  "title": "Compatibility: release notes (186)",
+  "body": "Release notes: The server adapter never sets Server or Date headers."
+ },
+ {
+  "path": "/",
+  "title": "Naming: maintenance scripts (187)",
+  "body": "Names in maintenance scripts: private helpers start with an underscore. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Release note: body size (188)",
+  "body": "Release 0.3.7: body size is documented in docs/options.md."
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: encoding (189)",
+  "body": "Encoding: Query values are strings; conversion is the handler's job."
+ },
+ {
+  "path": "/acme",
+  "title": "Naming: logging (190)",
+  "body": "Names in logging: options are nouns, never verbs. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Layout: maintenance scripts (191)",
+  "body": "Maintenance scripts lives in cli/main.py; do not add a second place for it."
+ },
+ {
+  "path": "/acme",
+  "title": "Layout: the docs tables (192)",
+  "body": "The docs tables lives in acme/app.py; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: test fixtures (193)",
+  "body": "Incident INC-202: test fixtures served a deprecated route after its window. Lesson: add a regression test before the fix"
+ },
+ {
+  "path": "/",
+  "title": "Release note: logging (194)",
+  "body": "Release 0.2.7: logging lost its last positional argument."
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: release notes (195)",
+  "body": "Release notes: Limits are read at import time, not per request."
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: the changelog (196)",
+  "body": "The changelog: The server adapter never sets Server or Date headers."
+ },
+ {
+  "path": "/docs",
+  "title": "Naming: body size (197)",
+  "body": "Names in body size: no abbreviations in public names. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: query strings (198)",
+  "body": "Incident INC-924: query strings dropped a header when the value contained a comma. Lesson: check the window with dates, not durations"
+ },
+ {
+  "path": "/",
+  "title": "Release note: option defaults (199)",
+  "body": "Release 0.3.7: option defaults moved to its own module."
+ },
+ {
+  "path": "/",
+  "title": "Release note: error slugs (200)",
+  "body": "Release 0.2.3: error slugs got a changelog entry."
+ },
+ {
+  "path": "/acme",
+  "title": "Layout: response headers (201)",
+  "body": "Response headers lives in acme/app.py; do not add a second place for it."
+ },
+ {
+  "path": "/docs",
+  "title": "Naming: import order (202)",
+  "body": "Names in import order: constants are UPPER_SNAKE. Existing names stay until their next change."
+ },
+ {
+  "path": "/scripts",
+  "title": "Compatibility: maintenance scripts (203)",
+  "body": "Maintenance scripts: The server adapter never sets Server or Date headers."
+ },
+ {
+  "path": "/scripts",
+  "title": "Layout: deprecations (204)",
+  "body": "Deprecations lives in tests/; do not add a second place for it."
+ },
+ {
+  "path": "/acme",
+  "title": "Incident note: logging (205)",
+  "body": "Incident INC-938: logging logged a request body at INFO. Lesson: add a regression test before the fix"
+ },
+ {
+  "path": "/",
+  "title": "Layout: deprecations (206)",
+  "body": "Deprecations lives in acme/http.py; do not add a second place for it."
+ },
+ {
+  "path": "/acme",
+  "title": "Naming: review process (207)",
+  "body": "Names in review process: options are nouns, never verbs. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: body size (208)",
+  "body": "Incident INC-616: body size regenerated the limits module with stale values. Lesson: add a regression test before the fix"
+ },
+ {
+  "path": "/",
+  "title": "Incident note: import order (209)",
+  "body": "Incident INC-558: import order answered 500 for a malformed query string. Lesson: check the window with dates, not durations"
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: response headers (210)",
+  "body": "Response headers: Python 3.12 is the floor; 3.11 is not tested."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: import order (211)",
+  "body": "In the 2025-10-02 API review the team agreed that import order is documented before it is extended. The slug list in the review doc was updated."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: encoding (212)",
+  "body": "Incident INC-281: encoding answered 500 for a malformed query string. Lesson: check the window with dates, not durations"
+ },
+ {
+  "path": "/cli",
+  "title": "Incident note: the CLI (213)",
+  "body": "Incident INC-617: the CLI retried a non-idempotent request. Lesson: check the window with dates, not durations"
+ },
+ {
+  "path": "/",
+  "title": "Layout: retries (214)",
+  "body": "Retries lives in acme/log.py; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Release note: query strings (215)",
+  "body": "Release 0.3.2: query strings answers 431 for oversized headers."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: maintenance scripts (216)",
+  "body": "Incident INC-931: maintenance scripts dropped a header when the value contained a comma. Lesson: the generated module is never edited by hand"
+ },
+ {
+  "path": "/",
+  "title": "Release note: query strings (217)",
+  "body": "Release 0.3.3: query strings is covered by the team suite."
+ },
+ {
+  "path": "/cli",
+  "title": "Compatibility: middleware (218)",
+  "body": "Middleware: Python 3.12 is the floor; 3.11 is not tested."
+ },
+ {
+  "path": "/",
+  "title": "Layout: error slugs (219)",
+  "body": "Error slugs lives in acme/log.py; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: review process (220)",
+  "body": "Incident INC-737: review process regenerated the limits module with stale values. Lesson: retries need an idempotency key"
+ },
+ {
+  "path": "/",
+  "title": "Release note: type hints (221)",
+  "body": "Release 0.3.8: type hints moved to its own module."
+ },
+ {
+  "path": "/",
+  "title": "Layout: test fixtures (222)",
+  "body": "Test fixtures lives in cli/main.py; do not add a second place for it."
+ },
+ {
+  "path": "/docs",
+  "title": "Incident note: import order (223)",
+  "body": "Incident INC-390: import order regenerated the limits module with stale values. Lesson: retries need an idempotency key"
+ },
+ {
+  "path": "/",
+  "title": "Naming: deprecations (224)",
+  "body": "Names in deprecations: private helpers start with an underscore. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: the CLI (225)",
+  "body": "In the 2025-11-05 API review the team agreed that the CLI gets no new public surface this quarter. Tests were added in the following week."
+ },
+ {
+  "path": "/acme",
+  "title": "Naming: limits (226)",
+  "body": "Names in limits: options are nouns, never verbs. Existing names stay until their next change."
+ },
+ {
+  "path": "/cli",
+  "title": "Layout: logging (227)",
+  "body": "Logging lives in tests/; do not add a second place for it."
+ },
+ {
+  "path": "/docs",
+  "title": "Layout: logging (228)",
+  "body": "Logging lives in acme/app.py; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Naming: body size (229)",
+  "body": "Names in body size: test modules are test_<area>.py. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Release note: response headers (230)",
+  "body": "Release 0.3.1: response headers is documented in docs/options.md."
+ },
+ {
+  "path": "/scripts",
+  "title": "Compatibility: retries (231)",
+  "body": "Retries: Python 3.12 is the floor; 3.11 is not tested."
+ },
+ {
+  "path": "/acme",
+  "title": "Release note: release notes (232)",
+  "body": "Release 0.1.2: release notes is covered by the team suite."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: the problem helper (233)",
+  "body": "In the 2025-08-14 API review the team agreed that the problem helper keeps backwards compatibility for one release. Tests were added in the following week."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: import order (234)",
+  "body": "Incident INC-529: import order truncated a long log line mid-character. Lesson: the generated module is never edited by hand"
+ },
+ {
+  "path": "/",
+  "title": "Layout: review process (235)",
+  "body": "Review process lives in acme/app.py; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Naming: type hints (236)",
+  "body": "Names in type hints: constants are UPPER_SNAKE. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: the server adapter (237)",
+  "body": "In the 2025-12-15 API review the team agreed that the server adapter keeps its current shape. The slug list in the review doc was updated."
+ },
+ {
+  "path": "/tests",
+  "title": "Release note: module layout (238)",
+  "body": "Release 0.2.8: module layout is covered by the team suite."
+ },
+ {
+  "path": "/scripts",
+  "title": "Naming: option defaults (239)",
+  "body": "Names in option defaults: test modules are test_<area>.py. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: retries (240)",
+  "body": "Incident INC-492: retries counted a repeated query key twice. Lesson: add a regression test before the fix"
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: type hints (241)",
+  "body": "In the 2025-03-12 API review the team agreed that type hints answers errors in the problem format. The docs table carries the note."
+ },
+ {
+  "path": "/tests",
+  "title": "Layout: the problem helper (242)",
+  "body": "The problem helper lives in acme/app.py; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Release note: the docs tables (243)",
+  "body": "Release 0.1.9: the docs tables is documented in docs/options.md."
+ },
+ {
+  "path": "/docs",
+  "title": "Naming: import order (244)",
+  "body": "Names in import order: slugs are kebab-case nouns. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: response headers (245)",
+  "body": "In the 2025-07-28 API review the team agreed that response headers is documented before it is extended. The docs table carries the note."
+ },
+ {
+  "path": "/",
+  "title": "Layout: import order (246)",
+  "body": "Import order lives in acme/http.py; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: test fixtures (247)",
+  "body": "Test fixtures: Query values are strings; conversion is the handler's job."
+ },
+ {
+  "path": "/scripts",
+  "title": "Compatibility: the generated limits module (248)",
+  "body": "The generated limits module: Header names compare case-insensitively everywhere."
+ },
+ {
+  "path": "/acme",
+  "title": "Layout: encoding (249)",
+  "body": "Encoding lives in tests/; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: the generated limits module (250)",
+  "body": "Incident INC-178: the generated limits module truncated a long log line mid-character. Lesson: check the window with dates, not durations"
+ },
+ {
+  "path": "/docs",
+  "title": "Naming: the server adapter (251)",
+  "body": "Names in the server adapter: no abbreviations in public names. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Naming: retries (252)",
+  "body": "Names in retries: private helpers start with an underscore. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Release note: deprecations (253)",
+  "body": "Release 0.2.7: deprecations is documented in docs/options.md."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: the generated limits module (254)",
+  "body": "Incident INC-245: the generated limits module counted a repeated query key twice. Lesson: check the window with dates, not durations"
+ },
+ {
+  "path": "/scripts",
+  "title": "Compatibility: option defaults (255)",
+  "body": "Option defaults: A Response without a Content-Type is sent as text/plain."
+ },
+ {
+  "path": "/",
+  "title": "Layout: encoding (256)",
+  "body": "Encoding lives in acme/app.py; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Naming: error slugs (257)",
+  "body": "Names in error slugs: no abbreviations in public names. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Release note: maintenance scripts (258)",
+  "body": "Release 0.2.3: maintenance scripts moved to its own module."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: test fixtures (259)",
+  "body": "In the 2025-09-17 API review the team agreed that test fixtures is covered by the team suite. No code change was needed."
+ },
+ {
+  "path": "/",
+  "title": "Naming: the problem helper (260)",
+  "body": "Names in the problem helper: snake_case for functions, PascalCase for classes. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: the server adapter (261)",
+  "body": "The server adapter: Query values are strings; conversion is the handler's job."
+ },
+ {
+  "path": "/docs",
+  "title": "Compatibility: error slugs (262)",
+  "body": "Error slugs: Query values are strings; conversion is the handler's job."
+ },
+ {
+  "path": "/cli",
+  "title": "Incident note: body size (263)",
+  "body": "Incident INC-963: body size dropped a header when the value contained a comma. Lesson: the generated module is never edited by hand"
+ },
+ {
+  "path": "/",
+  "title": "Naming: timeouts (264)",
+  "body": "Names in timeouts: no abbreviations in public names. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: maintenance scripts (265)",
+  "body": "Incident INC-748: maintenance scripts dropped a header when the value contained a comma. Lesson: add a regression test before the fix"
+ },
+ {
+  "path": "/cli",
+  "title": "Review outcome: body size (266)",
+  "body": "In the 2025-05-27 API review the team agreed that body size gets no new public surface this quarter. The docs table carries the note."
+ },
+ {
+  "path": "/acme",
+  "title": "Review outcome: retries (267)",
+  "body": "In the 2025-10-20 API review the team agreed that retries answers errors in the problem format. No code change was needed."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: query strings (268)",
+  "body": "In the 2025-02-05 API review the team agreed that query strings is documented before it is extended. The slug list in the review doc was updated."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: the generated limits module (269)",
+  "body": "In the 2025-02-05 API review the team agreed that the generated limits module stays standard-library only. The slug list in the review doc was updated."
+ },
+ {
+  "path": "/",
+  "title": "Layout: timeouts (270)",
+  "body": "Timeouts lives in acme/problem.py; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: release notes (271)",
+  "body": "In the 2025-06-27 API review the team agreed that release notes keeps its current shape. Tests were added in the following week."
+ },
+ {
+  "path": "/scripts",
+  "title": "Layout: logging (272)",
+  "body": "Logging lives in acme/http.py; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Naming: the CLI (273)",
+  "body": "Names in the CLI: snake_case for functions, PascalCase for classes. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: logging (274)",
+  "body": "Logging: A Response without a Content-Type is sent as text/plain."
+ },
+ {
+  "path": "/scripts",
+  "title": "Layout: response headers (275)",
+  "body": "Response headers lives in docs/options.md; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: the server adapter (276)",
+  "body": "In the 2025-12-28 API review the team agreed that the server adapter gets no new public surface this quarter. The docs table carries the note."
+ },
+ {
+  "path": "/",
+  "title": "Layout: encoding (277)",
+  "body": "Encoding lives in docs/options.md; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Layout: logging (278)",
+  "body": "Logging lives in acme/app.py; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: import order (279)",
+  "body": "In the 2025-04-19 API review the team agreed that import order is covered by the team suite. The slug list in the review doc was updated."
+ },
+ {
+  "path": "/docs",
+  "title": "Incident note: the router (280)",
+  "body": "Incident INC-477: the router served a deprecated route after its window. Lesson: check the window with dates, not durations"
+ },
+ {
+  "path": "/cli",
+  "title": "Compatibility: module layout (281)",
+  "body": "Module layout: Header names compare case-insensitively everywhere."
+ },
+ {
+  "path": "/",
+  "title": "Release note: the problem helper (282)",
+  "body": "Release 0.1.3: the problem helper lost its last positional argument."
+ },
+ {
+  "path": "/cli",
+  "title": "Incident note: the docs tables (283)",
+  "body": "Incident INC-888: the docs tables regenerated the limits module with stale values. Lesson: parse once, in the request constructor"
+ },
+ {
+  "path": "/",
+  "title": "Release note: maintenance scripts (284)",
+  "body": "Release 0.1.9: maintenance scripts answers 431 for oversized headers."
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: request parsing (285)",
+  "body": "Request parsing: Limits are read at import time, not per request."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: the CLI (286)",
+  "body": "Incident INC-313: the CLI answered 500 for a malformed query string. Lesson: the generated module is never edited by hand"
+ },
+ {
+  "path": "/docs",
+  "title": "Incident note: release notes (287)",
+  "body": "Incident INC-606: release notes served a deprecated route after its window. Lesson: add a regression test before the fix"
+ },
+ {
+  "path": "/docs",
+  "title": "Layout: query strings (288)",
+  "body": "Query strings lives in scripts/gen_limits.py; do not add a second place for it."
+ },
+ {
+  "path": "/acme",
+  "title": "Release note: release notes (289)",
+  "body": "Release 0.2.2: release notes got a changelog entry."
+ },
+ {
+  "path": "/",
+  "title": "Release note: naming (290)",
+  "body": "Release 0.1.9: naming moved to its own module."
+ },
+ {
+  "path": "/",
+  "title": "Layout: timeouts (291)",
+  "body": "Timeouts lives in acme/problem.py; do not add a second place for it."
+ },
+ {
+  "path": "/acme",
+  "title": "Review outcome: header size (292)",
+  "body": "In the 2025-12-06 API review the team agreed that header size gets no new public surface this quarter. The docs table carries the note."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: path matching (293)",
+  "body": "In the 2025-03-08 API review the team agreed that path matching answers errors in the problem format. Tests were added in the following week."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: header size (294)",
+  "body": "In the 2025-07-03 API review the team agreed that header size keeps its current shape. Tests were added in the following week."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: import order (295)",
+  "body": "In the 2025-03-12 API review the team agreed that import order is covered by the team suite. The docs table carries the note."
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: the generated limits module (296)",
+  "body": "The generated limits module: Python 3.12 is the floor; 3.11 is not tested."
+ },
+ {
+  "path": "/",
+  "title": "Release note: query strings (297)",
+  "body": "Release 0.1.5: query strings is covered by the team suite."
+ },
+ {
+  "path": "/docs",
+  "title": "Naming: module layout (298)",
+  "body": "Names in module layout: constants are UPPER_SNAKE. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: deprecations (299)",
+  "body": "In the 2025-04-09 API review the team agreed that deprecations gets no new public surface this quarter. The docs table carries the note."
+ },
+ {
+  "path": "/docs",
+  "title": "Naming: the CLI (300)",
+  "body": "Names in the CLI: options are nouns, never verbs. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: naming (301)",
+  "body": "Incident INC-951: naming counted a repeated query key twice. Lesson: add a regression test before the fix"
+ },
+ {
+  "path": "/docs",
+  "title": "Review outcome: the docs tables (302)",
+  "body": "In the 2025-12-04 API review the team agreed that the docs tables answers errors in the problem format. The docs table carries the note."
+ },
+ {
+  "path": "/acme",
+  "title": "Naming: deprecations (303)",
+  "body": "Names in deprecations: slugs are kebab-case nouns. Existing names stay until their next change."
+ },
+ {
+  "path": "/scripts",
+  "title": "Naming: option defaults (304)",
+  "body": "Names in option defaults: no abbreviations in public names. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Release note: type hints (305)",
+  "body": "Release 0.3.8: type hints answers 431 for oversized headers."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: test fixtures (306)",
+  "body": "Incident INC-434: test fixtures regenerated the limits module with stale values. Lesson: add a regression test before the fix"
+ },
+ {
+  "path": "/",
+  "title": "Layout: limits (307)",
+  "body": "Limits lives in tests/; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: retries (308)",
+  "body": "Retries: A Response without a Content-Type is sent as text/plain."
+ },
+ {
+  "path": "/",
+  "title": "Release note: import order (309)",
+  "body": "Release 0.2.3: import order got a changelog entry."
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: error slugs (310)",
+  "body": "Error slugs: Query values are strings; conversion is the handler's job."
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: the changelog (311)",
+  "body": "The changelog: Query values are strings; conversion is the handler's job."
+ },
+ {
+  "path": "/tests",
+  "title": "Layout: naming (312)",
+  "body": "Naming lives in cli/main.py; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Release note: type hints (313)",
+  "body": "Release 0.1.7: type hints gained a default."
+ },
+ {
+  "path": "/",
+  "title": "Release note: body size (314)",
+  "body": "Release 0.2.8: body size gained a default."
+ },
+ {
+  "path": "/",
+  "title": "Naming: logging (315)",
+  "body": "Names in logging: snake_case for functions, PascalCase for classes. Existing names stay until their next change."
+ },
+ {
+  "path": "/docs",
+  "title": "Naming: the docs tables (316)",
+  "body": "Names in the docs tables: no abbreviations in public names. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Naming: logging (317)",
+  "body": "Names in logging: options are nouns, never verbs. Existing names stay until their next change."
+ },
+ {
+  "path": "/tests",
+  "title": "Compatibility: import order (318)",
+  "body": "Import order: The server adapter never sets Server or Date headers."
+ },
+ {
+  "path": "/tests",
+  "title": "Release note: header size (319)",
+  "body": "Release 0.1.2: header size lost its last positional argument."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: maintenance scripts (320)",
+  "body": "Incident INC-658: maintenance scripts retried a non-idempotent request. Lesson: never log bodies, only sizes"
+ },
+ {
+  "path": "/",
+  "title": "Release note: option defaults (321)",
+  "body": "Release 0.2.9: option defaults lost its last positional argument."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: the problem helper (322)",
+  "body": "Incident INC-947: the problem helper retried a non-idempotent request. Lesson: cap log lines by bytes, not characters"
+ },
+ {
+  "path": "/",
+  "title": "Release note: type hints (323)",
+  "body": "Release 0.2.1: type hints moved to its own module."
+ },
+ {
+  "path": "/cli",
+  "title": "Review outcome: limits (324)",
+  "body": "In the 2025-06-08 API review the team agreed that limits keeps its current shape. The slug list in the review doc was updated."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: import order (325)",
+  "body": "Incident INC-650: import order logged a request body at INFO. Lesson: never log bodies, only sizes"
+ },
+ {
+  "path": "/",
+  "title": "Layout: error slugs (326)",
+  "body": "Error slugs lives in acme/problem.py; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Layout: timeouts (327)",
+  "body": "Timeouts lives in cli/main.py; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Naming: request parsing (328)",
+  "body": "Names in request parsing: no abbreviations in public names. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: request parsing (329)",
+  "body": "Incident INC-315: request parsing dropped a header when the value contained a comma. Lesson: check the window with dates, not durations"
+ },
+ {
+  "path": "/scripts",
+  "title": "Release note: timeouts (330)",
+  "body": "Release 0.3.2: timeouts answers 431 for oversized headers."
+ },
+ {
+  "path": "/",
+  "title": "Naming: response headers (331)",
+  "body": "Names in response headers: test modules are test_<area>.py. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Layout: request parsing (332)",
+  "body": "Request parsing lives in acme/app.py; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Naming: query strings (333)",
+  "body": "Names in query strings: test modules are test_<area>.py. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: query strings (334)",
+  "body": "In the 2025-03-23 API review the team agreed that query strings stays standard-library only. No code change was needed."
+ },
+ {
+  "path": "/cli",
+  "title": "Layout: review process (335)",
+  "body": "Review process lives in cli/main.py; do not add a second place for it."
+ },
+ {
+  "path": "/acme",
+  "title": "Layout: the generated limits module (336)",
+  "body": "The generated limits module lives in cli/main.py; do not add a second place for it."
+ },
+ {
+  "path": "/docs",
+  "title": "Compatibility: timeouts (337)",
+  "body": "Timeouts: Limits are read at import time, not per request."
+ },
+ {
+  "path": "/",
+  "title": "Layout: request parsing (338)",
+  "body": "Request parsing lives in acme/app.py; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Release note: the router (339)",
+  "body": "Release 0.3.5: the router answers 431 for oversized headers."
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: error slugs (340)",
+  "body": "Error slugs: Query values are strings; conversion is the handler's job."
+ },
+ {
+  "path": "/scripts",
+  "title": "Review outcome: release notes (341)",
+  "body": "In the 2025-09-03 API review the team agreed that release notes answers errors in the problem format. No code change was needed."
+ },
+ {
+  "path": "/cli",
+  "title": "Review outcome: middleware (342)",
+  "body": "In the 2025-02-09 API review the team agreed that middleware is covered by the team suite. No code change was needed."
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: error slugs (343)",
+  "body": "Error slugs: Limits are read at import time, not per request."
+ },
+ {
+  "path": "/cli",
+  "title": "Compatibility: response headers (344)",
+  "body": "Response headers: Query values are strings; conversion is the handler's job."
+ },
+ {
+  "path": "/",
+  "title": "Layout: encoding (345)",
+  "body": "Encoding lives in tests/; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: request parsing (346)",
+  "body": "In the 2025-12-14 API review the team agreed that request parsing answers errors in the problem format. The slug list in the review doc was updated."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: option defaults (347)",
+  "body": "In the 2025-10-21 API review the team agreed that option defaults keeps its current shape. The slug list in the review doc was updated."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: module layout (348)",
+  "body": "In the 2025-11-04 API review the team agreed that module layout is covered by the team suite. No code change was needed."
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: release notes (349)",
+  "body": "Release notes: Query values are strings; conversion is the handler's job."
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: response headers (350)",
+  "body": "Response headers: Limits are read at import time, not per request."
+ },
+ {
+  "path": "/cli",
+  "title": "Naming: deprecations (351)",
+  "body": "Names in deprecations: private helpers start with an underscore. Existing names stay until their next change."
+ },
+ {
+  "path": "/docs",
+  "title": "Compatibility: the server adapter (352)",
+  "body": "The server adapter: Query values are strings; conversion is the handler's job."
+ },
+ {
+  "path": "/",
+  "title": "Release note: option defaults (353)",
+  "body": "Release 0.3.0: option defaults is documented in docs/options.md."
+ },
+ {
+  "path": "/tests",
+  "title": "Layout: the server adapter (354)",
+  "body": "The server adapter lives in acme/http.py; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: query strings (355)",
+  "body": "Query strings: Query values are strings; conversion is the handler's job."
+ },
+ {
+  "path": "/tests",
+  "title": "Naming: the problem helper (356)",
+  "body": "Names in the problem helper: options are nouns, never verbs. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Layout: limits (357)",
+  "body": "Limits lives in cli/main.py; do not add a second place for it."
+ },
+ {
+  "path": "/tests",
+  "title": "Naming: test fixtures (358)",
+  "body": "Names in test fixtures: test modules are test_<area>.py. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: timeouts (359)",
+  "body": "In the 2025-05-21 API review the team agreed that timeouts is documented before it is extended. Tests were added in the following week."
+ },
+ {
+  "path": "/acme",
+  "title": "Compatibility: deprecations (360)",
+  "body": "Deprecations: Query values are strings; conversion is the handler's job."
+ },
+ {
+  "path": "/scripts",
+  "title": "Layout: path matching (361)",
+  "body": "Path matching lives in acme/http.py; do not add a second place for it."
+ },
+ {
+  "path": "/scripts",
+  "title": "Incident note: the router (362)",
+  "body": "Incident INC-274: the router truncated a long log line mid-character. Lesson: add a regression test before the fix"
+ },
+ {
+  "path": "/",
+  "title": "Layout: query strings (363)",
+  "body": "Query strings lives in docs/options.md; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Naming: test fixtures (364)",
+  "body": "Names in test fixtures: private helpers start with an underscore. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: review process (365)",
+  "body": "Review process: Query values are strings; conversion is the handler's job."
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: path matching (366)",
+  "body": "Path matching: Python 3.12 is the floor; 3.11 is not tested."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: option defaults (367)",
+  "body": "In the 2025-01-06 API review the team agreed that option defaults keeps its current shape. No code change was needed."
+ },
+ {
+  "path": "/cli",
+  "title": "Review outcome: path matching (368)",
+  "body": "In the 2025-01-01 API review the team agreed that path matching is documented before it is extended. No code change was needed."
+ },
+ {
+  "path": "/tests",
+  "title": "Review outcome: naming (369)",
+  "body": "In the 2025-11-09 API review the team agreed that naming keeps backwards compatibility for one release. Tests were added in the following week."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: the generated limits module (370)",
+  "body": "In the 2025-04-24 API review the team agreed that the generated limits module is covered by the team suite. The docs table carries the note."
+ },
+ {
+  "path": "/",
+  "title": "Naming: limits (371)",
+  "body": "Names in limits: no abbreviations in public names. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: body size (372)",
+  "body": "Incident INC-231: body size answered 500 for a malformed query string. Lesson: add a regression test before the fix"
+ },
+ {
+  "path": "/cli",
+  "title": "Layout: response headers (373)",
+  "body": "Response headers lives in acme/http.py; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Naming: body size (374)",
+  "body": "Names in body size: test modules are test_<area>.py. Existing names stay until their next change."
+ },
+ {
+  "path": "/tests",
+  "title": "Review outcome: the generated limits module (375)",
+  "body": "In the 2025-09-20 API review the team agreed that the generated limits module keeps its current shape. Tests were added in the following week."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: the server adapter (376)",
+  "body": "In the 2025-04-07 API review the team agreed that the server adapter is covered by the team suite. Tests were added in the following week."
+ },
+ {
+  "path": "/cli",
+  "title": "Layout: body size (377)",
+  "body": "Body size lives in scripts/gen_limits.py; do not add a second place for it."
+ },
+ {
+  "path": "/tests",
+  "title": "Release note: response headers (378)",
+  "body": "Release 0.2.7: response headers moved to its own module."
+ },
+ {
+  "path": "/",
+  "title": "Layout: middleware (379)",
+  "body": "Middleware lives in scripts/gen_limits.py; do not add a second place for it."
+ },
+ {
+  "path": "/tests",
+  "title": "Release note: the CLI (380)",
+  "body": "Release 0.3.0: the CLI is documented in docs/options.md."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: option defaults (381)",
+  "body": "In the 2025-10-06 API review the team agreed that option defaults is documented before it is extended. No code change was needed."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: import order (382)",
+  "body": "Incident INC-568: import order retried a non-idempotent request. Lesson: the generated module is never edited by hand"
+ },
+ {
+  "path": "/",
+  "title": "Release note: query strings (383)",
+  "body": "Release 0.3.5: query strings moved to its own module."
+ },
+ {
+  "path": "/",
+  "title": "Layout: encoding (384)",
+  "body": "Encoding lives in docs/options.md; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Release note: header size (385)",
+  "body": "Release 0.3.1: header size got a changelog entry."
+ },
+ {
+  "path": "/scripts",
+  "title": "Release note: release notes (386)",
+  "body": "Release 0.1.1: release notes lost its last positional argument."
+ },
+ {
+  "path": "/",
+  "title": "Naming: body size (387)",
+  "body": "Names in body size: snake_case for functions, PascalCase for classes. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: the router (388)",
+  "body": "In the 2025-04-13 API review the team agreed that the router stays standard-library only. The slug list in the review doc was updated."
+ },
+ {
+  "path": "/scripts",
+  "title": "Incident note: the generated limits module (389)",
+  "body": "Incident INC-881: the generated limits module counted a repeated query key twice. Lesson: parse once, in the request constructor"
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: test fixtures (390)",
+  "body": "In the 2025-09-14 API review the team agreed that test fixtures answers errors in the problem format. The docs table carries the note."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: import order (391)",
+  "body": "Incident INC-956: import order regenerated the limits module with stale values. Lesson: never log bodies, only sizes"
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: the router (392)",
+  "body": "In the 2025-03-20 API review the team agreed that the router is documented before it is extended. The slug list in the review doc was updated."
+ },
+ {
+  "path": "/acme",
+  "title": "Compatibility: limits (393)",
+  "body": "Limits: A Response without a Content-Type is sent as text/plain."
+ },
+ {
+  "path": "/acme",
+  "title": "Release note: review process (394)",
+  "body": "Release 0.1.2: review process is covered by the team suite."
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: error slugs (395)",
+  "body": "Error slugs: Header names compare case-insensitively everywhere."
+ },
+ {
+  "path": "/",
+  "title": "Naming: test fixtures (396)",
+  "body": "Names in test fixtures: options are nouns, never verbs. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Naming: test fixtures (397)",
+  "body": "Names in test fixtures: test modules are test_<area>.py. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: maintenance scripts (398)",
+  "body": "Maintenance scripts: A Response without a Content-Type is sent as text/plain."
+ },
+ {
+  "path": "/tests",
+  "title": "Compatibility: deprecations (399)",
+  "body": "Deprecations: A Response without a Content-Type is sent as text/plain."
+ },
+ {
+  "path": "/",
+  "title": "Layout: the changelog (400)",
+  "body": "The changelog lives in acme/log.py; do not add a second place for it."
+ },
+ {
+  "path": "/docs",
+  "title": "Incident note: type hints (401)",
+  "body": "Incident INC-507: type hints answered 500 for a malformed query string. Lesson: the generated module is never edited by hand"
+ },
+ {
+  "path": "/",
+  "title": "Release note: request parsing (402)",
+  "body": "Release 0.3.7: request parsing moved to its own module."
+ },
+ {
+  "path": "/",
+  "title": "Layout: import order (403)",
+  "body": "Import order lives in acme/problem.py; do not add a second place for it."
+ },
+ {
+  "path": "/cli",
+  "title": "Incident note: test fixtures (404)",
+  "body": "Incident INC-700: test fixtures counted a repeated query key twice. Lesson: cap log lines by bytes, not characters"
+ },
+ {
+  "path": "/docs",
+  "title": "Compatibility: the changelog (405)",
+  "body": "The changelog: Header names compare case-insensitively everywhere."
+ },
+ {
+  "path": "/tests",
+  "title": "Compatibility: query strings (406)",
+  "body": "Query strings: Query values are strings; conversion is the handler's job."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: request parsing (407)",
+  "body": "Incident INC-180: request parsing answered 500 for a malformed query string. Lesson: retries need an idempotency key"
+ },
+ {
+  "path": "/scripts",
+  "title": "Release note: import order (408)",
+  "body": "Release 0.2.1: import order got a changelog entry."
+ },
+ {
+  "path": "/",
+  "title": "Layout: header size (409)",
+  "body": "Header size lives in docs/options.md; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Release note: logging (410)",
+  "body": "Release 0.1.2: logging is documented in docs/options.md."
+ },
+ {
+  "path": "/",
+  "title": "Release note: response headers (411)",
+  "body": "Release 0.1.2: response headers is covered by the team suite."
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: body size (412)",
+  "body": "Body size: A Response without a Content-Type is sent as text/plain."
+ },
+ {
+  "path": "/scripts",
+  "title": "Layout: the problem helper (413)",
+  "body": "The problem helper lives in acme/app.py; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: release notes (414)",
+  "body": "In the 2025-01-13 API review the team agreed that release notes keeps its current shape. No code change was needed."
+ },
+ {
+  "path": "/",
+  "title": "Naming: review process (415)",
+  "body": "Names in review process: test modules are test_<area>.py. Existing names stay until their next change."
+ },
+ {
+  "path": "/acme",
+  "title": "Review outcome: option defaults (416)",
+  "body": "In the 2025-08-23 API review the team agreed that option defaults stays standard-library only. The slug list in the review doc was updated."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: query strings (417)",
+  "body": "In the 2025-09-16 API review the team agreed that query strings is documented before it is extended. The docs table carries the note."
+ },
+ {
+  "path": "/cli",
+  "title": "Incident note: deprecations (418)",
+  "body": "Incident INC-910: deprecations counted a repeated query key twice. Lesson: the generated module is never edited by hand"
+ },
+ {
+  "path": "/",
+  "title": "Release note: response headers (419)",
+  "body": "Release 0.2.0: response headers answers 431 for oversized headers."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: encoding (420)",
+  "body": "In the 2025-11-12 API review the team agreed that encoding is documented before it is extended. No code change was needed."
+ },
+ {
+  "path": "/tests",
+  "title": "Incident note: middleware (421)",
+  "body": "Incident INC-561: middleware dropped a header when the value contained a comma. Lesson: parse once, in the request constructor"
+ },
+ {
+  "path": "/docs",
+  "title": "Review outcome: request parsing (422)",
+  "body": "In the 2025-08-03 API review the team agreed that request parsing gets no new public surface this quarter. The slug list in the review doc was updated."
+ },
+ {
+  "path": "/",
+  "title": "Naming: body size (423)",
+  "body": "Names in body size: constants are UPPER_SNAKE. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: the docs tables (424)",
+  "body": "The docs tables: Python 3.12 is the floor; 3.11 is not tested."
+ },
+ {
+  "path": "/docs",
+  "title": "Compatibility: option defaults (425)",
+  "body": "Option defaults: A Response without a Content-Type is sent as text/plain."
+ },
+ {
+  "path": "/docs",
+  "title": "Compatibility: header size (426)",
+  "body": "Header size: The server adapter never sets Server or Date headers."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: request parsing (427)",
+  "body": "In the 2025-12-22 API review the team agreed that request parsing keeps backwards compatibility for one release. Tests were added in the following week."
+ },
+ {
+  "path": "/tests",
+  "title": "Release note: test fixtures (428)",
+  "body": "Release 0.3.2: test fixtures got a changelog entry."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: the generated limits module (429)",
+  "body": "Incident INC-333: the generated limits module regenerated the limits module with stale values. Lesson: add a regression test before the fix"
+ },
+ {
+  "path": "/",
+  "title": "Incident note: response headers (430)",
+  "body": "Incident INC-116: response headers counted a repeated query key twice. Lesson: parse once, in the request constructor"
+ },
+ {
+  "path": "/acme",
+  "title": "Release note: option defaults (431)",
+  "body": "Release 0.2.9: option defaults is covered by the team suite."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: timeouts (432)",
+  "body": "Incident INC-458: timeouts counted a repeated query key twice. Lesson: parse once, in the request constructor"
+ },
+ {
+  "path": "/",
+  "title": "Naming: header size (433)",
+  "body": "Names in header size: snake_case for functions, PascalCase for classes. Existing names stay until their next change."
+ },
+ {
+  "path": "/acme",
+  "title": "Naming: the problem helper (434)",
+  "body": "Names in the problem helper: slugs are kebab-case nouns. Existing names stay until their next change."
+ },
+ {
+  "path": "/docs",
+  "title": "Layout: the problem helper (435)",
+  "body": "The problem helper lives in acme/problem.py; do not add a second place for it."
+ },
+ {
+  "path": "/tests",
+  "title": "Layout: middleware (436)",
+  "body": "Middleware lives in docs/options.md; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Naming: request parsing (437)",
+  "body": "Names in request parsing: snake_case for functions, PascalCase for classes. Existing names stay until their next change."
+ },
+ {
+  "path": "/acme",
+  "title": "Compatibility: header size (438)",
+  "body": "Header size: Python 3.12 is the floor; 3.11 is not tested."
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: retries (439)",
+  "body": "Retries: Limits are read at import time, not per request."
+ },
+ {
+  "path": "/tests",
+  "title": "Layout: path matching (440)",
+  "body": "Path matching lives in docs/options.md; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Naming: middleware (441)",
+  "body": "Names in middleware: constants are UPPER_SNAKE. Existing names stay until their next change."
+ },
+ {
+  "path": "/docs",
+  "title": "Release note: naming (442)",
+  "body": "Release 0.2.9: naming is covered by the team suite."
+ },
+ {
+  "path": "/",
+  "title": "Naming: limits (443)",
+  "body": "Names in limits: constants are UPPER_SNAKE. Existing names stay until their next change."
+ },
+ {
+  "path": "/docs",
+  "title": "Naming: the router (444)",
+  "body": "Names in the router: snake_case for functions, PascalCase for classes. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Layout: the changelog (445)",
+  "body": "The changelog lives in acme/app.py; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Naming: the changelog (446)",
+  "body": "Names in the changelog: options are nouns, never verbs. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Release note: the problem helper (447)",
+  "body": "Release 0.2.4: the problem helper lost its last positional argument."
+ },
+ {
+  "path": "/",
+  "title": "Naming: review process (448)",
+  "body": "Names in review process: constants are UPPER_SNAKE. Existing names stay until their next change."
+ },
+ {
+  "path": "/acme",
+  "title": "Review outcome: module layout (449)",
+  "body": "In the 2025-01-25 API review the team agreed that module layout gets no new public surface this quarter. The slug list in the review doc was updated."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: module layout (450)",
+  "body": "In the 2025-09-25 API review the team agreed that module layout stays standard-library only. The docs table carries the note."
+ },
+ {
+  "path": "/docs",
+  "title": "Compatibility: module layout (451)",
+  "body": "Module layout: Query values are strings; conversion is the handler's job."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: naming (452)",
+  "body": "In the 2025-02-19 API review the team agreed that naming is documented before it is extended. Tests were added in the following week."
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: naming (453)",
+  "body": "Naming: Query values are strings; conversion is the handler's job."
+ },
+ {
+  "path": "/cli",
+  "title": "Layout: timeouts (454)",
+  "body": "Timeouts lives in tests/; do not add a second place for it."
+ },
+ {
+  "path": "/docs",
+  "title": "Compatibility: the generated limits module (455)",
+  "body": "The generated limits module: A Response without a Content-Type is sent as text/plain."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: type hints (456)",
+  "body": "Incident INC-626: type hints logged a request body at INFO. Lesson: parse once, in the request constructor"
+ },
+ {
+  "path": "/cli",
+  "title": "Release note: error slugs (457)",
+  "body": "Release 0.3.9: error slugs moved to its own module."
+ },
+ {
+  "path": "/",
+  "title": "Release note: encoding (458)",
+  "body": "Release 0.2.8: encoding is documented in docs/options.md."
+ },
+ {
+  "path": "/",
+  "title": "Layout: the CLI (459)",
+  "body": "The CLI lives in tests/; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: the docs tables (460)",
+  "body": "In the 2025-10-17 API review the team agreed that the docs tables keeps backwards compatibility for one release. The slug list in the review doc was updated."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: header size (461)",
+  "body": "Incident INC-962: header size regenerated the limits module with stale values. Lesson: parse once, in the request constructor"
+ },
+ {
+  "path": "/",
+  "title": "Naming: maintenance scripts (462)",
+  "body": "Names in maintenance scripts: private helpers start with an underscore. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Naming: release notes (463)",
+  "body": "Names in release notes: constants are UPPER_SNAKE. Existing names stay until their next change."
+ },
+ {
+  "path": "/acme",
+  "title": "Naming: review process (464)",
+  "body": "Names in review process: private helpers start with an underscore. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Naming: test fixtures (465)",
+  "body": "Names in test fixtures: test modules are test_<area>.py. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: path matching (466)",
+  "body": "In the 2025-12-15 API review the team agreed that path matching keeps its current shape. The docs table carries the note."
+ },
+ {
+  "path": "/",
+  "title": "Incident note: timeouts (467)",
+  "body": "Incident INC-708: timeouts regenerated the limits module with stale values. Lesson: parse once, in the request constructor"
+ },
+ {
+  "path": "/acme",
+  "title": "Layout: the problem helper (468)",
+  "body": "The problem helper lives in scripts/gen_limits.py; do not add a second place for it."
+ },
+ {
+  "path": "/acme",
+  "title": "Release note: the problem helper (469)",
+  "body": "Release 0.2.2: the problem helper is covered by the team suite."
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: request parsing (470)",
+  "body": "Request parsing: Python 3.12 is the floor; 3.11 is not tested."
+ },
+ {
+  "path": "/docs",
+  "title": "Review outcome: import order (471)",
+  "body": "In the 2025-06-11 API review the team agreed that import order gets no new public surface this quarter. The slug list in the review doc was updated."
+ },
+ {
+  "path": "/scripts",
+  "title": "Layout: the server adapter (472)",
+  "body": "The server adapter lives in acme/http.py; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Release note: header size (473)",
+  "body": "Release 0.3.3: header size got a changelog entry."
+ },
+ {
+  "path": "/docs",
+  "title": "Review outcome: test fixtures (474)",
+  "body": "In the 2025-02-15 API review the team agreed that test fixtures answers errors in the problem format. No code change was needed."
+ },
+ {
+  "path": "/cli",
+  "title": "Naming: response headers (475)",
+  "body": "Names in response headers: test modules are test_<area>.py. Existing names stay until their next change."
+ },
+ {
+  "path": "/",
+  "title": "Review outcome: body size (476)",
+  "body": "In the 2025-09-14 API review the team agreed that body size gets no new public surface this quarter. The slug list in the review doc was updated."
+ },
+ {
+  "path": "/tests",
+  "title": "Release note: the router (477)",
+  "body": "Release 0.2.1: the router moved to its own module."
+ },
+ {
+  "path": "/",
+  "title": "Layout: release notes (478)",
+  "body": "Release notes lives in tests/; do not add a second place for it."
+ },
+ {
+  "path": "/",
+  "title": "Compatibility: limits (479)",
+  "body": "Limits: The server adapter never sets Server or Date headers."
+ },
+ {
+  "path": "/",
+  "title": "Layout: naming (480)",
+  "body": "Naming lives in docs/options.md; do not add a second place for it."
+ }
+]

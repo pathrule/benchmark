@@ -1,0 +1,2 @@
+Teammate commit before session 4: the limits list lives in config/limits/limits.json now. The old
+config/limits.json stays (nobody deleted it), so knowledge naming it is stale; the generator says where it lives.
