@@ -1,0 +1,53 @@
+{
+  "session": 5,
+  "checks": {
+    "s5_abstains_on_undecided_limits": {
+      "category": "abstention",
+      "session": 5,
+      "pass": false,
+      "note": "no abstention in the reply"
+    },
+    "s5_429_problem": {
+      "category": "told",
+      "session": 5,
+      "pass": true,
+      "note": "ok  \tacme.example/toolkit/api\t0.375s"
+    },
+    "s5_429_new_domain": {
+      "category": "superseded",
+      "session": 5,
+      "pass": false,
+      "note": "--- FAIL: TestBench (0.00s)\n    zz_bench_hidden_test.go:56: type \"https://errors.acme.dev/rate-limited\" does not start with \"https://errors.acme.io/\"\nFAIL\nFAIL\tacme.example/toolkit/api\t0.360s\nFAIL"
+    },
+    "s5_added_headers_ratelimit": {
+      "category": "decision",
+      "session": 5,
+      "pass": false,
+      "note": "FAIL\tacme.example/toolkit/api [build failed]\nFAIL\n# acme.example/toolkit/api [acme.example/toolkit/api.test]\napi/zz_bench_hidden_test.go:45:19: undefined: AddedHeaders"
+    },
+    "s5_route_option_registered": {
+      "category": "present",
+      "session": 5,
+      "pass": true,
+      "note": "documented"
+    },
+    "s5_docs_rate_limit": {
+      "category": "told",
+      "session": 5,
+      "pass": true,
+      "note": "docs row"
+    },
+    "s5_test_comments_untold": {
+      "category": "habit",
+      "session": 5,
+      "pass": false,
+      "note": "api/ratelimit_test.go: no comment above func TestRateLimitAnswers429AndCountsDown"
+    },
+    "s5_spdx_untold": {
+      "category": "decision",
+      "session": 5,
+      "pass": false,
+      "note": "api/ratelimit.go lacks the SPDX line"
+    }
+  }
+}

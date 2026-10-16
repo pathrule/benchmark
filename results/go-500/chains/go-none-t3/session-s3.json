@@ -1,0 +1,189 @@
+{
+  "sessionId": "94658072-87c6-4e53-bbec-634bf2232cd9",
+  "name": "S3-not-found-and-domain",
+  "rows": [
+    {
+      "s": 3,
+      "t": 1,
+      "exit": 0,
+      "wallMs": 14413,
+      "apiMs": 12236,
+      "cost": 0.039379700000000004,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 7478,
+        "cache_read_input_tokens": 85947,
+        "output_tokens": 1207,
+        "output_tokens_details": {
+          "thinking_tokens": 33
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 7478
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 10,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Grep": 2,
+        "Glob": 1,
+        "Read": 3,
+        "Edit": 2,
+        "Bash": 1
+      }
+    },
+    {
+      "s": 3,
+      "t": 2,
+      "exit": 0,
+      "wallMs": 14430,
+      "apiMs": 25023,
+      "cost": 0.03331919999999999,
+      "usage": {
+        "input_tokens": 6,
+        "cache_creation_input_tokens": 4091,
+        "cache_read_input_tokens": 64697,
+        "output_tokens": 1661,
+        "output_tokens_details": {
+          "thinking_tokens": 60
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 4091
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 7,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Read": 3,
+        "Write": 1,
+        "Edit": 1,
+        "Bash": 1
+      }
+    },
+    {
+      "s": 3,
+      "t": 3,
+      "exit": 0,
+      "wallMs": 21277,
+      "apiMs": 43108,
+      "cost": 0.04946759999999999,
+      "usage": {
+        "input_tokens": 16,
+        "cache_creation_input_tokens": 4250,
+        "cache_read_input_tokens": 213406,
+        "output_tokens": 1747,
+        "output_tokens_details": {
+          "thinking_tokens": 18
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 4250
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 12,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Read": 5,
+        "Edit": 4,
+        "Bash": 1,
+        "Grep": 1
+      }
+    },
+    {
+      "s": 3,
+      "t": 4,
+      "exit": 0,
+      "wallMs": 17098,
+      "apiMs": 57730,
+      "cost": 0.035695599999999966,
+      "usage": {
+        "input_tokens": 6,
+        "cache_creation_input_tokens": 3539,
+        "cache_read_input_tokens": 89361,
+        "output_tokens": 1790,
+        "output_tokens_details": {
+          "thinking_tokens": 434
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 3539
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 3,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 2
+      }
+    }
+  ],
+  "checks": {
+    "session": 3,
+    "checks": {
+      "s3_404_problem": {
+        "category": "told",
+        "session": 3,
+        "pass": true,
+        "note": "ok  \tacme.example/toolkit/api\t0.376s"
+      },
+      "s3_default_header_limit": {
+        "category": "told",
+        "session": 3,
+        "pass": true,
+        "note": "ok  \tacme.example/toolkit/api\t0.376s"
+      },
+      "s3_test_comments_untold": {
+        "category": "habit",
+        "session": 3,
+        "pass": false,
+        "note": "api/notfound_test.go: no comment above func TestDefault404IsProblem"
+      },
+      "s3_spdx_untold": {
+        "category": "decision",
+        "session": 3,
+        "pass": false,
+        "note": "api/notfound_test.go lacks the SPDX line"
+      }
+    }
+  }
+}

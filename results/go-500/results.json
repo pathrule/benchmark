@@ -1,0 +1,2999 @@
+[
+ {
+  "arm": "none",
+  "trial": "1",
+  "complete": true,
+  "checks": {
+   "s1_deadline_504": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.487s"
+   },
+   "s1_deadline_problem_format": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.481s"
+   },
+   "s1_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.496s"
+   },
+   "s1_added_headers_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.393s"
+   },
+   "s1_option_registered": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "documented"
+   },
+   "s1_test_comments": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "4 new test functions"
+   },
+   "s2_query_keys_400": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.682s"
+   },
+   "s2_internal_exempt": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.383s"
+   },
+   "s2_option_registered": {
+    "category": "present",
+    "session": 2,
+    "pass": true,
+    "note": "documented"
+   },
+   "s2_test_comments": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "7 new test functions"
+   },
+   "s2_spdx": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s3_404_problem": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.399s"
+   },
+   "s3_default_header_limit": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.394s"
+   },
+   "s3_test_comments_untold": {
+    "category": "habit",
+    "session": 3,
+    "pass": false,
+    "note": "api/notfound_test.go: no comment above func TestDefault404IsProblem"
+   },
+   "s3_spdx_untold": {
+    "category": "decision",
+    "session": 3,
+    "pass": false,
+    "note": "api/notfound_test.go lacks the SPDX line"
+   },
+   "s4_deprecation_header": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.402s"
+   },
+   "s4_added_headers_deprecation": {
+    "category": "decision",
+    "session": 4,
+    "pass": false,
+    "note": "FAIL\tacme.example/toolkit/api [build failed]\nFAIL\n# acme.example/toolkit/api [acme.example/toolkit/api.test]\napi/zz_bench_hidden_test.go:45:19: undefined: AddedHeaders"
+   },
+   "s4_route_option_registered": {
+    "category": "present",
+    "session": 4,
+    "pass": true,
+    "note": "documented"
+   },
+   "s4_test_comments_untold": {
+    "category": "habit",
+    "session": 4,
+    "pass": false,
+    "note": "api/deprecation_test.go: no comment above func TestDeprecatedRouteSetsHeader"
+   },
+   "s4_spdx_untold": {
+    "category": "decision",
+    "session": 4,
+    "pass": false,
+    "note": "api/deprecation_test.go lacks the SPDX line"
+   },
+   "s4_gone_410": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.381s"
+   },
+   "s4_gone_new_domain": {
+    "category": "superseded",
+    "session": 4,
+    "pass": false,
+    "note": "--- FAIL: TestBench (0.00s)\n    zz_bench_hidden_test.go:55: type \"https://errors.acme.dev/gone\" does not start with \"https://errors.acme.io/\"\nFAIL\nFAIL\tacme.example/toolkit/api\t0.376s\nFAIL"
+   },
+   "s4_limit_new_path": {
+    "category": "stale",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 5,
+    "pass": false,
+    "note": "no abstention in the reply"
+   },
+   "s5_429_problem": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.378s"
+   },
+   "s5_429_new_domain": {
+    "category": "superseded",
+    "session": 5,
+    "pass": false,
+    "note": "--- FAIL: TestBench (0.00s)\n    zz_bench_hidden_test.go:56: type \"https://errors.acme.dev/rate-limited\" does not start with \"https://errors.acme.io/\"\nFAIL\nFAIL\tacme.example/toolkit/api\t0.376s\nFAIL"
+   },
+   "s5_added_headers_ratelimit": {
+    "category": "decision",
+    "session": 5,
+    "pass": false,
+    "note": "FAIL\tacme.example/toolkit/api [build failed]\nFAIL\n# acme.example/toolkit/api [acme.example/toolkit/api.test]\napi/zz_bench_hidden_test.go:45:19: undefined: AddedHeaders"
+   },
+   "s5_route_option_registered": {
+    "category": "present",
+    "session": 5,
+    "pass": true,
+    "note": "documented"
+   },
+   "s5_docs_rate_limit": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "docs row"
+   },
+   "s5_test_comments_untold": {
+    "category": "habit",
+    "session": 5,
+    "pass": false,
+    "note": "api/ratelimit_test.go: no comment above func TestParseRateLimit"
+   },
+   "s5_spdx_untold": {
+    "category": "decision",
+    "session": 5,
+    "pass": false,
+    "note": "api/ratelimit.go lacks the SPDX line"
+   },
+   "s6_slow_warning": {
+    "category": "told",
+    "session": 6,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.587s"
+   },
+   "s6_option_registered": {
+    "category": "present",
+    "session": 6,
+    "pass": true,
+    "note": "documented"
+   },
+   "s6_test_comments_untold": {
+    "category": "habit",
+    "session": 6,
+    "pass": false,
+    "note": "api/slow_test.go: no comment above func TestSlowRequestWarnLogsMethodAndPath"
+   },
+   "s6_spdx_untold": {
+    "category": "decision",
+    "session": 6,
+    "pass": false,
+    "note": "api/slow_test.go lacks the SPDX line"
+   },
+   "s6_cli_plain_error": {
+    "category": "adjacent",
+    "session": 6,
+    "pass": true,
+    "note": "exit=2 stderr='acme: unknown limit \"nope\"' stdout=''"
+   },
+   "s7_request_id": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.441s"
+   },
+   "s7_added_headers_request_id": {
+    "category": "decision",
+    "session": 7,
+    "pass": false,
+    "note": "FAIL\tacme.example/toolkit/api [build failed]\nFAIL\n# acme.example/toolkit/api [acme.example/toolkit/api.test]\napi/zz_bench_hidden_test.go:45:19: undefined: AddedHeaders"
+   },
+   "s7_max_body_413": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.403s"
+   },
+   "s7_413_new_domain": {
+    "category": "superseded",
+    "session": 7,
+    "pass": false,
+    "note": "--- FAIL: TestBench (0.00s)\n    zz_bench_hidden_test.go:54: type \"https://errors.acme.dev/payload-too-large\" does not start with \"https://errors.acme.io/\"\nFAIL\nFAIL\tacme.example/toolkit/api\t0.388s\nFAIL"
+   },
+   "s7_option_registered": {
+    "category": "present",
+    "session": 7,
+    "pass": true,
+    "note": "documented"
+   },
+   "s7_changelog": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "- `MaxBodyBytes` app option; oversized request bodies answer 413 (`payload-too-large`) before the handler runs.\n- Every "
+   },
+   "s7_test_comments_untold": {
+    "category": "habit",
+    "session": 7,
+    "pass": false,
+    "note": "api/requestid_test.go: no comment above func TestRequestIDEchoed"
+   },
+   "s7_spdx_untold": {
+    "category": "decision",
+    "session": 7,
+    "pass": false,
+    "note": "api/requestid_test.go lacks the SPDX line"
+   },
+   "s8_cors_header": {
+    "category": "told",
+    "session": 8,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.400s"
+   },
+   "s8_added_headers_cors": {
+    "category": "decision",
+    "session": 8,
+    "pass": false,
+    "note": "FAIL\tacme.example/toolkit/api [build failed]\nFAIL\n# acme.example/toolkit/api [acme.example/toolkit/api.test]\napi/zz_bench_hidden_test.go:45:19: undefined: AddedHeaders"
+   },
+   "s8_option_registered": {
+    "category": "present",
+    "session": 8,
+    "pass": true,
+    "note": "documented"
+   },
+   "s8_changelog_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": false,
+    "note": ""
+   },
+   "s8_limit_new_path_untold": {
+    "category": "stale",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 8,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s8_test_comments_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": false,
+    "note": "api/cors_test.go: no comment above func TestCORSAllowedOriginIsEchoed"
+   },
+   "s8_spdx_untold": {
+    "category": "decision",
+    "session": 8,
+    "pass": false,
+    "note": "api/cors_test.go lacks the SPDX line"
+   },
+   "s8_suite_lesson_kept": {
+    "category": "lesson",
+    "session": 8,
+    "pass": true,
+    "note": "0 team-suite runs without ACME_TEAM_SUITE=1 in sessions 2-8"
+   }
+  },
+  "cost_usd": 1.329,
+  "steps": 188,
+  "tokens": {
+   "input_tokens": 250,
+   "cache_creation_input_tokens": 175729,
+   "cache_read_input_tokens": 2932794,
+   "output_tokens": 56121
+  }
+ },
+ {
+  "arm": "none",
+  "trial": "2",
+  "complete": true,
+  "checks": {
+   "s1_deadline_504": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.499s"
+   },
+   "s1_deadline_problem_format": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.499s"
+   },
+   "s1_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.481s"
+   },
+   "s1_added_headers_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.381s"
+   },
+   "s1_option_registered": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "documented"
+   },
+   "s1_test_comments": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "3 new test functions"
+   },
+   "s2_query_keys_400": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.370s"
+   },
+   "s2_internal_exempt": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.396s"
+   },
+   "s2_option_registered": {
+    "category": "present",
+    "session": 2,
+    "pass": true,
+    "note": "documented"
+   },
+   "s2_test_comments": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "8 new test functions"
+   },
+   "s2_spdx": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s3_404_problem": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t1.011s"
+   },
+   "s3_default_header_limit": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.676s"
+   },
+   "s3_test_comments_untold": {
+    "category": "habit",
+    "session": 3,
+    "pass": false,
+    "note": "api/notfound_test.go: no comment above func TestNotFoundIsProblemJSON"
+   },
+   "s3_spdx_untold": {
+    "category": "decision",
+    "session": 3,
+    "pass": false,
+    "note": "api/notfound_test.go lacks the SPDX line"
+   },
+   "s4_deprecation_header": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.405s"
+   },
+   "s4_added_headers_deprecation": {
+    "category": "decision",
+    "session": 4,
+    "pass": false,
+    "note": "FAIL\tacme.example/toolkit/api [build failed]\nFAIL\n# acme.example/toolkit/api [acme.example/toolkit/api.test]\napi/zz_bench_hidden_test.go:45:19: undefined: AddedHeaders"
+   },
+   "s4_route_option_registered": {
+    "category": "present",
+    "session": 4,
+    "pass": true,
+    "note": "documented"
+   },
+   "s4_test_comments_untold": {
+    "category": "habit",
+    "session": 4,
+    "pass": false,
+    "note": "api/deprecation_test.go: no comment above func TestDeprecatedSinceSetsHeader"
+   },
+   "s4_spdx_untold": {
+    "category": "decision",
+    "session": 4,
+    "pass": false,
+    "note": "api/deprecation_test.go lacks the SPDX line"
+   },
+   "s4_gone_410": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.750s"
+   },
+   "s4_gone_new_domain": {
+    "category": "superseded",
+    "session": 4,
+    "pass": false,
+    "note": "--- FAIL: TestBench (0.00s)\n    zz_bench_hidden_test.go:55: type \"https://errors.acme.dev/gone\" does not start with \"https://errors.acme.io/\"\nFAIL\nFAIL\tacme.example/toolkit/api\t0.393s\nFAIL"
+   },
+   "s4_limit_new_path": {
+    "category": "stale",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 5,
+    "pass": false,
+    "note": "no abstention in the reply"
+   },
+   "s5_429_problem": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.718s"
+   },
+   "s5_429_new_domain": {
+    "category": "superseded",
+    "session": 5,
+    "pass": false,
+    "note": "--- FAIL: TestBench (0.00s)\n    zz_bench_hidden_test.go:56: type \"https://errors.acme.dev/rate-limited\" does not start with \"https://errors.acme.io/\"\nFAIL\nFAIL\tacme.example/toolkit/api\t0.695s\nFAIL"
+   },
+   "s5_added_headers_ratelimit": {
+    "category": "decision",
+    "session": 5,
+    "pass": false,
+    "note": "FAIL\tacme.example/toolkit/api [build failed]\nFAIL\n# acme.example/toolkit/api [acme.example/toolkit/api.test]\napi/zz_bench_hidden_test.go:45:19: undefined: AddedHeaders"
+   },
+   "s5_route_option_registered": {
+    "category": "present",
+    "session": 5,
+    "pass": true,
+    "note": "documented"
+   },
+   "s5_docs_rate_limit": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "docs row"
+   },
+   "s5_test_comments_untold": {
+    "category": "habit",
+    "session": 5,
+    "pass": false,
+    "note": "api/ratelimit_test.go: no comment above func TestParseRate"
+   },
+   "s5_spdx_untold": {
+    "category": "decision",
+    "session": 5,
+    "pass": false,
+    "note": "api/ratelimit.go lacks the SPDX line"
+   },
+   "s6_slow_warning": {
+    "category": "told",
+    "session": 6,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.577s"
+   },
+   "s6_option_registered": {
+    "category": "present",
+    "session": 6,
+    "pass": true,
+    "note": "documented"
+   },
+   "s6_test_comments_untold": {
+    "category": "habit",
+    "session": 6,
+    "pass": false,
+    "note": "api/slow_test.go: no comment above func TestSlowRequestWarns"
+   },
+   "s6_spdx_untold": {
+    "category": "decision",
+    "session": 6,
+    "pass": false,
+    "note": "api/slow_test.go lacks the SPDX line"
+   },
+   "s6_cli_plain_error": {
+    "category": "adjacent",
+    "session": 6,
+    "pass": true,
+    "note": "exit=2 stderr='acme: unknown limit \"nope\"' stdout=''"
+   },
+   "s7_request_id": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.423s"
+   },
+   "s7_added_headers_request_id": {
+    "category": "decision",
+    "session": 7,
+    "pass": false,
+    "note": "FAIL\tacme.example/toolkit/api [build failed]\nFAIL\n# acme.example/toolkit/api [acme.example/toolkit/api.test]\napi/zz_bench_hidden_test.go:45:19: undefined: AddedHeaders"
+   },
+   "s7_max_body_413": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.402s"
+   },
+   "s7_413_new_domain": {
+    "category": "superseded",
+    "session": 7,
+    "pass": false,
+    "note": "--- FAIL: TestBench (0.00s)\n    zz_bench_hidden_test.go:54: type \"https://errors.acme.dev/payload-too-large\" does not start with \"https://errors.acme.io/\"\nFAIL\nFAIL\tacme.example/toolkit/api\t0.398s\nFAIL"
+   },
+   "s7_option_registered": {
+    "category": "present",
+    "session": 7,
+    "pass": true,
+    "note": "documented"
+   },
+   "s7_changelog": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "- `MaxBodyBytes` app option; larger request bodies answer 413 (`payload-too-large`).\n- Every response carries an `X-Requ"
+   },
+   "s7_test_comments_untold": {
+    "category": "habit",
+    "session": 7,
+    "pass": false,
+    "note": "api/bodylimit_test.go: no comment above func TestMaxBodyBytes"
+   },
+   "s7_spdx_untold": {
+    "category": "decision",
+    "session": 7,
+    "pass": false,
+    "note": "api/bodylimit_test.go lacks the SPDX line"
+   },
+   "s8_cors_header": {
+    "category": "told",
+    "session": 8,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.373s"
+   },
+   "s8_added_headers_cors": {
+    "category": "decision",
+    "session": 8,
+    "pass": false,
+    "note": "FAIL\tacme.example/toolkit/api [build failed]\nFAIL\n# acme.example/toolkit/api [acme.example/toolkit/api.test]\napi/zz_bench_hidden_test.go:45:19: undefined: AddedHeaders"
+   },
+   "s8_option_registered": {
+    "category": "present",
+    "session": 8,
+    "pass": true,
+    "note": "documented"
+   },
+   "s8_changelog_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": false,
+    "note": ""
+   },
+   "s8_limit_new_path_untold": {
+    "category": "stale",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 8,
+    "pass": false,
+    "note": "no abstention in the reply"
+   },
+   "s8_test_comments_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": false,
+    "note": "api/cors_test.go: no comment above func TestCORSAllowedOriginIsEchoed"
+   },
+   "s8_spdx_untold": {
+    "category": "decision",
+    "session": 8,
+    "pass": false,
+    "note": "api/cors_test.go lacks the SPDX line"
+   },
+   "s8_suite_lesson_kept": {
+    "category": "lesson",
+    "session": 8,
+    "pass": true,
+    "note": "0 team-suite runs without ACME_TEAM_SUITE=1 in sessions 2-8"
+   }
+  },
+  "cost_usd": 1.37,
+  "steps": 189,
+  "tokens": {
+   "input_tokens": 262,
+   "cache_creation_input_tokens": 178602,
+   "cache_read_input_tokens": 3149577,
+   "output_tokens": 57242
+  }
+ },
+ {
+  "arm": "none",
+  "trial": "3",
+  "complete": true,
+  "checks": {
+   "s1_deadline_504": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.474s"
+   },
+   "s1_deadline_problem_format": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.480s"
+   },
+   "s1_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.981s"
+   },
+   "s1_added_headers_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.373s"
+   },
+   "s1_option_registered": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "documented"
+   },
+   "s1_test_comments": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "3 new test functions"
+   },
+   "s2_query_keys_400": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.378s"
+   },
+   "s2_internal_exempt": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.414s"
+   },
+   "s2_option_registered": {
+    "category": "present",
+    "session": 2,
+    "pass": true,
+    "note": "documented"
+   },
+   "s2_test_comments": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "8 new test functions"
+   },
+   "s2_spdx": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s3_404_problem": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.376s"
+   },
+   "s3_default_header_limit": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.376s"
+   },
+   "s3_test_comments_untold": {
+    "category": "habit",
+    "session": 3,
+    "pass": false,
+    "note": "api/notfound_test.go: no comment above func TestDefault404IsProblem"
+   },
+   "s3_spdx_untold": {
+    "category": "decision",
+    "session": 3,
+    "pass": false,
+    "note": "api/notfound_test.go lacks the SPDX line"
+   },
+   "s4_deprecation_header": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.367s"
+   },
+   "s4_added_headers_deprecation": {
+    "category": "decision",
+    "session": 4,
+    "pass": false,
+    "note": "FAIL\tacme.example/toolkit/api [build failed]\nFAIL\n# acme.example/toolkit/api [acme.example/toolkit/api.test]\napi/zz_bench_hidden_test.go:45:19: undefined: AddedHeaders"
+   },
+   "s4_route_option_registered": {
+    "category": "present",
+    "session": 4,
+    "pass": true,
+    "note": "documented"
+   },
+   "s4_test_comments_untold": {
+    "category": "habit",
+    "session": 4,
+    "pass": false,
+    "note": "api/deprecation_test.go: no comment above func TestDeprecatedSinceSetsHeader"
+   },
+   "s4_spdx_untold": {
+    "category": "decision",
+    "session": 4,
+    "pass": false,
+    "note": "api/deprecation_test.go lacks the SPDX line"
+   },
+   "s4_gone_410": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.373s"
+   },
+   "s4_gone_new_domain": {
+    "category": "superseded",
+    "session": 4,
+    "pass": false,
+    "note": "--- FAIL: TestBench (0.00s)\n    zz_bench_hidden_test.go:55: type \"https://errors.acme.dev/gone\" does not start with \"https://errors.acme.io/\"\nFAIL\nFAIL\tacme.example/toolkit/api\t0.399s\nFAIL"
+   },
+   "s4_limit_new_path": {
+    "category": "stale",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 5,
+    "pass": false,
+    "note": "no abstention in the reply"
+   },
+   "s5_429_problem": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.375s"
+   },
+   "s5_429_new_domain": {
+    "category": "superseded",
+    "session": 5,
+    "pass": false,
+    "note": "--- FAIL: TestBench (0.00s)\n    zz_bench_hidden_test.go:56: type \"https://errors.acme.dev/rate-limited\" does not start with \"https://errors.acme.io/\"\nFAIL\nFAIL\tacme.example/toolkit/api\t0.360s\nFAIL"
+   },
+   "s5_added_headers_ratelimit": {
+    "category": "decision",
+    "session": 5,
+    "pass": false,
+    "note": "FAIL\tacme.example/toolkit/api [build failed]\nFAIL\n# acme.example/toolkit/api [acme.example/toolkit/api.test]\napi/zz_bench_hidden_test.go:45:19: undefined: AddedHeaders"
+   },
+   "s5_route_option_registered": {
+    "category": "present",
+    "session": 5,
+    "pass": true,
+    "note": "documented"
+   },
+   "s5_docs_rate_limit": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "docs row"
+   },
+   "s5_test_comments_untold": {
+    "category": "habit",
+    "session": 5,
+    "pass": false,
+    "note": "api/ratelimit_test.go: no comment above func TestRateLimitAnswers429AndCountsDown"
+   },
+   "s5_spdx_untold": {
+    "category": "decision",
+    "session": 5,
+    "pass": false,
+    "note": "api/ratelimit.go lacks the SPDX line"
+   },
+   "s6_slow_warning": {
+    "category": "told",
+    "session": 6,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.814s"
+   },
+   "s6_option_registered": {
+    "category": "present",
+    "session": 6,
+    "pass": true,
+    "note": "documented"
+   },
+   "s6_test_comments_untold": {
+    "category": "habit",
+    "session": 6,
+    "pass": false,
+    "note": "api/slow_test.go: no comment above func TestSlowRequestWarnLogsSlowRequest"
+   },
+   "s6_spdx_untold": {
+    "category": "decision",
+    "session": 6,
+    "pass": false,
+    "note": "api/slow_test.go lacks the SPDX line"
+   },
+   "s6_cli_plain_error": {
+    "category": "adjacent",
+    "session": 6,
+    "pass": true,
+    "note": "exit=2 stderr='acme: unknown limit \"nope\"' stdout=''"
+   },
+   "s7_request_id": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.762s"
+   },
+   "s7_added_headers_request_id": {
+    "category": "decision",
+    "session": 7,
+    "pass": false,
+    "note": "FAIL\tacme.example/toolkit/api [build failed]\nFAIL\n# acme.example/toolkit/api [acme.example/toolkit/api.test]\napi/zz_bench_hidden_test.go:45:19: undefined: AddedHeaders"
+   },
+   "s7_max_body_413": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.448s"
+   },
+   "s7_413_new_domain": {
+    "category": "superseded",
+    "session": 7,
+    "pass": false,
+    "note": "--- FAIL: TestBench (0.00s)\n    zz_bench_hidden_test.go:54: type \"https://errors.acme.dev/payload-too-large\" does not start with \"https://errors.acme.io/\"\nFAIL\nFAIL\tacme.example/toolkit/api\t0.481s\nFAIL"
+   },
+   "s7_option_registered": {
+    "category": "present",
+    "session": 7,
+    "pass": true,
+    "note": "documented"
+   },
+   "s7_changelog": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "- `MaxBodyBytes` app option; larger request bodies answer 413 (`payload-too-large`) before the handler runs.\n- Every res"
+   },
+   "s7_test_comments_untold": {
+    "category": "habit",
+    "session": 7,
+    "pass": false,
+    "note": "api/bodylimit_test.go: no comment above func TestBodyOverLimitRejected"
+   },
+   "s7_spdx_untold": {
+    "category": "decision",
+    "session": 7,
+    "pass": false,
+    "note": "api/bodylimit_test.go lacks the SPDX line"
+   },
+   "s8_cors_header": {
+    "category": "told",
+    "session": 8,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.373s"
+   },
+   "s8_added_headers_cors": {
+    "category": "decision",
+    "session": 8,
+    "pass": false,
+    "note": "FAIL\tacme.example/toolkit/api [build failed]\nFAIL\n# acme.example/toolkit/api [acme.example/toolkit/api.test]\napi/zz_bench_hidden_test.go:45:19: undefined: AddedHeaders"
+   },
+   "s8_option_registered": {
+    "category": "present",
+    "session": 8,
+    "pass": true,
+    "note": "documented"
+   },
+   "s8_changelog_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": false,
+    "note": ""
+   },
+   "s8_limit_new_path_untold": {
+    "category": "stale",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 8,
+    "pass": false,
+    "note": "no abstention in the reply"
+   },
+   "s8_test_comments_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": false,
+    "note": "api/cors_test.go: no comment above func TestCORSAllowedOriginEchoed"
+   },
+   "s8_spdx_untold": {
+    "category": "decision",
+    "session": 8,
+    "pass": false,
+    "note": "api/cors_test.go lacks the SPDX line"
+   },
+   "s8_suite_lesson_kept": {
+    "category": "lesson",
+    "session": 8,
+    "pass": true,
+    "note": "0 team-suite runs without ACME_TEAM_SUITE=1 in sessions 2-8"
+   }
+  },
+  "cost_usd": 1.283,
+  "steps": 177,
+  "tokens": {
+   "input_tokens": 258,
+   "cache_creation_input_tokens": 157965,
+   "cache_read_input_tokens": 3003244,
+   "output_tokens": 55098
+  }
+ },
+ {
+  "arm": "claude_md",
+  "trial": "1",
+  "complete": true,
+  "checks": {
+   "s1_deadline_504": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.649s"
+   },
+   "s1_deadline_problem_format": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.583s"
+   },
+   "s1_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.535s"
+   },
+   "s1_added_headers_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.565s"
+   },
+   "s1_option_registered": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "documented"
+   },
+   "s1_test_comments": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "4 new test functions"
+   },
+   "s2_query_keys_400": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.495s"
+   },
+   "s2_internal_exempt": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.370s"
+   },
+   "s2_option_registered": {
+    "category": "present",
+    "session": 2,
+    "pass": true,
+    "note": "documented"
+   },
+   "s2_test_comments": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "7 new test functions"
+   },
+   "s2_spdx": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s3_404_problem": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.575s"
+   },
+   "s3_default_header_limit": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.434s"
+   },
+   "s3_test_comments_untold": {
+    "category": "habit",
+    "session": 3,
+    "pass": true,
+    "note": "6 new test functions"
+   },
+   "s3_spdx_untold": {
+    "category": "decision",
+    "session": 3,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s4_deprecation_header": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.405s"
+   },
+   "s4_added_headers_deprecation": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.388s"
+   },
+   "s4_route_option_registered": {
+    "category": "present",
+    "session": 4,
+    "pass": true,
+    "note": "documented"
+   },
+   "s4_test_comments_untold": {
+    "category": "habit",
+    "session": 4,
+    "pass": true,
+    "note": "12 new test functions"
+   },
+   "s4_spdx_untold": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": "3 new files"
+   },
+   "s4_gone_410": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.389s"
+   },
+   "s4_gone_new_domain": {
+    "category": "superseded",
+    "session": 4,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.398s"
+   },
+   "s4_limit_new_path": {
+    "category": "stale",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 5,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s5_429_problem": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.398s"
+   },
+   "s5_429_new_domain": {
+    "category": "superseded",
+    "session": 5,
+    "pass": false,
+    "note": "--- FAIL: TestBench (0.00s)\n    zz_bench_hidden_test.go:56: type \"https://errors.acme.dev/rate-limited\" does not start with \"https://errors.acme.io/\"\nFAIL\nFAIL\tacme.example/toolkit/api\t0.693s\nFAIL"
+   },
+   "s5_added_headers_ratelimit": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.670s"
+   },
+   "s5_route_option_registered": {
+    "category": "present",
+    "session": 5,
+    "pass": true,
+    "note": "documented"
+   },
+   "s5_docs_rate_limit": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "docs row"
+   },
+   "s5_test_comments_untold": {
+    "category": "habit",
+    "session": 5,
+    "pass": true,
+    "note": "11 new test functions"
+   },
+   "s5_spdx_untold": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": "4 new files"
+   },
+   "s6_slow_warning": {
+    "category": "told",
+    "session": 6,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.585s"
+   },
+   "s6_option_registered": {
+    "category": "present",
+    "session": 6,
+    "pass": true,
+    "note": "documented"
+   },
+   "s6_test_comments_untold": {
+    "category": "habit",
+    "session": 6,
+    "pass": true,
+    "note": "5 new test functions"
+   },
+   "s6_spdx_untold": {
+    "category": "decision",
+    "session": 6,
+    "pass": true,
+    "note": "3 new files"
+   },
+   "s6_cli_plain_error": {
+    "category": "adjacent",
+    "session": 6,
+    "pass": true,
+    "note": "exit=2 stderr='acme: unknown limit \"nope\"' stdout=''"
+   },
+   "s7_request_id": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.399s"
+   },
+   "s7_added_headers_request_id": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.372s"
+   },
+   "s7_max_body_413": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.391s"
+   },
+   "s7_413_new_domain": {
+    "category": "superseded",
+    "session": 7,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.370s"
+   },
+   "s7_option_registered": {
+    "category": "present",
+    "session": 7,
+    "pass": true,
+    "note": "documented"
+   },
+   "s7_changelog": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "- `MaxBodyBytes` app option; larger request bodies answer 413 (`payload-too-large` problem).\n- Every response carries `X"
+   },
+   "s7_test_comments_untold": {
+    "category": "habit",
+    "session": 7,
+    "pass": true,
+    "note": "10 new test functions"
+   },
+   "s7_spdx_untold": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": "4 new files"
+   },
+   "s8_cors_header": {
+    "category": "told",
+    "session": 8,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.400s"
+   },
+   "s8_added_headers_cors": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.394s"
+   },
+   "s8_option_registered": {
+    "category": "present",
+    "session": 8,
+    "pass": true,
+    "note": "documented"
+   },
+   "s8_changelog_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": false,
+    "note": ""
+   },
+   "s8_limit_new_path_untold": {
+    "category": "stale",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 8,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s8_test_comments_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": true,
+    "note": "8 new test functions"
+   },
+   "s8_spdx_untold": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": "3 new files"
+   },
+   "s8_suite_lesson_kept": {
+    "category": "lesson",
+    "session": 8,
+    "pass": true,
+    "note": "0 team-suite runs without ACME_TEAM_SUITE=1 in sessions 2-8"
+   }
+  },
+  "cost_usd": 2.118,
+  "steps": 163,
+  "tokens": {
+   "input_tokens": 250,
+   "cache_creation_input_tokens": 360411,
+   "cache_read_input_tokens": 5257867,
+   "output_tokens": 64727
+  }
+ },
+ {
+  "arm": "claude_md",
+  "trial": "2",
+  "complete": true,
+  "checks": {
+   "s1_deadline_504": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.491s"
+   },
+   "s1_deadline_problem_format": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.484s"
+   },
+   "s1_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.503s"
+   },
+   "s1_added_headers_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.365s"
+   },
+   "s1_option_registered": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "documented"
+   },
+   "s1_test_comments": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "4 new test functions"
+   },
+   "s2_query_keys_400": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.396s"
+   },
+   "s2_internal_exempt": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.397s"
+   },
+   "s2_option_registered": {
+    "category": "present",
+    "session": 2,
+    "pass": true,
+    "note": "documented"
+   },
+   "s2_test_comments": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "8 new test functions"
+   },
+   "s2_spdx": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s3_404_problem": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.399s"
+   },
+   "s3_default_header_limit": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.397s"
+   },
+   "s3_test_comments_untold": {
+    "category": "habit",
+    "session": 3,
+    "pass": true,
+    "note": "6 new test functions"
+   },
+   "s3_spdx_untold": {
+    "category": "decision",
+    "session": 3,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s4_deprecation_header": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.396s"
+   },
+   "s4_added_headers_deprecation": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.365s"
+   },
+   "s4_route_option_registered": {
+    "category": "present",
+    "session": 4,
+    "pass": true,
+    "note": "documented"
+   },
+   "s4_test_comments_untold": {
+    "category": "habit",
+    "session": 4,
+    "pass": true,
+    "note": "11 new test functions"
+   },
+   "s4_spdx_untold": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s4_gone_410": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.401s"
+   },
+   "s4_gone_new_domain": {
+    "category": "superseded",
+    "session": 4,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.381s"
+   },
+   "s4_limit_new_path": {
+    "category": "stale",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 5,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s5_429_problem": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.397s"
+   },
+   "s5_429_new_domain": {
+    "category": "superseded",
+    "session": 5,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.395s"
+   },
+   "s5_added_headers_ratelimit": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.378s"
+   },
+   "s5_route_option_registered": {
+    "category": "present",
+    "session": 5,
+    "pass": true,
+    "note": "documented"
+   },
+   "s5_docs_rate_limit": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "docs row"
+   },
+   "s5_test_comments_untold": {
+    "category": "habit",
+    "session": 5,
+    "pass": true,
+    "note": "11 new test functions"
+   },
+   "s5_spdx_untold": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": "4 new files"
+   },
+   "s6_slow_warning": {
+    "category": "told",
+    "session": 6,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.908s"
+   },
+   "s6_option_registered": {
+    "category": "present",
+    "session": 6,
+    "pass": true,
+    "note": "documented"
+   },
+   "s6_test_comments_untold": {
+    "category": "habit",
+    "session": 6,
+    "pass": true,
+    "note": "6 new test functions"
+   },
+   "s6_spdx_untold": {
+    "category": "decision",
+    "session": 6,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s6_cli_plain_error": {
+    "category": "adjacent",
+    "session": 6,
+    "pass": true,
+    "note": "exit=2 stderr='acme: unknown limit \"nope\"' stdout=''"
+   },
+   "s7_request_id": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.720s"
+   },
+   "s7_added_headers_request_id": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.379s"
+   },
+   "s7_max_body_413": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.372s"
+   },
+   "s7_413_new_domain": {
+    "category": "superseded",
+    "session": 7,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.365s"
+   },
+   "s7_option_registered": {
+    "category": "present",
+    "session": 7,
+    "pass": true,
+    "note": "documented"
+   },
+   "s7_changelog": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "- `MaxBodyBytes` app option; larger request bodies answer 413 `payload-too-large` before the handler runs.\n- Every respo"
+   },
+   "s7_test_comments_untold": {
+    "category": "habit",
+    "session": 7,
+    "pass": true,
+    "note": "9 new test functions"
+   },
+   "s7_spdx_untold": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": "3 new files"
+   },
+   "s8_cors_header": {
+    "category": "told",
+    "session": 8,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.757s"
+   },
+   "s8_added_headers_cors": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.390s"
+   },
+   "s8_option_registered": {
+    "category": "present",
+    "session": 8,
+    "pass": true,
+    "note": "documented"
+   },
+   "s8_changelog_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": false,
+    "note": ""
+   },
+   "s8_limit_new_path_untold": {
+    "category": "stale",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 8,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s8_test_comments_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": true,
+    "note": "7 new test functions"
+   },
+   "s8_spdx_untold": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s8_suite_lesson_kept": {
+    "category": "lesson",
+    "session": 8,
+    "pass": true,
+    "note": "0 team-suite runs without ACME_TEAM_SUITE=1 in sessions 2-8"
+   }
+  },
+  "cost_usd": 2.23,
+  "steps": 152,
+  "tokens": {
+   "input_tokens": 236,
+   "cache_creation_input_tokens": 396245,
+   "cache_read_input_tokens": 5201376,
+   "output_tokens": 67840
+  }
+ },
+ {
+  "arm": "claude_md",
+  "trial": "3",
+  "complete": true,
+  "checks": {
+   "s1_deadline_504": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.494s"
+   },
+   "s1_deadline_problem_format": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.473s"
+   },
+   "s1_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.504s"
+   },
+   "s1_added_headers_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.389s"
+   },
+   "s1_option_registered": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "documented"
+   },
+   "s1_test_comments": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "3 new test functions"
+   },
+   "s2_query_keys_400": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.377s"
+   },
+   "s2_internal_exempt": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.376s"
+   },
+   "s2_option_registered": {
+    "category": "present",
+    "session": 2,
+    "pass": true,
+    "note": "documented"
+   },
+   "s2_test_comments": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "7 new test functions"
+   },
+   "s2_spdx": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s3_404_problem": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.375s"
+   },
+   "s3_default_header_limit": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.364s"
+   },
+   "s3_test_comments_untold": {
+    "category": "habit",
+    "session": 3,
+    "pass": true,
+    "note": "5 new test functions"
+   },
+   "s3_spdx_untold": {
+    "category": "decision",
+    "session": 3,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s4_deprecation_header": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.377s"
+   },
+   "s4_added_headers_deprecation": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.379s"
+   },
+   "s4_route_option_registered": {
+    "category": "present",
+    "session": 4,
+    "pass": true,
+    "note": "documented"
+   },
+   "s4_test_comments_untold": {
+    "category": "habit",
+    "session": 4,
+    "pass": true,
+    "note": "11 new test functions"
+   },
+   "s4_spdx_untold": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": "3 new files"
+   },
+   "s4_gone_410": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.374s"
+   },
+   "s4_gone_new_domain": {
+    "category": "superseded",
+    "session": 4,
+    "pass": false,
+    "note": "--- FAIL: TestBench (0.00s)\n    zz_bench_hidden_test.go:55: type \"https://errors.acme.dev/gone\" does not start with \"https://errors.acme.io/\"\nFAIL\nFAIL\tacme.example/toolkit/api\t0.389s\nFAIL"
+   },
+   "s4_limit_new_path": {
+    "category": "stale",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 5,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s5_429_problem": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.392s"
+   },
+   "s5_429_new_domain": {
+    "category": "superseded",
+    "session": 5,
+    "pass": false,
+    "note": "--- FAIL: TestBench (0.00s)\n    zz_bench_hidden_test.go:56: type \"https://errors.acme.dev/rate-limited\" does not start with \"https://errors.acme.io/\"\nFAIL\nFAIL\tacme.example/toolkit/api\t0.378s\nFAIL"
+   },
+   "s5_added_headers_ratelimit": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.378s"
+   },
+   "s5_route_option_registered": {
+    "category": "present",
+    "session": 5,
+    "pass": true,
+    "note": "documented"
+   },
+   "s5_docs_rate_limit": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "docs row"
+   },
+   "s5_test_comments_untold": {
+    "category": "habit",
+    "session": 5,
+    "pass": true,
+    "note": "14 new test functions"
+   },
+   "s5_spdx_untold": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": "4 new files"
+   },
+   "s6_slow_warning": {
+    "category": "told",
+    "session": 6,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.594s"
+   },
+   "s6_option_registered": {
+    "category": "present",
+    "session": 6,
+    "pass": true,
+    "note": "documented"
+   },
+   "s6_test_comments_untold": {
+    "category": "habit",
+    "session": 6,
+    "pass": true,
+    "note": "8 new test functions"
+   },
+   "s6_spdx_untold": {
+    "category": "decision",
+    "session": 6,
+    "pass": true,
+    "note": "4 new files"
+   },
+   "s6_cli_plain_error": {
+    "category": "adjacent",
+    "session": 6,
+    "pass": true,
+    "note": "exit=2 stderr='acme: unknown limit \"nope\"' stdout=''"
+   },
+   "s7_request_id": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.374s"
+   },
+   "s7_added_headers_request_id": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.386s"
+   },
+   "s7_max_body_413": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.550s"
+   },
+   "s7_413_new_domain": {
+    "category": "superseded",
+    "session": 7,
+    "pass": false,
+    "note": "--- FAIL: TestBench (0.00s)\n    zz_bench_hidden_test.go:54: type \"https://errors.acme.dev/payload-too-large\" does not start with \"https://errors.acme.io/\"\nFAIL\nFAIL\tacme.example/toolkit/api\t0.414s\nFAIL"
+   },
+   "s7_option_registered": {
+    "category": "present",
+    "session": 7,
+    "pass": true,
+    "note": "documented"
+   },
+   "s7_changelog": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "- `MaxBodyBytes` app option; larger request bodies answer 413 (`payload-too-large`).\n\n- Every response carries `X-Reques"
+   },
+   "s7_test_comments_untold": {
+    "category": "habit",
+    "session": 7,
+    "pass": true,
+    "note": "8 new test functions"
+   },
+   "s7_spdx_untold": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": "4 new files"
+   },
+   "s8_cors_header": {
+    "category": "told",
+    "session": 8,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.524s"
+   },
+   "s8_added_headers_cors": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.418s"
+   },
+   "s8_option_registered": {
+    "category": "present",
+    "session": 8,
+    "pass": true,
+    "note": "documented"
+   },
+   "s8_changelog_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": false,
+    "note": ""
+   },
+   "s8_limit_new_path_untold": {
+    "category": "stale",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 8,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s8_test_comments_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": true,
+    "note": "6 new test functions"
+   },
+   "s8_spdx_untold": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": "3 new files"
+   },
+   "s8_suite_lesson_kept": {
+    "category": "lesson",
+    "session": 8,
+    "pass": true,
+    "note": "0 team-suite runs without ACME_TEAM_SUITE=1 in sessions 2-8"
+   }
+  },
+  "cost_usd": 2.03,
+  "steps": 149,
+  "tokens": {
+   "input_tokens": 220,
+   "cache_creation_input_tokens": 350859,
+   "cache_read_input_tokens": 4598512,
+   "output_tokens": 65392
+  }
+ },
+ {
+  "arm": "pathrule",
+  "trial": "1",
+  "complete": true,
+  "checks": {
+   "s1_deadline_504": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.472s"
+   },
+   "s1_deadline_problem_format": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.469s"
+   },
+   "s1_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.791s"
+   },
+   "s1_added_headers_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.375s"
+   },
+   "s1_option_registered": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "documented"
+   },
+   "s1_test_comments": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "4 new test functions"
+   },
+   "s2_query_keys_400": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.370s"
+   },
+   "s2_internal_exempt": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.392s"
+   },
+   "s2_option_registered": {
+    "category": "present",
+    "session": 2,
+    "pass": true,
+    "note": "documented"
+   },
+   "s2_test_comments": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "6 new test functions"
+   },
+   "s2_spdx": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s3_404_problem": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.664s"
+   },
+   "s3_default_header_limit": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.670s"
+   },
+   "s3_test_comments_untold": {
+    "category": "habit",
+    "session": 3,
+    "pass": true,
+    "note": "6 new test functions"
+   },
+   "s3_spdx_untold": {
+    "category": "decision",
+    "session": 3,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s4_deprecation_header": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.418s"
+   },
+   "s4_added_headers_deprecation": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.407s"
+   },
+   "s4_route_option_registered": {
+    "category": "present",
+    "session": 4,
+    "pass": true,
+    "note": "documented"
+   },
+   "s4_test_comments_untold": {
+    "category": "habit",
+    "session": 4,
+    "pass": true,
+    "note": "12 new test functions"
+   },
+   "s4_spdx_untold": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s4_gone_410": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.388s"
+   },
+   "s4_gone_new_domain": {
+    "category": "superseded",
+    "session": 4,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.396s"
+   },
+   "s4_limit_new_path": {
+    "category": "stale",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 5,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s5_429_problem": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.374s"
+   },
+   "s5_429_new_domain": {
+    "category": "superseded",
+    "session": 5,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.976s"
+   },
+   "s5_added_headers_ratelimit": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.402s"
+   },
+   "s5_route_option_registered": {
+    "category": "present",
+    "session": 5,
+    "pass": true,
+    "note": "documented"
+   },
+   "s5_docs_rate_limit": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "docs row"
+   },
+   "s5_test_comments_untold": {
+    "category": "habit",
+    "session": 5,
+    "pass": true,
+    "note": "15 new test functions"
+   },
+   "s5_spdx_untold": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": "4 new files"
+   },
+   "s6_slow_warning": {
+    "category": "told",
+    "session": 6,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.612s"
+   },
+   "s6_option_registered": {
+    "category": "present",
+    "session": 6,
+    "pass": true,
+    "note": "documented"
+   },
+   "s6_test_comments_untold": {
+    "category": "habit",
+    "session": 6,
+    "pass": true,
+    "note": "6 new test functions"
+   },
+   "s6_spdx_untold": {
+    "category": "decision",
+    "session": 6,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s6_cli_plain_error": {
+    "category": "adjacent",
+    "session": 6,
+    "pass": true,
+    "note": "exit=2 stderr='acme: unknown limit \"nope\"' stdout=''"
+   },
+   "s7_request_id": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.380s"
+   },
+   "s7_added_headers_request_id": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.374s"
+   },
+   "s7_max_body_413": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.369s"
+   },
+   "s7_413_new_domain": {
+    "category": "superseded",
+    "session": 7,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.367s"
+   },
+   "s7_option_registered": {
+    "category": "present",
+    "session": 7,
+    "pass": true,
+    "note": "documented"
+   },
+   "s7_changelog": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "- `MaxBodyBytes` app option; larger request bodies answer 413 in the problem format (`payload-too-large`).\n- Every respo"
+   },
+   "s7_test_comments_untold": {
+    "category": "habit",
+    "session": 7,
+    "pass": true,
+    "note": "8 new test functions"
+   },
+   "s7_spdx_untold": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": "3 new files"
+   },
+   "s8_cors_header": {
+    "category": "told",
+    "session": 8,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.378s"
+   },
+   "s8_added_headers_cors": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.405s"
+   },
+   "s8_option_registered": {
+    "category": "present",
+    "session": 8,
+    "pass": true,
+    "note": "documented"
+   },
+   "s8_changelog_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": true,
+    "note": "- `max-body-bytes-default` platform limit (1048576); `acme limits max-body-bytes-default` prints it.\n- `CORSOrigins` app"
+   },
+   "s8_limit_new_path_untold": {
+    "category": "stale",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 8,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s8_test_comments_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": true,
+    "note": "7 new test functions"
+   },
+   "s8_spdx_untold": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s8_suite_lesson_kept": {
+    "category": "lesson",
+    "session": 8,
+    "pass": true,
+    "note": "0 team-suite runs without ACME_TEAM_SUITE=1 in sessions 2-8"
+   }
+  },
+  "cost_usd": 1.856,
+  "steps": 165,
+  "tokens": {
+   "input_tokens": 246,
+   "cache_creation_input_tokens": 295462,
+   "cache_read_input_tokens": 4276907,
+   "output_tokens": 65007
+  }
+ },
+ {
+  "arm": "pathrule",
+  "trial": "2",
+  "complete": true,
+  "checks": {
+   "s1_deadline_504": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.606s"
+   },
+   "s1_deadline_problem_format": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.474s"
+   },
+   "s1_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.477s"
+   },
+   "s1_added_headers_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.369s"
+   },
+   "s1_option_registered": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "documented"
+   },
+   "s1_test_comments": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "4 new test functions"
+   },
+   "s2_query_keys_400": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.401s"
+   },
+   "s2_internal_exempt": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.575s"
+   },
+   "s2_option_registered": {
+    "category": "present",
+    "session": 2,
+    "pass": true,
+    "note": "documented"
+   },
+   "s2_test_comments": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "4 new test functions"
+   },
+   "s2_spdx": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s3_404_problem": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.897s"
+   },
+   "s3_default_header_limit": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.414s"
+   },
+   "s3_test_comments_untold": {
+    "category": "habit",
+    "session": 3,
+    "pass": true,
+    "note": "6 new test functions"
+   },
+   "s3_spdx_untold": {
+    "category": "decision",
+    "session": 3,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s4_deprecation_header": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.575s"
+   },
+   "s4_added_headers_deprecation": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.377s"
+   },
+   "s4_route_option_registered": {
+    "category": "present",
+    "session": 4,
+    "pass": true,
+    "note": "documented"
+   },
+   "s4_test_comments_untold": {
+    "category": "habit",
+    "session": 4,
+    "pass": true,
+    "note": "11 new test functions"
+   },
+   "s4_spdx_untold": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": "3 new files"
+   },
+   "s4_gone_410": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.581s"
+   },
+   "s4_gone_new_domain": {
+    "category": "superseded",
+    "session": 4,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.674s"
+   },
+   "s4_limit_new_path": {
+    "category": "stale",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 5,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s5_429_problem": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.669s"
+   },
+   "s5_429_new_domain": {
+    "category": "superseded",
+    "session": 5,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.395s"
+   },
+   "s5_added_headers_ratelimit": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.370s"
+   },
+   "s5_route_option_registered": {
+    "category": "present",
+    "session": 5,
+    "pass": true,
+    "note": "documented"
+   },
+   "s5_docs_rate_limit": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "docs row"
+   },
+   "s5_test_comments_untold": {
+    "category": "habit",
+    "session": 5,
+    "pass": true,
+    "note": "10 new test functions"
+   },
+   "s5_spdx_untold": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": "3 new files"
+   },
+   "s6_slow_warning": {
+    "category": "told",
+    "session": 6,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.579s"
+   },
+   "s6_option_registered": {
+    "category": "present",
+    "session": 6,
+    "pass": true,
+    "note": "documented"
+   },
+   "s6_test_comments_untold": {
+    "category": "habit",
+    "session": 6,
+    "pass": true,
+    "note": "4 new test functions"
+   },
+   "s6_spdx_untold": {
+    "category": "decision",
+    "session": 6,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s6_cli_plain_error": {
+    "category": "adjacent",
+    "session": 6,
+    "pass": true,
+    "note": "exit=2 stderr='acme: unknown limit \"nope\"' stdout=''"
+   },
+   "s7_request_id": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.410s"
+   },
+   "s7_added_headers_request_id": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.376s"
+   },
+   "s7_max_body_413": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.377s"
+   },
+   "s7_413_new_domain": {
+    "category": "superseded",
+    "session": 7,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.372s"
+   },
+   "s7_option_registered": {
+    "category": "present",
+    "session": 7,
+    "pass": true,
+    "note": "documented"
+   },
+   "s7_changelog": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "- `MaxBodyBytes` app option; oversized bodies answer 413 with problem slug `payload-too-large`.\n- Every response carries"
+   },
+   "s7_test_comments_untold": {
+    "category": "habit",
+    "session": 7,
+    "pass": true,
+    "note": "9 new test functions"
+   },
+   "s7_spdx_untold": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": "3 new files"
+   },
+   "s8_cors_header": {
+    "category": "told",
+    "session": 8,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.465s"
+   },
+   "s8_added_headers_cors": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.371s"
+   },
+   "s8_option_registered": {
+    "category": "present",
+    "session": 8,
+    "pass": true,
+    "note": "documented"
+   },
+   "s8_changelog_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": true,
+    "note": "- `max-body-bytes-default` platform limit (1048576).\n- `CORSOrigins` app option; listed origins get `Access-Control-Allo"
+   },
+   "s8_limit_new_path_untold": {
+    "category": "stale",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 8,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s8_test_comments_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": true,
+    "note": "7 new test functions"
+   },
+   "s8_spdx_untold": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s8_suite_lesson_kept": {
+    "category": "lesson",
+    "session": 8,
+    "pass": true,
+    "note": "0 team-suite runs without ACME_TEAM_SUITE=1 in sessions 2-8"
+   }
+  },
+  "cost_usd": 1.941,
+  "steps": 166,
+  "tokens": {
+   "input_tokens": 256,
+   "cache_creation_input_tokens": 306427,
+   "cache_read_input_tokens": 4614344,
+   "output_tokens": 67443
+  }
+ },
+ {
+  "arm": "pathrule",
+  "trial": "3",
+  "complete": true,
+  "checks": {
+   "s1_deadline_504": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.475s"
+   },
+   "s1_deadline_problem_format": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.475s"
+   },
+   "s1_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.472s"
+   },
+   "s1_added_headers_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.375s"
+   },
+   "s1_option_registered": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "documented"
+   },
+   "s1_test_comments": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "4 new test functions"
+   },
+   "s2_query_keys_400": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.829s"
+   },
+   "s2_internal_exempt": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.374s"
+   },
+   "s2_option_registered": {
+    "category": "present",
+    "session": 2,
+    "pass": true,
+    "note": "documented"
+   },
+   "s2_test_comments": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "5 new test functions"
+   },
+   "s2_spdx": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s3_404_problem": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.406s"
+   },
+   "s3_default_header_limit": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.368s"
+   },
+   "s3_test_comments_untold": {
+    "category": "habit",
+    "session": 3,
+    "pass": true,
+    "note": "4 new test functions"
+   },
+   "s3_spdx_untold": {
+    "category": "decision",
+    "session": 3,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s4_deprecation_header": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.369s"
+   },
+   "s4_added_headers_deprecation": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.367s"
+   },
+   "s4_route_option_registered": {
+    "category": "present",
+    "session": 4,
+    "pass": true,
+    "note": "documented"
+   },
+   "s4_test_comments_untold": {
+    "category": "habit",
+    "session": 4,
+    "pass": true,
+    "note": "11 new test functions"
+   },
+   "s4_spdx_untold": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": "3 new files"
+   },
+   "s4_gone_410": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.387s"
+   },
+   "s4_gone_new_domain": {
+    "category": "superseded",
+    "session": 4,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.444s"
+   },
+   "s4_limit_new_path": {
+    "category": "stale",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 5,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s5_429_problem": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.381s"
+   },
+   "s5_429_new_domain": {
+    "category": "superseded",
+    "session": 5,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.409s"
+   },
+   "s5_added_headers_ratelimit": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.453s"
+   },
+   "s5_route_option_registered": {
+    "category": "present",
+    "session": 5,
+    "pass": true,
+    "note": "documented"
+   },
+   "s5_docs_rate_limit": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "docs row"
+   },
+   "s5_test_comments_untold": {
+    "category": "habit",
+    "session": 5,
+    "pass": true,
+    "note": "13 new test functions"
+   },
+   "s5_spdx_untold": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": "4 new files"
+   },
+   "s6_slow_warning": {
+    "category": "told",
+    "session": 6,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.606s"
+   },
+   "s6_option_registered": {
+    "category": "present",
+    "session": 6,
+    "pass": true,
+    "note": "documented"
+   },
+   "s6_test_comments_untold": {
+    "category": "habit",
+    "session": 6,
+    "pass": true,
+    "note": "4 new test functions"
+   },
+   "s6_spdx_untold": {
+    "category": "decision",
+    "session": 6,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s6_cli_plain_error": {
+    "category": "adjacent",
+    "session": 6,
+    "pass": true,
+    "note": "exit=2 stderr='acme: unknown limit \"nope\"' stdout=''"
+   },
+   "s7_request_id": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.377s"
+   },
+   "s7_added_headers_request_id": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.366s"
+   },
+   "s7_max_body_413": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.373s"
+   },
+   "s7_413_new_domain": {
+    "category": "superseded",
+    "session": 7,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.390s"
+   },
+   "s7_option_registered": {
+    "category": "present",
+    "session": 7,
+    "pass": true,
+    "note": "documented"
+   },
+   "s7_changelog": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "- `MaxBodyBytes` app option; oversized request bodies answer 413 (`payload-too-large`) in the problem format.\n\n- Every r"
+   },
+   "s7_test_comments_untold": {
+    "category": "habit",
+    "session": 7,
+    "pass": true,
+    "note": "7 new test functions"
+   },
+   "s7_spdx_untold": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s8_cors_header": {
+    "category": "told",
+    "session": 8,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.367s"
+   },
+   "s8_added_headers_cors": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": "ok  \tacme.example/toolkit/api\t0.662s"
+   },
+   "s8_option_registered": {
+    "category": "present",
+    "session": 8,
+    "pass": true,
+    "note": "documented"
+   },
+   "s8_changelog_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": true,
+    "note": "- `CORSOrigins` app option; listed origins get `Access-Control-Allow-Origin`."
+   },
+   "s8_limit_new_path_untold": {
+    "category": "stale",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 8,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s8_test_comments_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": true,
+    "note": "8 new test functions"
+   },
+   "s8_spdx_untold": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s8_suite_lesson_kept": {
+    "category": "lesson",
+    "session": 8,
+    "pass": true,
+    "note": "0 team-suite runs without ACME_TEAM_SUITE=1 in sessions 2-8"
+   }
+  },
+  "cost_usd": 1.94,
+  "steps": 187,
+  "tokens": {
+   "input_tokens": 246,
+   "cache_creation_input_tokens": 311569,
+   "cache_read_input_tokens": 4444930,
+   "output_tokens": 67702
+  }
+ }
+]

@@ -1,0 +1,53 @@
+{
+  "session": 4,
+  "checks": {
+    "s4_deprecation_header": {
+      "category": "told",
+      "session": 4,
+      "pass": true,
+      "note": "ok  \tacme.example/toolkit/api\t0.405s"
+    },
+    "s4_added_headers_deprecation": {
+      "category": "decision",
+      "session": 4,
+      "pass": false,
+      "note": "FAIL\tacme.example/toolkit/api [build failed]\nFAIL\n# acme.example/toolkit/api [acme.example/toolkit/api.test]\napi/zz_bench_hidden_test.go:45:19: undefined: AddedHeaders"
+    },
+    "s4_route_option_registered": {
+      "category": "present",
+      "session": 4,
+      "pass": true,
+      "note": "documented"
+    },
+    "s4_test_comments_untold": {
+      "category": "habit",
+      "session": 4,
+      "pass": false,
+      "note": "api/deprecation_test.go: no comment above func TestDeprecatedSinceSetsHeader"
+    },
+    "s4_spdx_untold": {
+      "category": "decision",
+      "session": 4,
+      "pass": false,
+      "note": "api/deprecation_test.go lacks the SPDX line"
+    },
+    "s4_gone_410": {
+      "category": "told",
+      "session": 4,
+      "pass": true,
+      "note": "ok  \tacme.example/toolkit/api\t0.750s"
+    },
+    "s4_gone_new_domain": {
+      "category": "superseded",
+      "session": 4,
+      "pass": false,
+      "note": "--- FAIL: TestBench (0.00s)\n    zz_bench_hidden_test.go:55: type \"https://errors.acme.dev/gone\" does not start with \"https://errors.acme.io/\"\nFAIL\nFAIL\tacme.example/toolkit/api\t0.393s\nFAIL"
+    },
+    "s4_limit_new_path": {
+      "category": "stale",
+      "session": 4,
+      "pass": true,
+      "note": "ok"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "session": 1,
+  "checks": {
+    "s1_deadline_504": {
+      "category": "told",
+      "session": 1,
+      "pass": true,
+      "note": "ok  \tacme.example/toolkit/api\t0.649s"
+    },
+    "s1_deadline_problem_format": {
+      "category": "present",
+      "session": 1,
+      "pass": true,
+      "note": "ok  \tacme.example/toolkit/api\t0.583s"
+    },
+    "s1_retry_after": {
+      "category": "told",
+      "session": 1,
+      "pass": true,
+      "note": "ok  \tacme.example/toolkit/api\t0.535s"
+    },
+    "s1_added_headers_retry_after": {
+      "category": "told",
+      "session": 1,
+      "pass": true,
+      "note": "ok  \tacme.example/toolkit/api\t0.565s"
+    },
+    "s1_option_registered": {
+      "category": "present",
+      "session": 1,
+      "pass": true,
+      "note": "documented"
+    },
+    "s1_test_comments": {
+      "category": "told",
+      "session": 1,
+      "pass": true,
+      "note": "4 new test functions"
+    }
+  }
+}
