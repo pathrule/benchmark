@@ -1,0 +1,202 @@
+{
+  "sessionId": "be353ffa-828e-4073-9915-606d7b84331b",
+  "name": "S4-deprecation",
+  "rows": [
+    {
+      "s": 4,
+      "t": 1,
+      "exit": 0,
+      "wallMs": 20832,
+      "apiMs": 20031,
+      "cost": 0.1606349,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 44883,
+        "cache_read_input_tokens": 227374,
+        "output_tokens": 2567,
+        "output_tokens_details": {
+          "thinking_tokens": 252
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 44883
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 8,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Read": 3,
+        "Bash": 4
+      }
+    },
+    {
+      "s": 4,
+      "t": 2,
+      "exit": 0,
+      "wallMs": 10778,
+      "apiMs": 30332,
+      "cost": 0.030876000000000015,
+      "usage": {
+        "input_tokens": 4,
+        "cache_creation_input_tokens": 1859,
+        "cache_read_input_tokens": 117605,
+        "output_tokens": 1446,
+        "output_tokens_details": {
+          "thinking_tokens": 131
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1859
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 2,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 1
+      }
+    },
+    {
+      "s": 4,
+      "t": 3,
+      "exit": 0,
+      "wallMs": 17468,
+      "apiMs": 0,
+      "cost": 0.03945950000000001,
+      "usage": {
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 0,
+      "subtype": "success",
+      "isError": false,
+      "tools": {}
+    },
+    {
+      "s": 4,
+      "t": 4,
+      "exit": 0,
+      "wallMs": 48150,
+      "apiMs": 94161,
+      "cost": 0.22885130000000004,
+      "usage": {
+        "input_tokens": 22,
+        "cache_creation_input_tokens": 47789,
+        "cache_read_input_tokens": 567848,
+        "output_tokens": 5255,
+        "output_tokens_details": {
+          "thinking_tokens": 992
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 47789
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 11,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 10
+      }
+    }
+  ],
+  "checks": {
+    "session": 4,
+    "checks": {
+      "s4_deprecation_header": {
+        "category": "told",
+        "session": 4,
+        "pass": true,
+        "note": ""
+      },
+      "s4_added_headers_deprecation": {
+        "category": "decision",
+        "session": 4,
+        "pass": true,
+        "note": ""
+      },
+      "s4_route_option_registered": {
+        "category": "present",
+        "session": 4,
+        "pass": true,
+        "note": "documented"
+      },
+      "s4_docstrings_untold": {
+        "category": "habit",
+        "session": 4,
+        "pass": false,
+        "note": "tests/test_deprecated_since.py:test_header_value_is_the_given_date has no docstring"
+      },
+      "s4_spdx_untold": {
+        "category": "decision",
+        "session": 4,
+        "pass": true,
+        "note": "4 new files"
+      },
+      "s4_gone_410": {
+        "category": "told",
+        "session": 4,
+        "pass": true,
+        "note": ""
+      },
+      "s4_gone_new_domain": {
+        "category": "superseded",
+        "session": 4,
+        "pass": true,
+        "note": ""
+      },
+      "s4_limit_new_path": {
+        "category": "stale",
+        "session": 4,
+        "pass": true,
+        "note": "ok"
+      }
+    }
+  }
+}

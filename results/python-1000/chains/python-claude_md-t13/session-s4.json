@@ -1,0 +1,202 @@
+{
+  "sessionId": "ca3532b3-4411-47a2-afa2-2cf87d1c8cc5",
+  "name": "S4-deprecation",
+  "rows": [
+    {
+      "s": 4,
+      "t": 1,
+      "exit": 0,
+      "wallMs": 23314,
+      "apiMs": 22521,
+      "cost": 0.1626019,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 44733,
+        "cache_read_input_tokens": 227194,
+        "output_tokens": 2803,
+        "output_tokens_details": {
+          "thinking_tokens": 503
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 44733
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 8,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Read": 3,
+        "Bash": 4
+      }
+    },
+    {
+      "s": 4,
+      "t": 2,
+      "exit": 0,
+      "wallMs": 13270,
+      "apiMs": 35295,
+      "cost": 0.03568669999999999,
+      "usage": {
+        "input_tokens": 4,
+        "cache_creation_input_tokens": 2255,
+        "cache_read_input_tokens": 117412,
+        "output_tokens": 1830,
+        "output_tokens_details": {
+          "thinking_tokens": 348
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 2255
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 2,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 1
+      }
+    },
+    {
+      "s": 4,
+      "t": 3,
+      "exit": 0,
+      "wallMs": 16884,
+      "apiMs": 0,
+      "cost": 0.041137199999999985,
+      "usage": {
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 0,
+      "subtype": "success",
+      "isError": false,
+      "tools": {}
+    },
+    {
+      "s": 4,
+      "t": 4,
+      "exit": 0,
+      "wallMs": 43122,
+      "apiMs": 93996,
+      "cost": 0.224397,
+      "usage": {
+        "input_tokens": 18,
+        "cache_creation_input_tokens": 48674,
+        "cache_read_input_tokens": 465960,
+        "output_tokens": 5608,
+        "output_tokens_details": {
+          "thinking_tokens": 1381
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 48674
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 10,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 9
+      }
+    }
+  ],
+  "checks": {
+    "session": 4,
+    "checks": {
+      "s4_deprecation_header": {
+        "category": "told",
+        "session": 4,
+        "pass": true,
+        "note": ""
+      },
+      "s4_added_headers_deprecation": {
+        "category": "decision",
+        "session": 4,
+        "pass": false,
+        "note": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    from acme.headers import ADDED_HEADERS; assert 'Deprecation' in ADDED_HEADERS, ADDED_HEADERS\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nModuleNotFoundError: No module named 'acme.headers'"
+      },
+      "s4_route_option_registered": {
+        "category": "present",
+        "session": 4,
+        "pass": true,
+        "note": "documented"
+      },
+      "s4_docstrings_untold": {
+        "category": "habit",
+        "session": 4,
+        "pass": false,
+        "note": "tests/test_deprecation.py:test_deprecated_route_carries_header has no docstring"
+      },
+      "s4_spdx_untold": {
+        "category": "decision",
+        "session": 4,
+        "pass": true,
+        "note": "3 new files"
+      },
+      "s4_gone_410": {
+        "category": "told",
+        "session": 4,
+        "pass": true,
+        "note": ""
+      },
+      "s4_gone_new_domain": {
+        "category": "superseded",
+        "session": 4,
+        "pass": false,
+        "note": "lem(gone, \"gone\", \"https://errors.acme.io/\")\n    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 9, in is_problem\n    if base: assert body[\"type\"].startswith(base), body[\"type\"]\n                    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^\nAssertionError: https://errors.acme.dev/gone"
+      },
+      "s4_limit_new_path": {
+        "category": "stale",
+        "session": 4,
+        "pass": false,
+        "note": "config/limits/limits.json has deprecation-window-days=None"
+      }
+    }
+  }
+}

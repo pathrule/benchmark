@@ -1,0 +1,202 @@
+{
+  "sessionId": "a44d9d53-31f1-47df-9296-981d037d44e6",
+  "name": "S4-deprecation",
+  "rows": [
+    {
+      "s": 4,
+      "t": 1,
+      "exit": 0,
+      "wallMs": 27302,
+      "apiMs": 26440,
+      "cost": 0.175942,
+      "usage": {
+        "input_tokens": 12,
+        "cache_creation_input_tokens": 45917,
+        "cache_read_input_tokens": 285255,
+        "output_tokens": 3260,
+        "output_tokens_details": {
+          "thinking_tokens": 672
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 45917
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 9,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Read": 3,
+        "Bash": 5
+      }
+    },
+    {
+      "s": 4,
+      "t": 2,
+      "exit": 0,
+      "wallMs": 10035,
+      "apiMs": 36015,
+      "cost": 0.031419,
+      "usage": {
+        "input_tokens": 4,
+        "cache_creation_input_tokens": 1899,
+        "cache_read_input_tokens": 119735,
+        "output_tokens": 1469,
+        "output_tokens_details": {
+          "thinking_tokens": 113
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1899
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 2,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 1
+      }
+    },
+    {
+      "s": 4,
+      "t": 3,
+      "exit": 0,
+      "wallMs": 15965,
+      "apiMs": 0,
+      "cost": 0.038032099999999985,
+      "usage": {
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 0,
+      "subtype": "success",
+      "isError": false,
+      "tools": {}
+    },
+    {
+      "s": 4,
+      "t": 4,
+      "exit": 0,
+      "wallMs": 58567,
+      "apiMs": 108885,
+      "cost": 0.25605000000000006,
+      "usage": {
+        "input_tokens": 20,
+        "cache_creation_input_tokens": 52905,
+        "cache_read_input_tokens": 544775,
+        "output_tokens": 6927,
+        "output_tokens_details": {
+          "thinking_tokens": 1761
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 52905
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 10,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 9
+      }
+    }
+  ],
+  "checks": {
+    "session": 4,
+    "checks": {
+      "s4_deprecation_header": {
+        "category": "told",
+        "session": 4,
+        "pass": true,
+        "note": ""
+      },
+      "s4_added_headers_deprecation": {
+        "category": "decision",
+        "session": 4,
+        "pass": true,
+        "note": ""
+      },
+      "s4_route_option_registered": {
+        "category": "present",
+        "session": 4,
+        "pass": true,
+        "note": "documented"
+      },
+      "s4_docstrings_untold": {
+        "category": "habit",
+        "session": 4,
+        "pass": false,
+        "note": "tests/test_deprecation.py:test_option_is_registered has no docstring"
+      },
+      "s4_spdx_untold": {
+        "category": "decision",
+        "session": 4,
+        "pass": true,
+        "note": "2 new files"
+      },
+      "s4_gone_410": {
+        "category": "told",
+        "session": 4,
+        "pass": true,
+        "note": ""
+      },
+      "s4_gone_new_domain": {
+        "category": "superseded",
+        "session": 4,
+        "pass": true,
+        "note": ""
+      },
+      "s4_limit_new_path": {
+        "category": "stale",
+        "session": 4,
+        "pass": true,
+        "note": "ok"
+      }
+    }
+  }
+}

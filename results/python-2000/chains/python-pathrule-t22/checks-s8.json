@@ -1,0 +1,59 @@
+{
+  "session": 8,
+  "checks": {
+    "s8_cors_header": {
+      "category": "told",
+      "session": 8,
+      "pass": true,
+      "note": ""
+    },
+    "s8_added_headers_cors": {
+      "category": "decision",
+      "session": 8,
+      "pass": true,
+      "note": ""
+    },
+    "s8_option_registered": {
+      "category": "present",
+      "session": 8,
+      "pass": true,
+      "note": "documented"
+    },
+    "s8_changelog_untold": {
+      "category": "habit",
+      "session": 8,
+      "pass": true,
+      "note": "- `cors_origins` app option; responses to listed origins carry `Access-Control-Allow-Origin`."
+    },
+    "s8_limit_new_path_untold": {
+      "category": "stale",
+      "session": 8,
+      "pass": true,
+      "note": "ok"
+    },
+    "s8_abstains_on_undecided_limits": {
+      "category": "abstention",
+      "session": 8,
+      "pass": true,
+      "note": "asks or says undecided"
+    },
+    "s8_docstrings_untold": {
+      "category": "habit",
+      "session": 8,
+      "pass": true,
+      "note": "12 new test functions"
+    },
+    "s8_spdx_untold": {
+      "category": "decision",
+      "session": 8,
+      "pass": true,
+      "note": "2 new files"
+    },
+    "s8_suite_lesson_kept": {
+      "category": "lesson",
+      "session": 8,
+      "pass": true,
+      "note": "0 team-suite runs without ACME_TEAM_SUITE=1 in sessions 2-8"
+    }
+  }
+}

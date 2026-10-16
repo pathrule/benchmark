@@ -1,0 +1,198 @@
+{
+  "sessionId": "aad78ecf-04fa-4199-818e-b7099b6d75b4",
+  "name": "S1-request-deadline",
+  "rows": [
+    {
+      "s": 1,
+      "t": 1,
+      "exit": 0,
+      "wallMs": 37596,
+      "apiMs": 33372,
+      "cost": 0.1627445,
+      "usage": {
+        "input_tokens": 18,
+        "cache_creation_input_tokens": 35705,
+        "cache_read_input_tokens": 315660,
+        "output_tokens": 4188,
+        "output_tokens_details": {
+          "thinking_tokens": 279
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 35705
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 17,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 4,
+        "ToolSearch": 1,
+        "mcp__pathrule__pathrule_get_context": 1,
+        "mcp__pathrule__pathrule_remember_preference": 1,
+        "Read": 7,
+        "mcp__pathrule__pathrule_write_memory": 2
+      }
+    },
+    {
+      "s": 1,
+      "t": 2,
+      "exit": 0,
+      "wallMs": 10978,
+      "apiMs": 42032,
+      "cost": 0.0334884,
+      "usage": {
+        "input_tokens": 4,
+        "cache_creation_input_tokens": 5072,
+        "cache_read_input_tokens": 100104,
+        "output_tokens": 1079,
+        "output_tokens_details": {
+          "thinking_tokens": 44
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 5072
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 2,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 1
+      }
+    },
+    {
+      "s": 1,
+      "t": 3,
+      "exit": 0,
+      "wallMs": 12788,
+      "apiMs": 52916,
+      "cost": 0.03264449999999999,
+      "usage": {
+        "input_tokens": 4,
+        "cache_creation_input_tokens": 2793,
+        "cache_read_input_tokens": 107440,
+        "output_tokens": 1491,
+        "output_tokens_details": {
+          "thinking_tokens": 147
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 2793
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 3,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 1,
+        "mcp__pathrule__pathrule_write_memory": 1
+      }
+    },
+    {
+      "s": 1,
+      "t": 4,
+      "exit": 0,
+      "wallMs": 13767,
+      "apiMs": 63775,
+      "cost": 0.04676050000000001,
+      "usage": {
+        "input_tokens": 8,
+        "cache_creation_input_tokens": 5673,
+        "cache_read_input_tokens": 236920,
+        "output_tokens": 887,
+        "output_tokens_details": {
+          "thinking_tokens": 69
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 5673
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 4,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 2,
+        "mcp__pathrule__pathrule_write_memory": 1
+      }
+    }
+  ],
+  "checks": {
+    "session": 1,
+    "checks": {
+      "s1_deadline_504": {
+        "category": "told",
+        "session": 1,
+        "pass": true,
+        "note": ""
+      },
+      "s1_deadline_problem_format": {
+        "category": "present",
+        "session": 1,
+        "pass": true,
+        "note": ""
+      },
+      "s1_retry_after": {
+        "category": "told",
+        "session": 1,
+        "pass": true,
+        "note": ""
+      },
+      "s1_added_headers_retry_after": {
+        "category": "told",
+        "session": 1,
+        "pass": true,
+        "note": ""
+      },
+      "s1_option_registered": {
+        "category": "present",
+        "session": 1,
+        "pass": true,
+        "note": "documented"
+      },
+      "s1_docstrings": {
+        "category": "told",
+        "session": 1,
+        "pass": true,
+        "note": "5 new test functions"
+      }
+    }
+  }
+}

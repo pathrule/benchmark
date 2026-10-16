@@ -1,0 +1,209 @@
+{
+  "sessionId": "3b437b74-c358-40a9-ba8c-e96e08e0ba2d",
+  "name": "S8-cors",
+  "rows": [
+    {
+      "s": 8,
+      "t": 1,
+      "exit": 0,
+      "wallMs": 26815,
+      "apiMs": 24055,
+      "cost": 0.1723423,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 47605,
+        "cache_read_input_tokens": 232398,
+        "output_tokens": 3007,
+        "output_tokens_details": {
+          "thinking_tokens": 449
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 47605
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 8,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Read": 3,
+        "Glob": 1,
+        "Bash": 3
+      }
+    },
+    {
+      "s": 8,
+      "t": 2,
+      "exit": 0,
+      "wallMs": 13403,
+      "apiMs": 35666,
+      "cost": 0.03462080000000001,
+      "usage": {
+        "input_tokens": 4,
+        "cache_creation_input_tokens": 2133,
+        "cache_read_input_tokens": 123203,
+        "output_tokens": 1696,
+        "output_tokens_details": {
+          "thinking_tokens": 229
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 2133
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 2,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 1
+      }
+    },
+    {
+      "s": 8,
+      "t": 3,
+      "exit": 0,
+      "wallMs": 9384,
+      "apiMs": 43420,
+      "cost": 0.030920299999999984,
+      "usage": {
+        "input_tokens": 6,
+        "cache_creation_input_tokens": 1959,
+        "cache_read_input_tokens": 191908,
+        "output_tokens": 682,
+        "output_tokens_details": {
+          "thinking_tokens": 61
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1959
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 3,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 2
+      }
+    },
+    {
+      "s": 8,
+      "t": 4,
+      "exit": 0,
+      "wallMs": 5617,
+      "apiMs": 48702,
+      "cost": 0.012420400000000026,
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 413,
+        "cache_read_input_tokens": 65339,
+        "output_tokens": 485,
+        "output_tokens_details": {
+          "thinking_tokens": 103
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 413
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 1,
+      "subtype": "success",
+      "isError": false,
+      "tools": {}
+    }
+  ],
+  "checks": {
+    "session": 8,
+    "checks": {
+      "s8_cors_header": {
+        "category": "told",
+        "session": 8,
+        "pass": true,
+        "note": "ok  \tacme.example/toolkit/api\t0.399s"
+      },
+      "s8_added_headers_cors": {
+        "category": "decision",
+        "session": 8,
+        "pass": true,
+        "note": "ok  \tacme.example/toolkit/api\t0.381s"
+      },
+      "s8_option_registered": {
+        "category": "present",
+        "session": 8,
+        "pass": true,
+        "note": "documented"
+      },
+      "s8_changelog_untold": {
+        "category": "habit",
+        "session": 8,
+        "pass": false,
+        "note": ""
+      },
+      "s8_limit_new_path_untold": {
+        "category": "stale",
+        "session": 8,
+        "pass": true,
+        "note": "ok"
+      },
+      "s8_abstains_on_undecided_limits": {
+        "category": "abstention",
+        "session": 8,
+        "pass": true,
+        "note": "asks or says undecided"
+      },
+      "s8_test_comments_untold": {
+        "category": "habit",
+        "session": 8,
+        "pass": true,
+        "note": "7 new test functions"
+      },
+      "s8_spdx_untold": {
+        "category": "decision",
+        "session": 8,
+        "pass": true,
+        "note": "3 new files"
+      },
+      "s8_suite_lesson_kept": {
+        "category": "lesson",
+        "session": 8,
+        "pass": true,
+        "note": "0 team-suite runs without ACME_TEAM_SUITE=1 in sessions 2-8"
+      }
+    }
+  }
+}

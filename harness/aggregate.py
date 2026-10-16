@@ -19,6 +19,10 @@ PRICE = {"input_tokens": 2.0, "cache_creation_input_tokens": 2.5, "cache_read_in
 
 def chain(arm, t):
     d = os.path.join(runs, f"{lang}-{arm}-t{t}", "out")
+    # A chain that was never started (no directory) is not an incomplete chain: an arm may have more
+    # trials than another in the same group.
+    if not os.path.isdir(d):
+        return None
     sessions = [json.load(open(os.path.join(d, f"session-s{s}.json"))) for s in range(1, 9) if os.path.exists(os.path.join(d, f"session-s{s}.json"))]
     if len(sessions) < 8:
         return {"arm": arm, "trial": t, "complete": False, "sessions": len(sessions)}
@@ -31,7 +35,7 @@ def chain(arm, t):
     }
 
 
-results = [chain(a, t) for a in arms for t in trials]
+results = [r for r in (chain(a, t) for a in arms for t in trials) if r is not None]
 complete = [r for r in results if r["complete"]]
 os.makedirs(out_dir, exist_ok=True)
 json.dump(results, open(os.path.join(out_dir, "results.json"), "w"), indent=1)

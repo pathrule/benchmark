@@ -1,0 +1,197 @@
+{
+  "sessionId": "8cd09c3f-a7bd-45c7-9ff3-e445e1144af2",
+  "name": "S1-request-deadline",
+  "rows": [
+    {
+      "s": 1,
+      "t": 1,
+      "exit": 0,
+      "wallMs": 39420,
+      "apiMs": 37645,
+      "cost": 0.0984101,
+      "usage": {
+        "input_tokens": 18,
+        "cache_creation_input_tokens": 12773,
+        "cache_read_input_tokens": 186616,
+        "output_tokens": 4778,
+        "output_tokens_details": {
+          "thinking_tokens": 343
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 12773
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 18,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Grep": 2,
+        "Glob": 1,
+        "Read": 10,
+        "Bash": 4
+      }
+    },
+    {
+      "s": 1,
+      "t": 2,
+      "exit": 0,
+      "wallMs": 11194,
+      "apiMs": 47712,
+      "cost": 0.022431800000000002,
+      "usage": {
+        "input_tokens": 4,
+        "cache_creation_input_tokens": 1869,
+        "cache_read_input_tokens": 52413,
+        "output_tokens": 1251,
+        "output_tokens_details": {
+          "thinking_tokens": 102
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1869
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 2,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 1
+      }
+    },
+    {
+      "s": 1,
+      "t": 3,
+      "exit": 0,
+      "wallMs": 13756,
+      "apiMs": 60306,
+      "cost": 0.03175510000000001,
+      "usage": {
+        "input_tokens": 6,
+        "cache_creation_input_tokens": 2929,
+        "cache_read_input_tokens": 85406,
+        "output_tokens": 1588,
+        "output_tokens_details": {
+          "thinking_tokens": 290
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 2929
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 4,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Read": 1,
+        "Grep": 1,
+        "Bash": 1
+      }
+    },
+    {
+      "s": 1,
+      "t": 4,
+      "exit": 0,
+      "wallMs": 13878,
+      "apiMs": 72883,
+      "cost": 0.025547700000000034,
+      "usage": {
+        "input_tokens": 6,
+        "cache_creation_input_tokens": 1664,
+        "cache_read_input_tokens": 93457,
+        "output_tokens": 1203,
+        "output_tokens_details": {
+          "thinking_tokens": 417
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1664
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 4,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Grep": 1,
+        "Bash": 2
+      }
+    }
+  ],
+  "checks": {
+    "session": 1,
+    "checks": {
+      "s1_deadline_504": {
+        "category": "told",
+        "session": 1,
+        "pass": true,
+        "note": ""
+      },
+      "s1_deadline_problem_format": {
+        "category": "present",
+        "session": 1,
+        "pass": true,
+        "note": ""
+      },
+      "s1_retry_after": {
+        "category": "told",
+        "session": 1,
+        "pass": true,
+        "note": ""
+      },
+      "s1_added_headers_retry_after": {
+        "category": "told",
+        "session": 1,
+        "pass": true,
+        "note": ""
+      },
+      "s1_option_registered": {
+        "category": "present",
+        "session": 1,
+        "pass": true,
+        "note": "documented"
+      },
+      "s1_docstrings": {
+        "category": "told",
+        "session": 1,
+        "pass": true,
+        "note": "7 new test functions"
+      }
+    }
+  }
+}

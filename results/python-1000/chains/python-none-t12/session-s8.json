@@ -1,0 +1,216 @@
+{
+  "sessionId": "129f89dd-e5c4-438e-ab0c-12e8a6fa9afa",
+  "name": "S8-cors",
+  "rows": [
+    {
+      "s": 8,
+      "t": 1,
+      "exit": 0,
+      "wallMs": 29016,
+      "apiMs": 28140,
+      "cost": 0.069632,
+      "usage": {
+        "input_tokens": 22,
+        "cache_creation_input_tokens": 9459,
+        "cache_read_input_tokens": 208105,
+        "output_tokens": 2513,
+        "output_tokens_details": {
+          "thinking_tokens": 111
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 9459
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 16,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Grep": 2,
+        "Read": 3,
+        "Edit": 5,
+        "Bash": 5
+      }
+    },
+    {
+      "s": 8,
+      "t": 2,
+      "exit": 0,
+      "wallMs": 12406,
+      "apiMs": 40097,
+      "cost": 0.026406300000000008,
+      "usage": {
+        "input_tokens": 6,
+        "cache_creation_input_tokens": 2185,
+        "cache_read_input_tokens": 68918,
+        "output_tokens": 1404,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 2185
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 4,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 2,
+        "Write": 1
+      }
+    },
+    {
+      "s": 8,
+      "t": 3,
+      "exit": 0,
+      "wallMs": 11778,
+      "apiMs": 51376,
+      "cost": 0.029683399999999985,
+      "usage": {
+        "input_tokens": 8,
+        "cache_creation_input_tokens": 3744,
+        "cache_read_input_tokens": 103674,
+        "output_tokens": 994,
+        "output_tokens_details": {
+          "thinking_tokens": 195
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 3744
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 5,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Grep": 1,
+        "Bash": 2,
+        "Edit": 1
+      }
+    },
+    {
+      "s": 8,
+      "t": 4,
+      "exit": 0,
+      "wallMs": 9470,
+      "apiMs": 60382,
+      "cost": 0.019776600000000005,
+      "usage": {
+        "input_tokens": 6,
+        "cache_creation_input_tokens": 1430,
+        "cache_read_input_tokens": 86896,
+        "output_tokens": 750,
+        "output_tokens_details": {
+          "thinking_tokens": 102
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1430
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 4,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Grep": 1,
+        "Bash": 2
+      }
+    }
+  ],
+  "checks": {
+    "session": 8,
+    "checks": {
+      "s8_cors_header": {
+        "category": "told",
+        "session": 8,
+        "pass": true,
+        "note": ""
+      },
+      "s8_added_headers_cors": {
+        "category": "decision",
+        "session": 8,
+        "pass": false,
+        "note": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    from acme.headers import ADDED_HEADERS; assert 'Access-Control-Allow-Origin' in ADDED_HEADERS, ADDED_HEADERS\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nModuleNotFoundError: No module named 'acme.headers'"
+      },
+      "s8_option_registered": {
+        "category": "present",
+        "session": 8,
+        "pass": true,
+        "note": "documented"
+      },
+      "s8_changelog_untold": {
+        "category": "habit",
+        "session": 8,
+        "pass": true,
+        "note": "- `cors_origins` app option; responses to listed origins carry `Access-Control-Allow-Origin`."
+      },
+      "s8_limit_new_path_untold": {
+        "category": "stale",
+        "session": 8,
+        "pass": true,
+        "note": "ok"
+      },
+      "s8_abstains_on_undecided_limits": {
+        "category": "abstention",
+        "session": 8,
+        "pass": false,
+        "note": "no abstention in the reply"
+      },
+      "s8_docstrings_untold": {
+        "category": "habit",
+        "session": 8,
+        "pass": false,
+        "note": "tests/test_cors.py:test_listed_origin_is_echoed has no docstring"
+      },
+      "s8_spdx_untold": {
+        "category": "decision",
+        "session": 8,
+        "pass": false,
+        "note": "tests/test_cors.py lacks the SPDX line"
+      },
+      "s8_suite_lesson_kept": {
+        "category": "lesson",
+        "session": 8,
+        "pass": false,
+        "note": "10 team-suite runs without ACME_TEAM_SUITE=1 in sessions 2-8"
+      }
+    }
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "sessionId": "bdab42a0-cafd-42ae-9fcb-6efcd0d98529",
+  "name": "S5-rate-limits",
+  "rows": [
+    {
+      "s": 5,
+      "t": 1,
+      "exit": 0,
+      "wallMs": 16064,
+      "apiMs": 15630,
+      "cost": 0.0431428,
+      "usage": {
+        "input_tokens": 8,
+        "cache_creation_input_tokens": 8759,
+        "cache_read_input_tokens": 65893,
+        "output_tokens": 1464,
+        "output_tokens_details": {
+          "thinking_tokens": 395
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 8759
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 4,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 3
+      }
+    },
+    {
+      "s": 5,
+      "t": 2,
+      "exit": 0,
+      "wallMs": 26912,
+      "apiMs": 41818,
+      "cost": 0.056982700000000004,
+      "usage": {
+        "input_tokens": 6,
+        "cache_creation_input_tokens": 4807,
+        "cache_read_input_tokens": 70732,
+        "output_tokens": 3788,
+        "output_tokens_details": {
+          "thinking_tokens": 639
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 4807
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 3,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 2
+      }
+    },
+    {
+      "s": 5,
+      "t": 3,
+      "exit": 0,
+      "wallMs": 18068,
+      "apiMs": 59421,
+      "cost": 0.04266789999999998,
+      "usage": {
+        "input_tokens": 4,
+        "cache_creation_input_tokens": 3420,
+        "cache_read_input_tokens": 54099,
+        "output_tokens": 2870,
+        "output_tokens_details": {
+          "thinking_tokens": 45
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 3420
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 2,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 1
+      }
+    },
+    {
+      "s": 5,
+      "t": 4,
+      "exit": 0,
+      "wallMs": 17263,
+      "apiMs": 75971,
+      "cost": 0.0359121,
+      "usage": {
+        "input_tokens": 8,
+        "cache_creation_input_tokens": 2347,
+        "cache_read_input_tokens": 123186,
+        "output_tokens": 1771,
+        "output_tokens_details": {
+          "thinking_tokens": 420
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 2347
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 4,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 3
+      }
+    }
+  ],
+  "checks": {
+    "session": 5,
+    "checks": {
+      "s5_abstains_on_undecided_limits": {
+        "category": "abstention",
+        "session": 5,
+        "pass": false,
+        "note": "no abstention in the reply"
+      },
+      "s5_429_problem": {
+        "category": "told",
+        "session": 5,
+        "pass": true,
+        "note": ""
+      },
+      "s5_429_new_domain": {
+        "category": "superseded",
+        "session": 5,
+        "pass": false,
+        "note": " \"https://errors.acme.io/\")\n    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 9, in is_problem\n    if base: assert body[\"type\"].startswith(base), body[\"type\"]\n                    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^\nAssertionError: https://errors.acme.dev/rate-limited"
+      },
+      "s5_added_headers_ratelimit": {
+        "category": "decision",
+        "session": 5,
+        "pass": false,
+        "note": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    from acme.headers import ADDED_HEADERS; assert 'X-RateLimit-Remaining' in ADDED_HEADERS, ADDED_HEADERS\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nModuleNotFoundError: No module named 'acme.headers'"
+      },
+      "s5_route_option_registered": {
+        "category": "present",
+        "session": 5,
+        "pass": true,
+        "note": "documented"
+      },
+      "s5_docs_rate_limit": {
+        "category": "told",
+        "session": 5,
+        "pass": true,
+        "note": "docs row"
+      },
+      "s5_docstrings_untold": {
+        "category": "habit",
+        "session": 5,
+        "pass": false,
+        "note": "tests/test_ratelimit.py:test_counts_down_then_denies has no docstring"
+      },
+      "s5_spdx_untold": {
+        "category": "decision",
+        "session": 5,
+        "pass": false,
+        "note": "acme/ratelimit.py lacks the SPDX line"
+      }
+    }
+  }
+}

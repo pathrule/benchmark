@@ -1,0 +1,204 @@
+{
+  "sessionId": "267ea44f-ea13-4ff6-8688-e02b0b11826a",
+  "name": "S7-request-ids",
+  "rows": [
+    {
+      "s": 7,
+      "t": 1,
+      "exit": 0,
+      "wallMs": 26617,
+      "apiMs": 25777,
+      "cost": 0.2564521,
+      "usage": {
+        "input_tokens": 14,
+        "cache_creation_input_tokens": 71836,
+        "cache_read_input_tokens": 497541,
+        "output_tokens": 2708,
+        "output_tokens_details": {
+          "thinking_tokens": 331
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 71836
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 8,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Read": 1,
+        "Bash": 6
+      }
+    },
+    {
+      "s": 7,
+      "t": 2,
+      "exit": 0,
+      "wallMs": 12235,
+      "apiMs": 37543,
+      "cost": 0.17446899999999999,
+      "usage": {
+        "input_tokens": 4,
+        "cache_creation_input_tokens": 54895,
+        "cache_read_input_tokens": 224835,
+        "output_tokens": 1474,
+        "output_tokens_details": {
+          "thinking_tokens": 113
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 54895
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 2,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 1
+      }
+    },
+    {
+      "s": 7,
+      "t": 3,
+      "exit": 0,
+      "wallMs": 28898,
+      "apiMs": 65759,
+      "cost": 0.11962920000000016,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 4721,
+        "cache_read_input_tokens": 712567,
+        "output_tokens": 3655,
+        "output_tokens_details": {
+          "thinking_tokens": 596
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 4721
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 5,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 4
+      }
+    },
+    {
+      "s": 7,
+      "t": 4,
+      "exit": 0,
+      "wallMs": 10620,
+      "apiMs": 75655,
+      "cost": 0.057783600000000046,
+      "usage": {
+        "input_tokens": 6,
+        "cache_creation_input_tokens": 2005,
+        "cache_read_input_tokens": 438191,
+        "output_tokens": 894,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 2005
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 4,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 3
+      }
+    }
+  ],
+  "checks": {
+    "session": 7,
+    "checks": {
+      "s7_request_id": {
+        "category": "told",
+        "session": 7,
+        "pass": true,
+        "note": ""
+      },
+      "s7_added_headers_request_id": {
+        "category": "decision",
+        "session": 7,
+        "pass": true,
+        "note": ""
+      },
+      "s7_max_body_413": {
+        "category": "told",
+        "session": 7,
+        "pass": true,
+        "note": ""
+      },
+      "s7_413_new_domain": {
+        "category": "superseded",
+        "session": 7,
+        "pass": true,
+        "note": ""
+      },
+      "s7_option_registered": {
+        "category": "present",
+        "session": 7,
+        "pass": true,
+        "note": "documented"
+      },
+      "s7_changelog": {
+        "category": "told",
+        "session": 7,
+        "pass": true,
+        "note": "- `max_body_bytes` app option; larger request bodies answer 413 (`payload-too-large`). 0 = no limit.\n- Every response ca"
+      },
+      "s7_docstrings_untold": {
+        "category": "habit",
+        "session": 7,
+        "pass": true,
+        "note": "11 new test functions"
+      },
+      "s7_spdx_untold": {
+        "category": "decision",
+        "session": 7,
+        "pass": true,
+        "note": "2 new files"
+      }
+    }
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "sessionId": "1a8983d1-9ae9-4a2a-bc98-0f5544663809",
+  "name": "S4-deprecation",
+  "rows": [
+    {
+      "s": 4,
+      "t": 1,
+      "exit": 0,
+      "wallMs": 18090,
+      "apiMs": 16182,
+      "cost": 0.07940259999999999,
+      "usage": {
+        "input_tokens": 8,
+        "cache_creation_input_tokens": 19197,
+        "cache_read_input_tokens": 98841,
+        "output_tokens": 2151,
+        "output_tokens_details": {
+          "thinking_tokens": 287
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 19197
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 8,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Read": 4,
+        "Bash": 3
+      }
+    },
+    {
+      "s": 4,
+      "t": 2,
+      "exit": 0,
+      "wallMs": 11537,
+      "apiMs": 26119,
+      "cost": 0.029424900000000004,
+      "usage": {
+        "input_tokens": 4,
+        "cache_creation_input_tokens": 2911,
+        "cache_read_input_tokens": 67594,
+        "output_tokens": 1538,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 2911
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 2,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 1
+      }
+    },
+    {
+      "s": 4,
+      "t": 3,
+      "exit": 0,
+      "wallMs": 15390,
+      "apiMs": 0,
+      "cost": 0.033648700000000004,
+      "usage": {
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 0,
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 0,
+      "subtype": "success",
+      "isError": false,
+      "tools": {}
+    },
+    {
+      "s": 4,
+      "t": 4,
+      "exit": 0,
+      "wallMs": 41223,
+      "apiMs": 77722,
+      "cost": 0.160234,
+      "usage": {
+        "input_tokens": 20,
+        "cache_creation_input_tokens": 30825,
+        "cache_read_input_tokens": 349415,
+        "output_tokens": 4819,
+        "output_tokens_details": {
+          "thinking_tokens": 639
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 30825
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 13,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Read": 4,
+        "Bash": 6,
+        "ToolSearch": 1,
+        "mcp__pathrule__pathrule_write_memory": 1
+      }
+    }
+  ],
+  "checks": {
+    "session": 4,
+    "checks": {
+      "s4_deprecation_header": {
+        "category": "told",
+        "session": 4,
+        "pass": true,
+        "note": ""
+      },
+      "s4_added_headers_deprecation": {
+        "category": "decision",
+        "session": 4,
+        "pass": true,
+        "note": ""
+      },
+      "s4_route_option_registered": {
+        "category": "present",
+        "session": 4,
+        "pass": true,
+        "note": "documented"
+      },
+      "s4_docstrings_untold": {
+        "category": "habit",
+        "session": 4,
+        "pass": true,
+        "note": "16 new test functions"
+      },
+      "s4_spdx_untold": {
+        "category": "decision",
+        "session": 4,
+        "pass": true,
+        "note": "2 new files"
+      },
+      "s4_gone_410": {
+        "category": "told",
+        "session": 4,
+        "pass": true,
+        "note": ""
+      },
+      "s4_gone_new_domain": {
+        "category": "superseded",
+        "session": 4,
+        "pass": true,
+        "note": ""
+      },
+      "s4_limit_new_path": {
+        "category": "stale",
+        "session": 4,
+        "pass": true,
+        "note": "ok"
+      }
+    }
+  }
+}

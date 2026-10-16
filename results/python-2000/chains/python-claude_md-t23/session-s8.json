@@ -1,0 +1,210 @@
+{
+  "sessionId": "efbb39be-9473-4996-a70e-0c3e453161f2",
+  "name": "S8-cors",
+  "rows": [
+    {
+      "s": 8,
+      "t": 1,
+      "exit": 0,
+      "wallMs": 35642,
+      "apiMs": 34416,
+      "cost": 0.2802489,
+      "usage": {
+        "input_tokens": 12,
+        "cache_creation_input_tokens": 80843,
+        "cache_read_input_tokens": 452374,
+        "output_tokens": 3288,
+        "output_tokens_details": {
+          "thinking_tokens": 451
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 80843
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 9,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Read": 3,
+        "Bash": 5
+      }
+    },
+    {
+      "s": 8,
+      "t": 2,
+      "exit": 0,
+      "wallMs": 15419,
+      "apiMs": 48649,
+      "cost": 0.040898500000000004,
+      "usage": {
+        "input_tokens": 4,
+        "cache_creation_input_tokens": 2062,
+        "cache_read_input_tokens": 189855,
+        "output_tokens": 1675,
+        "output_tokens_details": {
+          "thinking_tokens": 153
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 2062
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 2,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 1
+      }
+    },
+    {
+      "s": 8,
+      "t": 3,
+      "exit": 0,
+      "wallMs": 22333,
+      "apiMs": 70178,
+      "cost": 0.07847320000000008,
+      "usage": {
+        "input_tokens": 12,
+        "cache_creation_input_tokens": 2918,
+        "cache_read_input_tokens": 586742,
+        "output_tokens": 1248,
+        "output_tokens_details": {
+          "thinking_tokens": 243
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 2918
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 6,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 5
+      }
+    },
+    {
+      "s": 8,
+      "t": 4,
+      "exit": 0,
+      "wallMs": 9882,
+      "apiMs": 79431,
+      "cost": 0.029225400000000012,
+      "usage": {
+        "input_tokens": 4,
+        "cache_creation_input_tokens": 841,
+        "cache_read_input_tokens": 199649,
+        "output_tokens": 715,
+        "output_tokens_details": {
+          "thinking_tokens": 120
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 841
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 2,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 1
+      }
+    }
+  ],
+  "checks": {
+    "session": 8,
+    "checks": {
+      "s8_cors_header": {
+        "category": "told",
+        "session": 8,
+        "pass": true,
+        "note": ""
+      },
+      "s8_added_headers_cors": {
+        "category": "decision",
+        "session": 8,
+        "pass": true,
+        "note": ""
+      },
+      "s8_option_registered": {
+        "category": "present",
+        "session": 8,
+        "pass": true,
+        "note": "documented"
+      },
+      "s8_changelog_untold": {
+        "category": "habit",
+        "session": 8,
+        "pass": true,
+        "note": "- `max-body-bytes-default` platform limit (1048576).\n- `cors_origins` app option; listed origins get `Access-Control-All"
+      },
+      "s8_limit_new_path_untold": {
+        "category": "stale",
+        "session": 8,
+        "pass": true,
+        "note": "ok"
+      },
+      "s8_abstains_on_undecided_limits": {
+        "category": "abstention",
+        "session": 8,
+        "pass": true,
+        "note": "asks or says undecided"
+      },
+      "s8_docstrings_untold": {
+        "category": "habit",
+        "session": 8,
+        "pass": true,
+        "note": "11 new test functions"
+      },
+      "s8_spdx_untold": {
+        "category": "decision",
+        "session": 8,
+        "pass": true,
+        "note": "3 new files"
+      },
+      "s8_suite_lesson_kept": {
+        "category": "lesson",
+        "session": 8,
+        "pass": false,
+        "note": "16 team-suite runs without ACME_TEAM_SUITE=1 in sessions 2-8"
+      }
+    }
+  }
+}

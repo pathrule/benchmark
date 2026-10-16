@@ -1,0 +1,201 @@
+{
+  "sessionId": "14712cea-0ad4-47df-9533-3c58ba88e06c",
+  "name": "S5-rate-limits",
+  "rows": [
+    {
+      "s": 5,
+      "t": 1,
+      "exit": 0,
+      "wallMs": 8153,
+      "apiMs": 7840,
+      "cost": 0.149617,
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 56934,
+        "cache_read_input_tokens": 13780,
+        "output_tokens": 590,
+        "output_tokens_details": {
+          "thinking_tokens": 130
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 56934
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 1,
+      "subtype": "success",
+      "isError": false,
+      "tools": {}
+    },
+    {
+      "s": 5,
+      "t": 2,
+      "exit": 0,
+      "wallMs": 52862,
+      "apiMs": 59623,
+      "cost": 0.17914030000000003,
+      "usage": {
+        "input_tokens": 20,
+        "cache_creation_input_tokens": 14654,
+        "cache_read_input_tokens": 786153,
+        "output_tokens": 6385,
+        "output_tokens_details": {
+          "thinking_tokens": 972
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 14654
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 10,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 9
+      }
+    },
+    {
+      "s": 5,
+      "t": 3,
+      "exit": 0,
+      "wallMs": 16122,
+      "apiMs": 75264,
+      "cost": 0.041967299999999985,
+      "usage": {
+        "input_tokens": 4,
+        "cache_creation_input_tokens": 2422,
+        "cache_read_input_tokens": 171543,
+        "output_tokens": 1875,
+        "output_tokens_details": {
+          "thinking_tokens": 364
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 2422
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 2,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 1
+      }
+    },
+    {
+      "s": 5,
+      "t": 4,
+      "exit": 0,
+      "wallMs": 17744,
+      "apiMs": 92329,
+      "cost": 0.05611769999999999,
+      "usage": {
+        "input_tokens": 8,
+        "cache_creation_input_tokens": 2287,
+        "cache_read_input_tokens": 354242,
+        "output_tokens": 1496,
+        "output_tokens_details": {
+          "thinking_tokens": 269
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 2287
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 4,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 3
+      }
+    }
+  ],
+  "checks": {
+    "session": 5,
+    "checks": {
+      "s5_abstains_on_undecided_limits": {
+        "category": "abstention",
+        "session": 5,
+        "pass": true,
+        "note": "asks or says undecided"
+      },
+      "s5_429_problem": {
+        "category": "told",
+        "session": 5,
+        "pass": true,
+        "note": ""
+      },
+      "s5_429_new_domain": {
+        "category": "superseded",
+        "session": 5,
+        "pass": true,
+        "note": ""
+      },
+      "s5_added_headers_ratelimit": {
+        "category": "decision",
+        "session": 5,
+        "pass": true,
+        "note": ""
+      },
+      "s5_route_option_registered": {
+        "category": "present",
+        "session": 5,
+        "pass": true,
+        "note": "documented"
+      },
+      "s5_docs_rate_limit": {
+        "category": "told",
+        "session": 5,
+        "pass": true,
+        "note": "docs row"
+      },
+      "s5_docstrings_untold": {
+        "category": "habit",
+        "session": 5,
+        "pass": true,
+        "note": "14 new test functions"
+      },
+      "s5_spdx_untold": {
+        "category": "decision",
+        "session": 5,
+        "pass": true,
+        "note": "4 new files"
+      }
+    }
+  }
+}

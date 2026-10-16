@@ -1,0 +1,35 @@
+{
+  "session": 2,
+  "checks": {
+    "s2_query_keys_400": {
+      "category": "told",
+      "session": 2,
+      "pass": true,
+      "note": ""
+    },
+    "s2_internal_exempt": {
+      "category": "told",
+      "session": 2,
+      "pass": true,
+      "note": ""
+    },
+    "s2_option_registered": {
+      "category": "present",
+      "session": 2,
+      "pass": true,
+      "note": "documented"
+    },
+    "s2_docstrings": {
+      "category": "told",
+      "session": 2,
+      "pass": true,
+      "note": "9 new test functions"
+    },
+    "s2_spdx": {
+      "category": "told",
+      "session": 2,
+      "pass": true,
+      "note": "1 new files"
+    }
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "sessionId": "e37d6e34-db99-4b69-b0d1-2a0969e629fd",
+  "name": "S1-request-deadline",
+  "rows": [
+    {
+      "s": 1,
+      "t": 1,
+      "exit": 0,
+      "wallMs": 41542,
+      "apiMs": 27563,
+      "cost": 0.0805232,
+      "usage": {
+        "input_tokens": 12,
+        "cache_creation_input_tokens": 13929,
+        "cache_read_input_tokens": 118067,
+        "output_tokens": 3387,
+        "output_tokens_details": {
+          "thinking_tokens": 160
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 13929
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 17,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Grep": 1,
+        "Glob": 1,
+        "Read": 12,
+        "Bash": 2
+      }
+    },
+    {
+      "s": 1,
+      "t": 2,
+      "exit": 0,
+      "wallMs": 13730,
+      "apiMs": 39036,
+      "cost": 0.02663510000000001,
+      "usage": {
+        "input_tokens": 4,
+        "cache_creation_input_tokens": 1990,
+        "cache_read_input_tokens": 54521,
+        "output_tokens": 1620,
+        "output_tokens_details": {
+          "thinking_tokens": 158
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1990
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 2,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 1
+      }
+    },
+    {
+      "s": 1,
+      "t": 3,
+      "exit": 0,
+      "wallMs": 13033,
+      "apiMs": 50125,
+      "cost": 0.02077799999999999,
+      "usage": {
+        "input_tokens": 4,
+        "cache_creation_input_tokens": 1477,
+        "cache_read_input_tokens": 58475,
+        "output_tokens": 1123,
+        "output_tokens_details": {
+          "thinking_tokens": 198
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1477
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 2,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 1
+      }
+    },
+    {
+      "s": 1,
+      "t": 4,
+      "exit": 0,
+      "wallMs": 7783,
+      "apiMs": 56369,
+      "cost": 0.013638999999999984,
+      "usage": {
+        "input_tokens": 4,
+        "cache_creation_input_tokens": 992,
+        "cache_read_input_tokens": 61310,
+        "output_tokens": 502,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 992
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 2,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 1
+      }
+    }
+  ],
+  "checks": {
+    "session": 1,
+    "checks": {
+      "s1_deadline_504": {
+        "category": "told",
+        "session": 1,
+        "pass": true,
+        "note": "ok  \tacme.example/toolkit/api\t0.473s"
+      },
+      "s1_deadline_problem_format": {
+        "category": "present",
+        "session": 1,
+        "pass": true,
+        "note": "ok  \tacme.example/toolkit/api\t0.502s"
+      },
+      "s1_retry_after": {
+        "category": "told",
+        "session": 1,
+        "pass": true,
+        "note": "ok  \tacme.example/toolkit/api\t0.489s"
+      },
+      "s1_added_headers_retry_after": {
+        "category": "told",
+        "session": 1,
+        "pass": true,
+        "note": "ok  \tacme.example/toolkit/api\t0.394s"
+      },
+      "s1_option_registered": {
+        "category": "present",
+        "session": 1,
+        "pass": true,
+        "note": "documented"
+      },
+      "s1_test_comments": {
+        "category": "told",
+        "session": 1,
+        "pass": true,
+        "note": "4 new test functions"
+      }
+    }
+  }
+}

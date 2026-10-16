@@ -1,0 +1,200 @@
+{
+  "sessionId": "5c922328-17ea-4955-822f-ba2ba5f5cef4",
+  "name": "S1-request-deadline",
+  "rows": [
+    {
+      "s": 1,
+      "t": 1,
+      "exit": 0,
+      "wallMs": 32087,
+      "apiMs": 30225,
+      "cost": 0.1980583,
+      "usage": {
+        "input_tokens": 14,
+        "cache_creation_input_tokens": 49854,
+        "cache_read_input_tokens": 346353,
+        "output_tokens": 3876,
+        "output_tokens_details": {
+          "thinking_tokens": 397
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 49854
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 19,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Read": 6,
+        "Glob": 1,
+        "Grep": 1,
+        "Edit": 9,
+        "Bash": 1
+      }
+    },
+    {
+      "s": 1,
+      "t": 2,
+      "exit": 0,
+      "wallMs": 15220,
+      "apiMs": 44929,
+      "cost": 0.0433249,
+      "usage": {
+        "input_tokens": 6,
+        "cache_creation_input_tokens": 2539,
+        "cache_read_input_tokens": 188954,
+        "output_tokens": 1807,
+        "output_tokens_details": {
+          "thinking_tokens": 58
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 2539
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 5,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Write": 1,
+        "Edit": 2,
+        "Bash": 1
+      }
+    },
+    {
+      "s": 1,
+      "t": 3,
+      "exit": 0,
+      "wallMs": 14947,
+      "apiMs": 59169,
+      "cost": 0.043358700000000056,
+      "usage": {
+        "input_tokens": 6,
+        "cache_creation_input_tokens": 2385,
+        "cache_read_input_tokens": 196242,
+        "output_tokens": 1776,
+        "output_tokens_details": {
+          "thinking_tokens": 186
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 2385
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 7,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Write": 1,
+        "Edit": 4,
+        "Bash": 1
+      }
+    },
+    {
+      "s": 1,
+      "t": 4,
+      "exit": 0,
+      "wallMs": 12134,
+      "apiMs": 70530,
+      "cost": 0.034342700000000004,
+      "usage": {
+        "input_tokens": 6,
+        "cache_creation_input_tokens": 1615,
+        "cache_read_input_tokens": 202332,
+        "output_tokens": 1006,
+        "output_tokens_details": {
+          "thinking_tokens": 239
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1615
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 4,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 1,
+        "Read": 2
+      }
+    }
+  ],
+  "checks": {
+    "session": 1,
+    "checks": {
+      "s1_deadline_504": {
+        "category": "told",
+        "session": 1,
+        "pass": true,
+        "note": ""
+      },
+      "s1_deadline_problem_format": {
+        "category": "present",
+        "session": 1,
+        "pass": true,
+        "note": ""
+      },
+      "s1_retry_after": {
+        "category": "told",
+        "session": 1,
+        "pass": true,
+        "note": ""
+      },
+      "s1_added_headers_retry_after": {
+        "category": "told",
+        "session": 1,
+        "pass": true,
+        "note": ""
+      },
+      "s1_option_registered": {
+        "category": "present",
+        "session": 1,
+        "pass": true,
+        "note": "documented"
+      },
+      "s1_docstrings": {
+        "category": "told",
+        "session": 1,
+        "pass": true,
+        "note": "5 new test functions"
+      }
+    }
+  }
+}

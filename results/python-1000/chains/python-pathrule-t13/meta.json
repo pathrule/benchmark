@@ -1,0 +1,16 @@
+{
+  "lang": "python",
+  "arm": "pathrule",
+  "trial": "13",
+  "model": "claude-sonnet-5-5",
+  "knowledge": "team-scale-1000.json",
+  "sessions": "sessions.json",
+  "pathrule": "202a28db5",
+  "claude": "2.1.302 (Claude Code)",
+  "startedAt": "2026-10-16T21:22:06.763Z",
+  "seed": {
+    "workspace": "4645d658-6432-4f3a-aab7-1c62ec676031",
+    "memories": 1000,
+    "atoms": 1000
+  }
+}

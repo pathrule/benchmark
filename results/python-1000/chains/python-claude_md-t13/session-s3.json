@@ -1,0 +1,185 @@
+{
+  "sessionId": "53953074-0c7f-45bf-b1ad-28ae44b98615",
+  "name": "S3-not-found-and-domain",
+  "rows": [
+    {
+      "s": 3,
+      "t": 1,
+      "exit": 0,
+      "wallMs": 23171,
+      "apiMs": 22342,
+      "cost": 0.1788157,
+      "usage": {
+        "input_tokens": 14,
+        "cache_creation_input_tokens": 47591,
+        "cache_read_input_tokens": 343902,
+        "output_tokens": 2542,
+        "output_tokens_details": {
+          "thinking_tokens": 174
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 47591
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 15,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Grep": 1,
+        "Read": 4,
+        "Bash": 3,
+        "Edit": 6
+      }
+    },
+    {
+      "s": 3,
+      "t": 2,
+      "exit": 0,
+      "wallMs": 12350,
+      "apiMs": 34247,
+      "cost": 0.0367924,
+      "usage": {
+        "input_tokens": 6,
+        "cache_creation_input_tokens": 2023,
+        "cache_read_input_tokens": 185029,
+        "output_tokens": 1322,
+        "output_tokens_details": {
+          "thinking_tokens": 58
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 2023
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 4,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Read": 1,
+        "Write": 1,
+        "Bash": 1
+      }
+    },
+    {
+      "s": 3,
+      "t": 3,
+      "exit": 0,
+      "wallMs": 16234,
+      "apiMs": 49829,
+      "cost": 0.06470020000000001,
+      "usage": {
+        "input_tokens": 12,
+        "cache_creation_input_tokens": 3930,
+        "cache_read_input_tokens": 390012,
+        "output_tokens": 1585,
+        "output_tokens_details": {
+          "thinking_tokens": 95
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 3930
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 7,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 5,
+        "Edit": 1
+      }
+    },
+    {
+      "s": 3,
+      "t": 4,
+      "exit": 0,
+      "wallMs": 17172,
+      "apiMs": 66353,
+      "cost": 0.05870540000000002,
+      "usage": {
+        "input_tokens": 8,
+        "cache_creation_input_tokens": 4180,
+        "cache_read_input_tokens": 272994,
+        "output_tokens": 2094,
+        "output_tokens_details": {
+          "thinking_tokens": 323
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 4180
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 4,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 3
+      }
+    }
+  ],
+  "checks": {
+    "session": 3,
+    "checks": {
+      "s3_404_problem": {
+        "category": "told",
+        "session": 3,
+        "pass": true,
+        "note": ""
+      },
+      "s3_default_header_limit": {
+        "category": "told",
+        "session": 3,
+        "pass": true,
+        "note": ""
+      },
+      "s3_docstrings_untold": {
+        "category": "habit",
+        "session": 3,
+        "pass": true,
+        "note": "10 new test functions"
+      },
+      "s3_spdx_untold": {
+        "category": "decision",
+        "session": 3,
+        "pass": true,
+        "note": "1 new files"
+      }
+    }
+  }
+}

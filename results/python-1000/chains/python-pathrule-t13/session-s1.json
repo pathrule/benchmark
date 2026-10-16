@@ -1,0 +1,198 @@
+{
+  "sessionId": "076c9d90-5756-4787-9c6c-9485c2ec130e",
+  "name": "S1-request-deadline",
+  "rows": [
+    {
+      "s": 1,
+      "t": 1,
+      "exit": 0,
+      "wallMs": 33557,
+      "apiMs": 30392,
+      "cost": 0.1301059,
+      "usage": {
+        "input_tokens": 16,
+        "cache_creation_input_tokens": 27888,
+        "cache_read_input_tokens": 240339,
+        "output_tokens": 3632,
+        "output_tokens_details": {
+          "thinking_tokens": 285
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 27888
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 15,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 4,
+        "ToolSearch": 1,
+        "mcp__pathrule__pathrule_get_context": 1,
+        "Read": 7,
+        "mcp__pathrule__pathrule_remember_preference": 1
+      }
+    },
+    {
+      "s": 1,
+      "t": 2,
+      "exit": 0,
+      "wallMs": 11918,
+      "apiMs": 40187,
+      "cost": 0.0341688,
+      "usage": {
+        "input_tokens": 4,
+        "cache_creation_input_tokens": 5228,
+        "cache_read_input_tokens": 84508,
+        "output_tokens": 1264,
+        "output_tokens_details": {
+          "thinking_tokens": 53
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 5228
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 2,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 1
+      }
+    },
+    {
+      "s": 1,
+      "t": 3,
+      "exit": 0,
+      "wallMs": 16099,
+      "apiMs": 54511,
+      "cost": 0.04209260000000001,
+      "usage": {
+        "input_tokens": 6,
+        "cache_creation_input_tokens": 3627,
+        "cache_read_input_tokens": 140531,
+        "output_tokens": 1896,
+        "output_tokens_details": {
+          "thinking_tokens": 131
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 3627
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 4,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 1,
+        "mcp__pathrule__pathrule_write_memory": 2
+      }
+    },
+    {
+      "s": 1,
+      "t": 4,
+      "exit": 0,
+      "wallMs": 15728,
+      "apiMs": 67413,
+      "cost": 0.04670339999999998,
+      "usage": {
+        "input_tokens": 8,
+        "cache_creation_input_tokens": 5671,
+        "cache_read_input_tokens": 209599,
+        "output_tokens": 1155,
+        "output_tokens_details": {
+          "thinking_tokens": 171
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 5671
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 5,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Read": 1,
+        "Bash": 2,
+        "mcp__pathrule__pathrule_write_memory": 1
+      }
+    }
+  ],
+  "checks": {
+    "session": 1,
+    "checks": {
+      "s1_deadline_504": {
+        "category": "told",
+        "session": 1,
+        "pass": true,
+        "note": ""
+      },
+      "s1_deadline_problem_format": {
+        "category": "present",
+        "session": 1,
+        "pass": true,
+        "note": ""
+      },
+      "s1_retry_after": {
+        "category": "told",
+        "session": 1,
+        "pass": true,
+        "note": ""
+      },
+      "s1_added_headers_retry_after": {
+        "category": "told",
+        "session": 1,
+        "pass": true,
+        "note": ""
+      },
+      "s1_option_registered": {
+        "category": "present",
+        "session": 1,
+        "pass": true,
+        "note": "documented"
+      },
+      "s1_docstrings": {
+        "category": "told",
+        "session": 1,
+        "pass": true,
+        "note": "6 new test functions"
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "session": 7,
+  "checks": {
+    "s7_request_id": {
+      "category": "told",
+      "session": 7,
+      "pass": true,
+      "note": "ok  \tacme.example/toolkit/api\t0.407s"
+    },
+    "s7_added_headers_request_id": {
+      "category": "decision",
+      "session": 7,
+      "pass": true,
+      "note": "ok  \tacme.example/toolkit/api\t0.409s"
+    },
+    "s7_max_body_413": {
+      "category": "told",
+      "session": 7,
+      "pass": true,
+      "note": "ok  \tacme.example/toolkit/api\t0.438s"
+    },
+    "s7_413_new_domain": {
+      "category": "superseded",
+      "session": 7,
+      "pass": true,
+      "note": "ok  \tacme.example/toolkit/api\t0.405s"
+    },
+    "s7_option_registered": {
+      "category": "present",
+      "session": 7,
+      "pass": true,
+      "note": "documented"
+    },
+    "s7_changelog": {
+      "category": "told",
+      "session": 7,
+      "pass": true,
+      "note": "- Every response carries an `X-Request-Id` header: the request's own value, or a new random id.\n- `MaxBodyBytes` app opt"
+    },
+    "s7_test_comments_untold": {
+      "category": "habit",
+      "session": 7,
+      "pass": true,
+      "note": "10 new test functions"
+    },
+    "s7_spdx_untold": {
+      "category": "decision",
+      "session": 7,
+      "pass": true,
+      "note": "3 new files"
+    }
+  }
+}

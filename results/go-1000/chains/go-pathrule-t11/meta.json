@@ -1,0 +1,16 @@
+{
+  "lang": "go",
+  "arm": "pathrule",
+  "trial": "11",
+  "model": "claude-sonnet-5-5",
+  "knowledge": "team-scale-1000.json",
+  "sessions": "sessions.json",
+  "pathrule": "202a28db5",
+  "claude": "2.1.302 (Claude Code)",
+  "startedAt": "2026-10-16T21:40:23.928Z",
+  "seed": {
+    "workspace": "c6719841-b7f2-4121-8545-e37913fe8c9a",
+    "memories": 1000,
+    "atoms": 1000
+  }
+}

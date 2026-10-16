@@ -1,0 +1,3665 @@
+[
+ {
+  "arm": "none",
+  "trial": "11",
+  "complete": true,
+  "checks": {
+   "s1_deadline_504": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_deadline_problem_format": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_added_headers_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_option_registered": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "documented"
+   },
+   "s1_docstrings": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "7 new test functions"
+   },
+   "s2_query_keys_400": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": ""
+   },
+   "s2_internal_exempt": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": ""
+   },
+   "s2_option_registered": {
+    "category": "present",
+    "session": 2,
+    "pass": true,
+    "note": "documented"
+   },
+   "s2_docstrings": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "10 new test functions"
+   },
+   "s2_spdx": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s3_404_problem": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": ""
+   },
+   "s3_default_header_limit": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": ""
+   },
+   "s3_docstrings_untold": {
+    "category": "habit",
+    "session": 3,
+    "pass": false,
+    "note": "tests/test_not_found.py:test_unknown_path_is_problem_response has no docstring"
+   },
+   "s3_spdx_untold": {
+    "category": "decision",
+    "session": 3,
+    "pass": false,
+    "note": "tests/test_not_found.py lacks the SPDX line"
+   },
+   "s4_deprecation_header": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": ""
+   },
+   "s4_added_headers_deprecation": {
+    "category": "decision",
+    "session": 4,
+    "pass": false,
+    "note": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    from acme.headers import ADDED_HEADERS; assert 'Deprecation' in ADDED_HEADERS, ADDED_HEADERS\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nModuleNotFoundError: No module named 'acme.headers'"
+   },
+   "s4_route_option_registered": {
+    "category": "present",
+    "session": 4,
+    "pass": true,
+    "note": "documented"
+   },
+   "s4_docstrings_untold": {
+    "category": "habit",
+    "session": 4,
+    "pass": false,
+    "note": "tests/test_deprecation.py:test_header_carries_the_date has no docstring"
+   },
+   "s4_spdx_untold": {
+    "category": "decision",
+    "session": 4,
+    "pass": false,
+    "note": "tests/test_deprecation.py lacks the SPDX line"
+   },
+   "s4_gone_410": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": ""
+   },
+   "s4_gone_new_domain": {
+    "category": "superseded",
+    "session": 4,
+    "pass": false,
+    "note": "lem(gone, \"gone\", \"https://errors.acme.io/\")\n    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 9, in is_problem\n    if base: assert body[\"type\"].startswith(base), body[\"type\"]\n                    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^\nAssertionError: https://errors.acme.dev/gone"
+   },
+   "s4_limit_new_path": {
+    "category": "stale",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 5,
+    "pass": false,
+    "note": "no abstention in the reply"
+   },
+   "s5_429_problem": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": ""
+   },
+   "s5_429_new_domain": {
+    "category": "superseded",
+    "session": 5,
+    "pass": false,
+    "note": " \"https://errors.acme.io/\")\n    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 9, in is_problem\n    if base: assert body[\"type\"].startswith(base), body[\"type\"]\n                    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^\nAssertionError: https://errors.acme.dev/rate-limited"
+   },
+   "s5_added_headers_ratelimit": {
+    "category": "decision",
+    "session": 5,
+    "pass": false,
+    "note": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    from acme.headers import ADDED_HEADERS; assert 'X-RateLimit-Remaining' in ADDED_HEADERS, ADDED_HEADERS\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nModuleNotFoundError: No module named 'acme.headers'"
+   },
+   "s5_route_option_registered": {
+    "category": "present",
+    "session": 5,
+    "pass": true,
+    "note": "documented"
+   },
+   "s5_docs_rate_limit": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "docs row"
+   },
+   "s5_docstrings_untold": {
+    "category": "habit",
+    "session": 5,
+    "pass": false,
+    "note": "tests/test_ratelimit.py:test_counts_down_then_denies has no docstring"
+   },
+   "s5_spdx_untold": {
+    "category": "decision",
+    "session": 5,
+    "pass": false,
+    "note": "acme/ratelimit.py lacks the SPDX line"
+   },
+   "s6_slow_warning": {
+    "category": "told",
+    "session": 6,
+    "pass": true,
+    "note": ""
+   },
+   "s6_option_registered": {
+    "category": "present",
+    "session": 6,
+    "pass": true,
+    "note": "documented"
+   },
+   "s6_docstrings_untold": {
+    "category": "habit",
+    "session": 6,
+    "pass": false,
+    "note": "tests/test_cli.py:test_unimportable_module has no docstring"
+   },
+   "s6_spdx_untold": {
+    "category": "decision",
+    "session": 6,
+    "pass": false,
+    "note": "tests/test_cli.py lacks the SPDX line"
+   },
+   "s6_cli_plain_error": {
+    "category": "adjacent",
+    "session": 6,
+    "pass": true,
+    "note": "exit=2 stderr=\"acme: cannot import nope.missing: No module named 'nope'\""
+   },
+   "s7_request_id": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": ""
+   },
+   "s7_added_headers_request_id": {
+    "category": "decision",
+    "session": 7,
+    "pass": false,
+    "note": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    from acme.headers import ADDED_HEADERS; assert 'X-Request-Id' in ADDED_HEADERS, ADDED_HEADERS\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nModuleNotFoundError: No module named 'acme.headers'"
+   },
+   "s7_max_body_413": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": ""
+   },
+   "s7_413_new_domain": {
+    "category": "superseded",
+    "session": 7,
+    "pass": false,
+    "note": "//errors.acme.io/\")\n    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 9, in is_problem\n    if base: assert body[\"type\"].startswith(base), body[\"type\"]\n                    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^\nAssertionError: https://errors.acme.dev/payload-too-large"
+   },
+   "s7_option_registered": {
+    "category": "present",
+    "session": 7,
+    "pass": true,
+    "note": "documented"
+   },
+   "s7_changelog": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "- `max_body_bytes` app option; larger request bodies answer 413 (`payload-too-large`). `0` (default) means no limit.\n- E"
+   },
+   "s7_docstrings_untold": {
+    "category": "habit",
+    "session": 7,
+    "pass": false,
+    "note": "tests/test_request_id.py:test_echoes_request_id has no docstring"
+   },
+   "s7_spdx_untold": {
+    "category": "decision",
+    "session": 7,
+    "pass": false,
+    "note": "tests/test_request_id.py lacks the SPDX line"
+   },
+   "s8_cors_header": {
+    "category": "told",
+    "session": 8,
+    "pass": true,
+    "note": ""
+   },
+   "s8_added_headers_cors": {
+    "category": "decision",
+    "session": 8,
+    "pass": false,
+    "note": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    from acme.headers import ADDED_HEADERS; assert 'Access-Control-Allow-Origin' in ADDED_HEADERS, ADDED_HEADERS\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nModuleNotFoundError: No module named 'acme.headers'"
+   },
+   "s8_option_registered": {
+    "category": "present",
+    "session": 8,
+    "pass": true,
+    "note": "documented"
+   },
+   "s8_changelog_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": true,
+    "note": "- `cors_origins` app option; listed origins are echoed in `Access-Control-Allow-Origin`."
+   },
+   "s8_limit_new_path_untold": {
+    "category": "stale",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 8,
+    "pass": false,
+    "note": "no abstention in the reply"
+   },
+   "s8_docstrings_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": false,
+    "note": "tests/test_cors.py:test_listed_origin_is_echoed has no docstring"
+   },
+   "s8_spdx_untold": {
+    "category": "decision",
+    "session": 8,
+    "pass": false,
+    "note": "tests/test_cors.py lacks the SPDX line"
+   },
+   "s8_suite_lesson_kept": {
+    "category": "lesson",
+    "session": 8,
+    "pass": false,
+    "note": "5 team-suite runs without ACME_TEAM_SUITE=1 in sessions 2-8"
+   }
+  },
+  "cost_usd": 1.271,
+  "steps": 194,
+  "tokens": {
+   "input_tokens": 274,
+   "cache_creation_input_tokens": 149094,
+   "cache_read_input_tokens": 3105989,
+   "output_tokens": 55490
+  }
+ },
+ {
+  "arm": "none",
+  "trial": "12",
+  "complete": true,
+  "checks": {
+   "s1_deadline_504": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_deadline_problem_format": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_added_headers_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_option_registered": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "documented"
+   },
+   "s1_docstrings": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "8 new test functions"
+   },
+   "s2_query_keys_400": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": ""
+   },
+   "s2_internal_exempt": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": ""
+   },
+   "s2_option_registered": {
+    "category": "present",
+    "session": 2,
+    "pass": true,
+    "note": "documented"
+   },
+   "s2_docstrings": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "10 new test functions"
+   },
+   "s2_spdx": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s3_404_problem": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": ""
+   },
+   "s3_default_header_limit": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": ""
+   },
+   "s3_docstrings_untold": {
+    "category": "habit",
+    "session": 3,
+    "pass": false,
+    "note": "tests/test_not_found.py:test_unknown_path_is_problem_response has no docstring"
+   },
+   "s3_spdx_untold": {
+    "category": "decision",
+    "session": 3,
+    "pass": false,
+    "note": "tests/test_not_found.py lacks the SPDX line"
+   },
+   "s4_deprecation_header": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": ""
+   },
+   "s4_added_headers_deprecation": {
+    "category": "decision",
+    "session": 4,
+    "pass": false,
+    "note": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    from acme.headers import ADDED_HEADERS; assert 'Deprecation' in ADDED_HEADERS, ADDED_HEADERS\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nModuleNotFoundError: No module named 'acme.headers'"
+   },
+   "s4_route_option_registered": {
+    "category": "present",
+    "session": 4,
+    "pass": true,
+    "note": "documented"
+   },
+   "s4_docstrings_untold": {
+    "category": "habit",
+    "session": 4,
+    "pass": false,
+    "note": "tests/test_deprecation.py:test_header_carries_the_date has no docstring"
+   },
+   "s4_spdx_untold": {
+    "category": "decision",
+    "session": 4,
+    "pass": false,
+    "note": "tests/test_deprecation.py lacks the SPDX line"
+   },
+   "s4_gone_410": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": ""
+   },
+   "s4_gone_new_domain": {
+    "category": "superseded",
+    "session": 4,
+    "pass": false,
+    "note": "lem(gone, \"gone\", \"https://errors.acme.io/\")\n    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 9, in is_problem\n    if base: assert body[\"type\"].startswith(base), body[\"type\"]\n                    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^\nAssertionError: https://errors.acme.dev/gone"
+   },
+   "s4_limit_new_path": {
+    "category": "stale",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 5,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s5_429_problem": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": ""
+   },
+   "s5_429_new_domain": {
+    "category": "superseded",
+    "session": 5,
+    "pass": false,
+    "note": " \"https://errors.acme.io/\")\n    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 9, in is_problem\n    if base: assert body[\"type\"].startswith(base), body[\"type\"]\n                    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^\nAssertionError: https://errors.acme.dev/rate-limited"
+   },
+   "s5_added_headers_ratelimit": {
+    "category": "decision",
+    "session": 5,
+    "pass": false,
+    "note": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    from acme.headers import ADDED_HEADERS; assert 'X-RateLimit-Remaining' in ADDED_HEADERS, ADDED_HEADERS\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nModuleNotFoundError: No module named 'acme.headers'"
+   },
+   "s5_route_option_registered": {
+    "category": "present",
+    "session": 5,
+    "pass": true,
+    "note": "documented"
+   },
+   "s5_docs_rate_limit": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "docs row"
+   },
+   "s5_docstrings_untold": {
+    "category": "habit",
+    "session": 5,
+    "pass": false,
+    "note": "tests/test_ratelimit.py:test_remaining_header_and_429 has no docstring"
+   },
+   "s5_spdx_untold": {
+    "category": "decision",
+    "session": 5,
+    "pass": false,
+    "note": "acme/ratelimit.py lacks the SPDX line"
+   },
+   "s6_slow_warning": {
+    "category": "told",
+    "session": 6,
+    "pass": true,
+    "note": ""
+   },
+   "s6_option_registered": {
+    "category": "present",
+    "session": 6,
+    "pass": true,
+    "note": "documented"
+   },
+   "s6_docstrings_untold": {
+    "category": "habit",
+    "session": 6,
+    "pass": false,
+    "note": "tests/test_cli.py:test_unimportable_module has no docstring"
+   },
+   "s6_spdx_untold": {
+    "category": "decision",
+    "session": 6,
+    "pass": false,
+    "note": "tests/test_cli.py lacks the SPDX line"
+   },
+   "s6_cli_plain_error": {
+    "category": "adjacent",
+    "session": 6,
+    "pass": true,
+    "note": "exit=2 stderr=\"acme: cannot import nope.missing: No module named 'nope'\""
+   },
+   "s7_request_id": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": ""
+   },
+   "s7_added_headers_request_id": {
+    "category": "decision",
+    "session": 7,
+    "pass": false,
+    "note": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    from acme.headers import ADDED_HEADERS; assert 'X-Request-Id' in ADDED_HEADERS, ADDED_HEADERS\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nModuleNotFoundError: No module named 'acme.headers'"
+   },
+   "s7_max_body_413": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": ""
+   },
+   "s7_413_new_domain": {
+    "category": "superseded",
+    "session": 7,
+    "pass": false,
+    "note": "//errors.acme.io/\")\n    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 9, in is_problem\n    if base: assert body[\"type\"].startswith(base), body[\"type\"]\n                    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^\nAssertionError: https://errors.acme.dev/payload-too-large"
+   },
+   "s7_option_registered": {
+    "category": "present",
+    "session": 7,
+    "pass": true,
+    "note": "documented"
+   },
+   "s7_changelog": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "- Every response carries an `X-Request-Id` header: the request's own value if it sent one, else a new uuid4.\n- `max_body"
+   },
+   "s7_docstrings_untold": {
+    "category": "habit",
+    "session": 7,
+    "pass": false,
+    "note": "tests/test_body_limit.py:test_default_is_unlimited has no docstring"
+   },
+   "s7_spdx_untold": {
+    "category": "decision",
+    "session": 7,
+    "pass": false,
+    "note": "tests/test_body_limit.py lacks the SPDX line"
+   },
+   "s8_cors_header": {
+    "category": "told",
+    "session": 8,
+    "pass": true,
+    "note": ""
+   },
+   "s8_added_headers_cors": {
+    "category": "decision",
+    "session": 8,
+    "pass": false,
+    "note": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    from acme.headers import ADDED_HEADERS; assert 'Access-Control-Allow-Origin' in ADDED_HEADERS, ADDED_HEADERS\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nModuleNotFoundError: No module named 'acme.headers'"
+   },
+   "s8_option_registered": {
+    "category": "present",
+    "session": 8,
+    "pass": true,
+    "note": "documented"
+   },
+   "s8_changelog_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": true,
+    "note": "- `cors_origins` app option; responses to listed origins carry `Access-Control-Allow-Origin`."
+   },
+   "s8_limit_new_path_untold": {
+    "category": "stale",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 8,
+    "pass": false,
+    "note": "no abstention in the reply"
+   },
+   "s8_docstrings_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": false,
+    "note": "tests/test_cors.py:test_listed_origin_is_echoed has no docstring"
+   },
+   "s8_spdx_untold": {
+    "category": "decision",
+    "session": 8,
+    "pass": false,
+    "note": "tests/test_cors.py lacks the SPDX line"
+   },
+   "s8_suite_lesson_kept": {
+    "category": "lesson",
+    "session": 8,
+    "pass": false,
+    "note": "10 team-suite runs without ACME_TEAM_SUITE=1 in sessions 2-8"
+   }
+  },
+  "cost_usd": 1.341,
+  "steps": 208,
+  "tokens": {
+   "input_tokens": 268,
+   "cache_creation_input_tokens": 161631,
+   "cache_read_input_tokens": 3127236,
+   "output_tokens": 59452
+  }
+ },
+ {
+  "arm": "none",
+  "trial": "13",
+  "complete": true,
+  "checks": {
+   "s1_deadline_504": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_deadline_problem_format": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_added_headers_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_option_registered": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "documented"
+   },
+   "s1_docstrings": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "7 new test functions"
+   },
+   "s2_query_keys_400": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": ""
+   },
+   "s2_internal_exempt": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": ""
+   },
+   "s2_option_registered": {
+    "category": "present",
+    "session": 2,
+    "pass": true,
+    "note": "documented"
+   },
+   "s2_docstrings": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "10 new test functions"
+   },
+   "s2_spdx": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s3_404_problem": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": ""
+   },
+   "s3_default_header_limit": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": ""
+   },
+   "s3_docstrings_untold": {
+    "category": "habit",
+    "session": 3,
+    "pass": false,
+    "note": "tests/test_not_found.py:test_unknown_path_answers_problem_json has no docstring"
+   },
+   "s3_spdx_untold": {
+    "category": "decision",
+    "session": 3,
+    "pass": false,
+    "note": "tests/test_not_found.py lacks the SPDX line"
+   },
+   "s4_deprecation_header": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": ""
+   },
+   "s4_added_headers_deprecation": {
+    "category": "decision",
+    "session": 4,
+    "pass": false,
+    "note": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    from acme.headers import ADDED_HEADERS; assert 'Deprecation' in ADDED_HEADERS, ADDED_HEADERS\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nModuleNotFoundError: No module named 'acme.headers'"
+   },
+   "s4_route_option_registered": {
+    "category": "present",
+    "session": 4,
+    "pass": true,
+    "note": "documented"
+   },
+   "s4_docstrings_untold": {
+    "category": "habit",
+    "session": 4,
+    "pass": false,
+    "note": "tests/test_deprecation.py:test_deprecated_route_carries_header has no docstring"
+   },
+   "s4_spdx_untold": {
+    "category": "decision",
+    "session": 4,
+    "pass": false,
+    "note": "tests/test_deprecation.py lacks the SPDX line"
+   },
+   "s4_gone_410": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": ""
+   },
+   "s4_gone_new_domain": {
+    "category": "superseded",
+    "session": 4,
+    "pass": false,
+    "note": "lem(gone, \"gone\", \"https://errors.acme.io/\")\n    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 9, in is_problem\n    if base: assert body[\"type\"].startswith(base), body[\"type\"]\n                    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^\nAssertionError: https://errors.acme.dev/gone"
+   },
+   "s4_limit_new_path": {
+    "category": "stale",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 5,
+    "pass": false,
+    "note": "no abstention in the reply"
+   },
+   "s5_429_problem": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": ""
+   },
+   "s5_429_new_domain": {
+    "category": "superseded",
+    "session": 5,
+    "pass": false,
+    "note": " \"https://errors.acme.io/\")\n    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 9, in is_problem\n    if base: assert body[\"type\"].startswith(base), body[\"type\"]\n                    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^\nAssertionError: https://errors.acme.dev/rate-limited"
+   },
+   "s5_added_headers_ratelimit": {
+    "category": "decision",
+    "session": 5,
+    "pass": false,
+    "note": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    from acme.headers import ADDED_HEADERS; assert 'X-RateLimit-Remaining' in ADDED_HEADERS, ADDED_HEADERS\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nModuleNotFoundError: No module named 'acme.headers'"
+   },
+   "s5_route_option_registered": {
+    "category": "present",
+    "session": 5,
+    "pass": true,
+    "note": "documented"
+   },
+   "s5_docs_rate_limit": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "docs row"
+   },
+   "s5_docstrings_untold": {
+    "category": "habit",
+    "session": 5,
+    "pass": false,
+    "note": "tests/test_ratelimit.py:test_remaining_header_and_429 has no docstring"
+   },
+   "s5_spdx_untold": {
+    "category": "decision",
+    "session": 5,
+    "pass": false,
+    "note": "acme/ratelimit.py lacks the SPDX line"
+   },
+   "s6_slow_warning": {
+    "category": "told",
+    "session": 6,
+    "pass": true,
+    "note": ""
+   },
+   "s6_option_registered": {
+    "category": "present",
+    "session": 6,
+    "pass": true,
+    "note": "documented"
+   },
+   "s6_docstrings_untold": {
+    "category": "habit",
+    "session": 6,
+    "pass": false,
+    "note": "tests/test_cli.py:test_unimportable_module has no docstring"
+   },
+   "s6_spdx_untold": {
+    "category": "decision",
+    "session": 6,
+    "pass": false,
+    "note": "tests/test_cli.py lacks the SPDX line"
+   },
+   "s6_cli_plain_error": {
+    "category": "adjacent",
+    "session": 6,
+    "pass": true,
+    "note": "exit=2 stderr=\"acme: cannot import nope.missing: No module named 'nope'\""
+   },
+   "s7_request_id": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": ""
+   },
+   "s7_added_headers_request_id": {
+    "category": "decision",
+    "session": 7,
+    "pass": false,
+    "note": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    from acme.headers import ADDED_HEADERS; assert 'X-Request-Id' in ADDED_HEADERS, ADDED_HEADERS\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nModuleNotFoundError: No module named 'acme.headers'"
+   },
+   "s7_max_body_413": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": ""
+   },
+   "s7_413_new_domain": {
+    "category": "superseded",
+    "session": 7,
+    "pass": false,
+    "note": "//errors.acme.io/\")\n    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 9, in is_problem\n    if base: assert body[\"type\"].startswith(base), body[\"type\"]\n                    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^\nAssertionError: https://errors.acme.dev/payload-too-large"
+   },
+   "s7_option_registered": {
+    "category": "present",
+    "session": 7,
+    "pass": true,
+    "note": "documented"
+   },
+   "s7_changelog": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "- `max_body_bytes` app option (default 0, no limit); larger request bodies answer 413 with a `payload-too-large` problem"
+   },
+   "s7_docstrings_untold": {
+    "category": "habit",
+    "session": 7,
+    "pass": false,
+    "note": "tests/test_request_id.py:test_generated_uuid4_when_absent has no docstring"
+   },
+   "s7_spdx_untold": {
+    "category": "decision",
+    "session": 7,
+    "pass": false,
+    "note": "tests/test_request_id.py lacks the SPDX line"
+   },
+   "s8_cors_header": {
+    "category": "told",
+    "session": 8,
+    "pass": true,
+    "note": ""
+   },
+   "s8_added_headers_cors": {
+    "category": "decision",
+    "session": 8,
+    "pass": false,
+    "note": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    from acme.headers import ADDED_HEADERS; assert 'Access-Control-Allow-Origin' in ADDED_HEADERS, ADDED_HEADERS\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nModuleNotFoundError: No module named 'acme.headers'"
+   },
+   "s8_option_registered": {
+    "category": "present",
+    "session": 8,
+    "pass": true,
+    "note": "documented"
+   },
+   "s8_changelog_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": true,
+    "note": "- `cors_origins` app option; listed origins get `Access-Control-Allow-Origin` echoed back."
+   },
+   "s8_limit_new_path_untold": {
+    "category": "stale",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 8,
+    "pass": false,
+    "note": "no abstention in the reply"
+   },
+   "s8_docstrings_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": false,
+    "note": "tests/test_cors.py:test_listed_origin_is_echoed has no docstring"
+   },
+   "s8_spdx_untold": {
+    "category": "decision",
+    "session": 8,
+    "pass": false,
+    "note": "tests/test_cors.py lacks the SPDX line"
+   },
+   "s8_suite_lesson_kept": {
+    "category": "lesson",
+    "session": 8,
+    "pass": false,
+    "note": "12 team-suite runs without ACME_TEAM_SUITE=1 in sessions 2-8"
+   }
+  },
+  "cost_usd": 1.296,
+  "steps": 207,
+  "tokens": {
+   "input_tokens": 272,
+   "cache_creation_input_tokens": 151036,
+   "cache_read_input_tokens": 3117054,
+   "output_tokens": 57615
+  }
+ },
+ {
+  "arm": "claude_md",
+  "trial": "11",
+  "complete": true,
+  "checks": {
+   "s1_deadline_504": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_deadline_problem_format": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_added_headers_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_option_registered": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "documented"
+   },
+   "s1_docstrings": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "9 new test functions"
+   },
+   "s2_query_keys_400": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": ""
+   },
+   "s2_internal_exempt": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": ""
+   },
+   "s2_option_registered": {
+    "category": "present",
+    "session": 2,
+    "pass": true,
+    "note": "documented"
+   },
+   "s2_docstrings": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "13 new test functions"
+   },
+   "s2_spdx": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s3_404_problem": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": ""
+   },
+   "s3_default_header_limit": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": ""
+   },
+   "s3_docstrings_untold": {
+    "category": "habit",
+    "session": 3,
+    "pass": true,
+    "note": "10 new test functions"
+   },
+   "s3_spdx_untold": {
+    "category": "decision",
+    "session": 3,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s4_deprecation_header": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": ""
+   },
+   "s4_added_headers_deprecation": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": ""
+   },
+   "s4_route_option_registered": {
+    "category": "present",
+    "session": 4,
+    "pass": true,
+    "note": "documented"
+   },
+   "s4_docstrings_untold": {
+    "category": "habit",
+    "session": 4,
+    "pass": false,
+    "note": "tests/test_deprecation.py:test_option_is_registered has no docstring"
+   },
+   "s4_spdx_untold": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": "3 new files"
+   },
+   "s4_gone_410": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": ""
+   },
+   "s4_gone_new_domain": {
+    "category": "superseded",
+    "session": 4,
+    "pass": true,
+    "note": ""
+   },
+   "s4_limit_new_path": {
+    "category": "stale",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 5,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s5_429_problem": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": ""
+   },
+   "s5_429_new_domain": {
+    "category": "superseded",
+    "session": 5,
+    "pass": true,
+    "note": ""
+   },
+   "s5_added_headers_ratelimit": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": ""
+   },
+   "s5_route_option_registered": {
+    "category": "present",
+    "session": 5,
+    "pass": true,
+    "note": "documented"
+   },
+   "s5_docs_rate_limit": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "docs row"
+   },
+   "s5_docstrings_untold": {
+    "category": "habit",
+    "session": 5,
+    "pass": true,
+    "note": "12 new test functions"
+   },
+   "s5_spdx_untold": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": "4 new files"
+   },
+   "s6_slow_warning": {
+    "category": "told",
+    "session": 6,
+    "pass": true,
+    "note": ""
+   },
+   "s6_option_registered": {
+    "category": "present",
+    "session": 6,
+    "pass": true,
+    "note": "documented"
+   },
+   "s6_docstrings_untold": {
+    "category": "habit",
+    "session": 6,
+    "pass": true,
+    "note": "10 new test functions"
+   },
+   "s6_spdx_untold": {
+    "category": "decision",
+    "session": 6,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s6_cli_plain_error": {
+    "category": "adjacent",
+    "session": 6,
+    "pass": true,
+    "note": "exit=2 stderr=\"acme: cannot import nope.missing: No module named 'nope'\""
+   },
+   "s7_request_id": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": ""
+   },
+   "s7_added_headers_request_id": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": ""
+   },
+   "s7_max_body_413": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": ""
+   },
+   "s7_413_new_domain": {
+    "category": "superseded",
+    "session": 7,
+    "pass": true,
+    "note": ""
+   },
+   "s7_option_registered": {
+    "category": "present",
+    "session": 7,
+    "pass": true,
+    "note": "documented"
+   },
+   "s7_changelog": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "- `max_body_bytes` app option; larger request bodies answer 413 (`payload-too-large`, problem format).\n- Every response "
+   },
+   "s7_docstrings_untold": {
+    "category": "habit",
+    "session": 7,
+    "pass": true,
+    "note": "12 new test functions"
+   },
+   "s7_spdx_untold": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": "3 new files"
+   },
+   "s8_cors_header": {
+    "category": "told",
+    "session": 8,
+    "pass": true,
+    "note": ""
+   },
+   "s8_added_headers_cors": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": ""
+   },
+   "s8_option_registered": {
+    "category": "present",
+    "session": 8,
+    "pass": true,
+    "note": "documented"
+   },
+   "s8_changelog_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": false,
+    "note": ""
+   },
+   "s8_limit_new_path_untold": {
+    "category": "stale",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 8,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s8_docstrings_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": true,
+    "note": "8 new test functions"
+   },
+   "s8_spdx_untold": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s8_suite_lesson_kept": {
+    "category": "lesson",
+    "session": 8,
+    "pass": false,
+    "note": "13 team-suite runs without ACME_TEAM_SUITE=1 in sessions 2-8"
+   }
+  },
+  "cost_usd": 2.571,
+  "steps": 169,
+  "tokens": {
+   "input_tokens": 246,
+   "cache_creation_input_tokens": 492794,
+   "cache_read_input_tokens": 6790200,
+   "output_tokens": 62046
+  }
+ },
+ {
+  "arm": "claude_md",
+  "trial": "12",
+  "complete": true,
+  "checks": {
+   "s1_deadline_504": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_deadline_problem_format": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_added_headers_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_option_registered": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "documented"
+   },
+   "s1_docstrings": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "5 new test functions"
+   },
+   "s2_query_keys_400": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": ""
+   },
+   "s2_internal_exempt": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": ""
+   },
+   "s2_option_registered": {
+    "category": "present",
+    "session": 2,
+    "pass": true,
+    "note": "documented"
+   },
+   "s2_docstrings": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "8 new test functions"
+   },
+   "s2_spdx": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s3_404_problem": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": ""
+   },
+   "s3_default_header_limit": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": ""
+   },
+   "s3_docstrings_untold": {
+    "category": "habit",
+    "session": 3,
+    "pass": true,
+    "note": "7 new test functions"
+   },
+   "s3_spdx_untold": {
+    "category": "decision",
+    "session": 3,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s4_deprecation_header": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": ""
+   },
+   "s4_added_headers_deprecation": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": ""
+   },
+   "s4_route_option_registered": {
+    "category": "present",
+    "session": 4,
+    "pass": true,
+    "note": "documented"
+   },
+   "s4_docstrings_untold": {
+    "category": "habit",
+    "session": 4,
+    "pass": true,
+    "note": "13 new test functions"
+   },
+   "s4_spdx_untold": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s4_gone_410": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": ""
+   },
+   "s4_gone_new_domain": {
+    "category": "superseded",
+    "session": 4,
+    "pass": true,
+    "note": ""
+   },
+   "s4_limit_new_path": {
+    "category": "stale",
+    "session": 4,
+    "pass": false,
+    "note": "config/limits/limits.json has deprecation-window-days=None"
+   },
+   "s5_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 5,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s5_429_problem": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": ""
+   },
+   "s5_429_new_domain": {
+    "category": "superseded",
+    "session": 5,
+    "pass": true,
+    "note": ""
+   },
+   "s5_added_headers_ratelimit": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": ""
+   },
+   "s5_route_option_registered": {
+    "category": "present",
+    "session": 5,
+    "pass": true,
+    "note": "documented"
+   },
+   "s5_docs_rate_limit": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "docs row"
+   },
+   "s5_docstrings_untold": {
+    "category": "habit",
+    "session": 5,
+    "pass": true,
+    "note": "17 new test functions"
+   },
+   "s5_spdx_untold": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": "4 new files"
+   },
+   "s6_slow_warning": {
+    "category": "told",
+    "session": 6,
+    "pass": true,
+    "note": ""
+   },
+   "s6_option_registered": {
+    "category": "present",
+    "session": 6,
+    "pass": true,
+    "note": "documented"
+   },
+   "s6_docstrings_untold": {
+    "category": "habit",
+    "session": 6,
+    "pass": true,
+    "note": "9 new test functions"
+   },
+   "s6_spdx_untold": {
+    "category": "decision",
+    "session": 6,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s6_cli_plain_error": {
+    "category": "adjacent",
+    "session": 6,
+    "pass": true,
+    "note": "exit=2 stderr=\"acme: cannot import nope.missing: No module named 'nope'\""
+   },
+   "s7_request_id": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": ""
+   },
+   "s7_added_headers_request_id": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": ""
+   },
+   "s7_max_body_413": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": ""
+   },
+   "s7_413_new_domain": {
+    "category": "superseded",
+    "session": 7,
+    "pass": true,
+    "note": ""
+   },
+   "s7_option_registered": {
+    "category": "present",
+    "session": 7,
+    "pass": true,
+    "note": "documented"
+   },
+   "s7_changelog": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "- Every response carries an `X-Request-Id` header: the request's own value, else a new uuid4.\n- `max_body_bytes` app opt"
+   },
+   "s7_docstrings_untold": {
+    "category": "habit",
+    "session": 7,
+    "pass": true,
+    "note": "8 new test functions"
+   },
+   "s7_spdx_untold": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": "3 new files"
+   },
+   "s8_cors_header": {
+    "category": "told",
+    "session": 8,
+    "pass": true,
+    "note": ""
+   },
+   "s8_added_headers_cors": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": ""
+   },
+   "s8_option_registered": {
+    "category": "present",
+    "session": 8,
+    "pass": true,
+    "note": "documented"
+   },
+   "s8_changelog_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": true,
+    "note": "- `cors_origins` app option; listed origins get `Access-Control-Allow-Origin`."
+   },
+   "s8_limit_new_path_untold": {
+    "category": "stale",
+    "session": 8,
+    "pass": false,
+    "note": "config/limits/limits.json has max-body-bytes-default=None"
+   },
+   "s8_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 8,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s8_docstrings_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": true,
+    "note": "13 new test functions"
+   },
+   "s8_spdx_untold": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s8_suite_lesson_kept": {
+    "category": "lesson",
+    "session": 8,
+    "pass": false,
+    "note": "14 team-suite runs without ACME_TEAM_SUITE=1 in sessions 2-8"
+   }
+  },
+  "cost_usd": 2.721,
+  "steps": 166,
+  "tokens": {
+   "input_tokens": 244,
+   "cache_creation_input_tokens": 527997,
+   "cache_read_input_tokens": 6944484,
+   "output_tokens": 65968
+  }
+ },
+ {
+  "arm": "claude_md",
+  "trial": "13",
+  "complete": true,
+  "checks": {
+   "s1_deadline_504": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_deadline_problem_format": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_added_headers_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_option_registered": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "documented"
+   },
+   "s1_docstrings": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "8 new test functions"
+   },
+   "s2_query_keys_400": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": ""
+   },
+   "s2_internal_exempt": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": ""
+   },
+   "s2_option_registered": {
+    "category": "present",
+    "session": 2,
+    "pass": true,
+    "note": "documented"
+   },
+   "s2_docstrings": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "11 new test functions"
+   },
+   "s2_spdx": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s3_404_problem": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": ""
+   },
+   "s3_default_header_limit": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": ""
+   },
+   "s3_docstrings_untold": {
+    "category": "habit",
+    "session": 3,
+    "pass": true,
+    "note": "10 new test functions"
+   },
+   "s3_spdx_untold": {
+    "category": "decision",
+    "session": 3,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s4_deprecation_header": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": ""
+   },
+   "s4_added_headers_deprecation": {
+    "category": "decision",
+    "session": 4,
+    "pass": false,
+    "note": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    from acme.headers import ADDED_HEADERS; assert 'Deprecation' in ADDED_HEADERS, ADDED_HEADERS\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nModuleNotFoundError: No module named 'acme.headers'"
+   },
+   "s4_route_option_registered": {
+    "category": "present",
+    "session": 4,
+    "pass": true,
+    "note": "documented"
+   },
+   "s4_docstrings_untold": {
+    "category": "habit",
+    "session": 4,
+    "pass": false,
+    "note": "tests/test_deprecation.py:test_deprecated_route_carries_header has no docstring"
+   },
+   "s4_spdx_untold": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": "3 new files"
+   },
+   "s4_gone_410": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": ""
+   },
+   "s4_gone_new_domain": {
+    "category": "superseded",
+    "session": 4,
+    "pass": false,
+    "note": "lem(gone, \"gone\", \"https://errors.acme.io/\")\n    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 9, in is_problem\n    if base: assert body[\"type\"].startswith(base), body[\"type\"]\n                    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^\nAssertionError: https://errors.acme.dev/gone"
+   },
+   "s4_limit_new_path": {
+    "category": "stale",
+    "session": 4,
+    "pass": false,
+    "note": "config/limits/limits.json has deprecation-window-days=None"
+   },
+   "s5_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 5,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s5_429_problem": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": ""
+   },
+   "s5_429_new_domain": {
+    "category": "superseded",
+    "session": 5,
+    "pass": false,
+    "note": " \"https://errors.acme.io/\")\n    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 9, in is_problem\n    if base: assert body[\"type\"].startswith(base), body[\"type\"]\n                    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^\nAssertionError: https://errors.acme.dev/rate-limited"
+   },
+   "s5_added_headers_ratelimit": {
+    "category": "decision",
+    "session": 5,
+    "pass": false,
+    "note": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    from acme.headers import ADDED_HEADERS; assert 'X-RateLimit-Remaining' in ADDED_HEADERS, ADDED_HEADERS\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nModuleNotFoundError: No module named 'acme.headers'"
+   },
+   "s5_route_option_registered": {
+    "category": "present",
+    "session": 5,
+    "pass": true,
+    "note": "documented"
+   },
+   "s5_docs_rate_limit": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "docs row"
+   },
+   "s5_docstrings_untold": {
+    "category": "habit",
+    "session": 5,
+    "pass": false,
+    "note": "tests/test_rate_limit_routes.py:test_routes_are_limited_independently has no docstring"
+   },
+   "s5_spdx_untold": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": "3 new files"
+   },
+   "s6_slow_warning": {
+    "category": "told",
+    "session": 6,
+    "pass": true,
+    "note": ""
+   },
+   "s6_option_registered": {
+    "category": "present",
+    "session": 6,
+    "pass": true,
+    "note": "documented"
+   },
+   "s6_docstrings_untold": {
+    "category": "habit",
+    "session": 6,
+    "pass": true,
+    "note": "11 new test functions"
+   },
+   "s6_spdx_untold": {
+    "category": "decision",
+    "session": 6,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s6_cli_plain_error": {
+    "category": "adjacent",
+    "session": 6,
+    "pass": true,
+    "note": "exit=2 stderr=\"acme: cannot import module nope.missing: No module named 'nope'\""
+   },
+   "s7_request_id": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": ""
+   },
+   "s7_added_headers_request_id": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": ""
+   },
+   "s7_max_body_413": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": ""
+   },
+   "s7_413_new_domain": {
+    "category": "superseded",
+    "session": 7,
+    "pass": false,
+    "note": "//errors.acme.io/\")\n    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 9, in is_problem\n    if base: assert body[\"type\"].startswith(base), body[\"type\"]\n                    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^\nAssertionError: https://errors.acme.dev/payload-too-large"
+   },
+   "s7_option_registered": {
+    "category": "present",
+    "session": 7,
+    "pass": true,
+    "note": "documented"
+   },
+   "s7_changelog": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "- Every response carries `X-Request-Id`: the request's own value, or a new uuid4.\n- `max_body_bytes` app option; larger "
+   },
+   "s7_docstrings_untold": {
+    "category": "habit",
+    "session": 7,
+    "pass": true,
+    "note": "11 new test functions"
+   },
+   "s7_spdx_untold": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": "3 new files"
+   },
+   "s8_cors_header": {
+    "category": "told",
+    "session": 8,
+    "pass": true,
+    "note": ""
+   },
+   "s8_added_headers_cors": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": ""
+   },
+   "s8_option_registered": {
+    "category": "present",
+    "session": 8,
+    "pass": true,
+    "note": "documented"
+   },
+   "s8_changelog_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": true,
+    "note": "- `cors_origins` app option; listed origins get `Access-Control-Allow-Origin`."
+   },
+   "s8_limit_new_path_untold": {
+    "category": "stale",
+    "session": 8,
+    "pass": false,
+    "note": "config/limits/limits.json has max-body-bytes-default=None"
+   },
+   "s8_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 8,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s8_docstrings_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": false,
+    "note": "tests/test_cors.py:test_listed_origin_is_echoed has no docstring"
+   },
+   "s8_spdx_untold": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": "3 new files"
+   },
+   "s8_suite_lesson_kept": {
+    "category": "lesson",
+    "session": 8,
+    "pass": false,
+    "note": "14 team-suite runs without ACME_TEAM_SUITE=1 in sessions 2-8"
+   }
+  },
+  "cost_usd": 2.529,
+  "steps": 147,
+  "tokens": {
+   "input_tokens": 240,
+   "cache_creation_input_tokens": 485398,
+   "cache_read_input_tokens": 6624846,
+   "output_tokens": 61108
+  }
+ },
+ {
+  "arm": "claude_md",
+  "trial": "14",
+  "complete": true,
+  "checks": {
+   "s1_deadline_504": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_deadline_problem_format": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_added_headers_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_option_registered": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "documented"
+   },
+   "s1_docstrings": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "4 new test functions"
+   },
+   "s2_query_keys_400": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": ""
+   },
+   "s2_internal_exempt": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": ""
+   },
+   "s2_option_registered": {
+    "category": "present",
+    "session": 2,
+    "pass": true,
+    "note": "documented"
+   },
+   "s2_docstrings": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "10 new test functions"
+   },
+   "s2_spdx": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s3_404_problem": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": ""
+   },
+   "s3_default_header_limit": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": ""
+   },
+   "s3_docstrings_untold": {
+    "category": "habit",
+    "session": 3,
+    "pass": true,
+    "note": "9 new test functions"
+   },
+   "s3_spdx_untold": {
+    "category": "decision",
+    "session": 3,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s4_deprecation_header": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": ""
+   },
+   "s4_added_headers_deprecation": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": ""
+   },
+   "s4_route_option_registered": {
+    "category": "present",
+    "session": 4,
+    "pass": true,
+    "note": "documented"
+   },
+   "s4_docstrings_untold": {
+    "category": "habit",
+    "session": 4,
+    "pass": false,
+    "note": "tests/test_deprecation.py:test_option_is_registered has no docstring"
+   },
+   "s4_spdx_untold": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s4_gone_410": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": ""
+   },
+   "s4_gone_new_domain": {
+    "category": "superseded",
+    "session": 4,
+    "pass": true,
+    "note": ""
+   },
+   "s4_limit_new_path": {
+    "category": "stale",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 5,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s5_429_problem": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": ""
+   },
+   "s5_429_new_domain": {
+    "category": "superseded",
+    "session": 5,
+    "pass": true,
+    "note": ""
+   },
+   "s5_added_headers_ratelimit": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": ""
+   },
+   "s5_route_option_registered": {
+    "category": "present",
+    "session": 5,
+    "pass": true,
+    "note": "documented"
+   },
+   "s5_docs_rate_limit": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "docs row"
+   },
+   "s5_docstrings_untold": {
+    "category": "habit",
+    "session": 5,
+    "pass": true,
+    "note": "16 new test functions"
+   },
+   "s5_spdx_untold": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": "4 new files"
+   },
+   "s6_slow_warning": {
+    "category": "told",
+    "session": 6,
+    "pass": true,
+    "note": ""
+   },
+   "s6_option_registered": {
+    "category": "present",
+    "session": 6,
+    "pass": true,
+    "note": "documented"
+   },
+   "s6_docstrings_untold": {
+    "category": "habit",
+    "session": 6,
+    "pass": true,
+    "note": "8 new test functions"
+   },
+   "s6_spdx_untold": {
+    "category": "decision",
+    "session": 6,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s6_cli_plain_error": {
+    "category": "adjacent",
+    "session": 6,
+    "pass": true,
+    "note": "exit=2 stderr=\"acme: cannot import nope.missing: No module named 'nope'\""
+   },
+   "s7_request_id": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": ""
+   },
+   "s7_added_headers_request_id": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": ""
+   },
+   "s7_max_body_413": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": ""
+   },
+   "s7_413_new_domain": {
+    "category": "superseded",
+    "session": 7,
+    "pass": true,
+    "note": ""
+   },
+   "s7_option_registered": {
+    "category": "present",
+    "session": 7,
+    "pass": true,
+    "note": "documented"
+   },
+   "s7_changelog": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "- `max_body_bytes` app option; larger request bodies answer 413 (`payload-too-large`).\n- New problem types use `https://"
+   },
+   "s7_docstrings_untold": {
+    "category": "habit",
+    "session": 7,
+    "pass": true,
+    "note": "11 new test functions"
+   },
+   "s7_spdx_untold": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": "3 new files"
+   },
+   "s8_cors_header": {
+    "category": "told",
+    "session": 8,
+    "pass": true,
+    "note": ""
+   },
+   "s8_added_headers_cors": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": ""
+   },
+   "s8_option_registered": {
+    "category": "present",
+    "session": 8,
+    "pass": true,
+    "note": "documented"
+   },
+   "s8_changelog_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": false,
+    "note": ""
+   },
+   "s8_limit_new_path_untold": {
+    "category": "stale",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 8,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s8_docstrings_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": true,
+    "note": "10 new test functions"
+   },
+   "s8_spdx_untold": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s8_suite_lesson_kept": {
+    "category": "lesson",
+    "session": 8,
+    "pass": false,
+    "note": "14 team-suite runs without ACME_TEAM_SUITE=1 in sessions 2-8"
+   }
+  },
+  "cost_usd": 2.803,
+  "steps": 164,
+  "tokens": {
+   "input_tokens": 252,
+   "cache_creation_input_tokens": 550707,
+   "cache_read_input_tokens": 7448393,
+   "output_tokens": 64321
+  }
+ },
+ {
+  "arm": "claude_md",
+  "trial": "15",
+  "complete": true,
+  "checks": {
+   "s1_deadline_504": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_deadline_problem_format": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_added_headers_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_option_registered": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "documented"
+   },
+   "s1_docstrings": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "4 new test functions"
+   },
+   "s2_query_keys_400": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": ""
+   },
+   "s2_internal_exempt": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": ""
+   },
+   "s2_option_registered": {
+    "category": "present",
+    "session": 2,
+    "pass": true,
+    "note": "documented"
+   },
+   "s2_docstrings": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "9 new test functions"
+   },
+   "s2_spdx": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s3_404_problem": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": ""
+   },
+   "s3_default_header_limit": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": ""
+   },
+   "s3_docstrings_untold": {
+    "category": "habit",
+    "session": 3,
+    "pass": true,
+    "note": "8 new test functions"
+   },
+   "s3_spdx_untold": {
+    "category": "decision",
+    "session": 3,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s4_deprecation_header": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": ""
+   },
+   "s4_added_headers_deprecation": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": ""
+   },
+   "s4_route_option_registered": {
+    "category": "present",
+    "session": 4,
+    "pass": true,
+    "note": "documented"
+   },
+   "s4_docstrings_untold": {
+    "category": "habit",
+    "session": 4,
+    "pass": false,
+    "note": "tests/test_deprecated_since.py:test_header_value_is_the_given_date has no docstring"
+   },
+   "s4_spdx_untold": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": "4 new files"
+   },
+   "s4_gone_410": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": ""
+   },
+   "s4_gone_new_domain": {
+    "category": "superseded",
+    "session": 4,
+    "pass": true,
+    "note": ""
+   },
+   "s4_limit_new_path": {
+    "category": "stale",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 5,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s5_429_problem": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": ""
+   },
+   "s5_429_new_domain": {
+    "category": "superseded",
+    "session": 5,
+    "pass": true,
+    "note": ""
+   },
+   "s5_added_headers_ratelimit": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": ""
+   },
+   "s5_route_option_registered": {
+    "category": "present",
+    "session": 5,
+    "pass": true,
+    "note": "documented"
+   },
+   "s5_docs_rate_limit": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "docs row"
+   },
+   "s5_docstrings_untold": {
+    "category": "habit",
+    "session": 5,
+    "pass": false,
+    "note": "tests/test_ratelimit.py:test_remaining_header_counts_down_then_429 has no docstring"
+   },
+   "s5_spdx_untold": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": "3 new files"
+   },
+   "s6_slow_warning": {
+    "category": "told",
+    "session": 6,
+    "pass": true,
+    "note": ""
+   },
+   "s6_option_registered": {
+    "category": "present",
+    "session": 6,
+    "pass": true,
+    "note": "documented"
+   },
+   "s6_docstrings_untold": {
+    "category": "habit",
+    "session": 6,
+    "pass": false,
+    "note": "tests/test_cli.py:test_unimportable_module has no docstring"
+   },
+   "s6_spdx_untold": {
+    "category": "decision",
+    "session": 6,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s6_cli_plain_error": {
+    "category": "adjacent",
+    "session": 6,
+    "pass": true,
+    "note": "exit=2 stderr=\"acme: cannot import nope.missing: No module named 'nope'\""
+   },
+   "s7_request_id": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": ""
+   },
+   "s7_added_headers_request_id": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": ""
+   },
+   "s7_max_body_413": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": ""
+   },
+   "s7_413_new_domain": {
+    "category": "superseded",
+    "session": 7,
+    "pass": true,
+    "note": ""
+   },
+   "s7_option_registered": {
+    "category": "present",
+    "session": 7,
+    "pass": true,
+    "note": "documented"
+   },
+   "s7_changelog": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "- `max_body_bytes` app option; larger request bodies answer 413 (`payload-too-large`).\n- Every response carries `X-Reque"
+   },
+   "s7_docstrings_untold": {
+    "category": "habit",
+    "session": 7,
+    "pass": true,
+    "note": "12 new test functions"
+   },
+   "s7_spdx_untold": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": "3 new files"
+   },
+   "s8_cors_header": {
+    "category": "told",
+    "session": 8,
+    "pass": true,
+    "note": ""
+   },
+   "s8_added_headers_cors": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": ""
+   },
+   "s8_option_registered": {
+    "category": "present",
+    "session": 8,
+    "pass": true,
+    "note": "documented"
+   },
+   "s8_changelog_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": false,
+    "note": ""
+   },
+   "s8_limit_new_path_untold": {
+    "category": "stale",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 8,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s8_docstrings_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": false,
+    "note": "tests/test_cors.py:test_listed_origin_is_echoed has no docstring"
+   },
+   "s8_spdx_untold": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s8_suite_lesson_kept": {
+    "category": "lesson",
+    "session": 8,
+    "pass": false,
+    "note": "14 team-suite runs without ACME_TEAM_SUITE=1 in sessions 2-8"
+   }
+  },
+  "cost_usd": 2.481,
+  "steps": 153,
+  "tokens": {
+   "input_tokens": 238,
+   "cache_creation_input_tokens": 485213,
+   "cache_read_input_tokens": 6588731,
+   "output_tokens": 56899
+  }
+ },
+ {
+  "arm": "pathrule",
+  "trial": "11",
+  "complete": true,
+  "checks": {
+   "s1_deadline_504": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_deadline_problem_format": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_added_headers_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_option_registered": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "documented"
+   },
+   "s1_docstrings": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "5 new test functions"
+   },
+   "s2_query_keys_400": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": ""
+   },
+   "s2_internal_exempt": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": ""
+   },
+   "s2_option_registered": {
+    "category": "present",
+    "session": 2,
+    "pass": true,
+    "note": "documented"
+   },
+   "s2_docstrings": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "10 new test functions"
+   },
+   "s2_spdx": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s3_404_problem": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": ""
+   },
+   "s3_default_header_limit": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": ""
+   },
+   "s3_docstrings_untold": {
+    "category": "habit",
+    "session": 3,
+    "pass": true,
+    "note": "10 new test functions"
+   },
+   "s3_spdx_untold": {
+    "category": "decision",
+    "session": 3,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s4_deprecation_header": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": ""
+   },
+   "s4_added_headers_deprecation": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": ""
+   },
+   "s4_route_option_registered": {
+    "category": "present",
+    "session": 4,
+    "pass": true,
+    "note": "documented"
+   },
+   "s4_docstrings_untold": {
+    "category": "habit",
+    "session": 4,
+    "pass": true,
+    "note": "12 new test functions"
+   },
+   "s4_spdx_untold": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s4_gone_410": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": ""
+   },
+   "s4_gone_new_domain": {
+    "category": "superseded",
+    "session": 4,
+    "pass": false,
+    "note": "lem(gone, \"gone\", \"https://errors.acme.io/\")\n    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 9, in is_problem\n    if base: assert body[\"type\"].startswith(base), body[\"type\"]\n                    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^\nAssertionError: https://errors.acme.dev/gone"
+   },
+   "s4_limit_new_path": {
+    "category": "stale",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 5,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s5_429_problem": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": ""
+   },
+   "s5_429_new_domain": {
+    "category": "superseded",
+    "session": 5,
+    "pass": true,
+    "note": ""
+   },
+   "s5_added_headers_ratelimit": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": ""
+   },
+   "s5_route_option_registered": {
+    "category": "present",
+    "session": 5,
+    "pass": true,
+    "note": "documented"
+   },
+   "s5_docs_rate_limit": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "docs row"
+   },
+   "s5_docstrings_untold": {
+    "category": "habit",
+    "session": 5,
+    "pass": true,
+    "note": "14 new test functions"
+   },
+   "s5_spdx_untold": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": "4 new files"
+   },
+   "s6_slow_warning": {
+    "category": "told",
+    "session": 6,
+    "pass": true,
+    "note": ""
+   },
+   "s6_option_registered": {
+    "category": "present",
+    "session": 6,
+    "pass": true,
+    "note": "documented"
+   },
+   "s6_docstrings_untold": {
+    "category": "habit",
+    "session": 6,
+    "pass": true,
+    "note": "9 new test functions"
+   },
+   "s6_spdx_untold": {
+    "category": "decision",
+    "session": 6,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s6_cli_plain_error": {
+    "category": "adjacent",
+    "session": 6,
+    "pass": true,
+    "note": "exit=2 stderr=\"acme: cannot import nope.missing: No module named 'nope'\""
+   },
+   "s7_request_id": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": ""
+   },
+   "s7_added_headers_request_id": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": ""
+   },
+   "s7_max_body_413": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": ""
+   },
+   "s7_413_new_domain": {
+    "category": "superseded",
+    "session": 7,
+    "pass": false,
+    "note": "//errors.acme.io/\")\n    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 9, in is_problem\n    if base: assert body[\"type\"].startswith(base), body[\"type\"]\n                    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^\nAssertionError: https://errors.acme.dev/payload-too-large"
+   },
+   "s7_option_registered": {
+    "category": "present",
+    "session": 7,
+    "pass": true,
+    "note": "documented"
+   },
+   "s7_changelog": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "- Every response carries an `X-Request-Id` header: the request's own, else a new uuid4.\n- `max_body_bytes` app option (d"
+   },
+   "s7_docstrings_untold": {
+    "category": "habit",
+    "session": 7,
+    "pass": true,
+    "note": "13 new test functions"
+   },
+   "s7_spdx_untold": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": "3 new files"
+   },
+   "s8_cors_header": {
+    "category": "told",
+    "session": 8,
+    "pass": true,
+    "note": ""
+   },
+   "s8_added_headers_cors": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": ""
+   },
+   "s8_option_registered": {
+    "category": "present",
+    "session": 8,
+    "pass": true,
+    "note": "documented"
+   },
+   "s8_changelog_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": true,
+    "note": "- `cors_origins` app option; listed origins get `Access-Control-Allow-Origin`."
+   },
+   "s8_limit_new_path_untold": {
+    "category": "stale",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 8,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s8_docstrings_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": true,
+    "note": "6 new test functions"
+   },
+   "s8_spdx_untold": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s8_suite_lesson_kept": {
+    "category": "lesson",
+    "session": 8,
+    "pass": true,
+    "note": "0 team-suite runs without ACME_TEAM_SUITE=1 in sessions 2-8"
+   }
+  },
+  "cost_usd": 1.673,
+  "steps": 154,
+  "tokens": {
+   "input_tokens": 222,
+   "cache_creation_input_tokens": 282248,
+   "cache_read_input_tokens": 3856924,
+   "output_tokens": 54749
+  }
+ },
+ {
+  "arm": "pathrule",
+  "trial": "12",
+  "complete": true,
+  "checks": {
+   "s1_deadline_504": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_deadline_problem_format": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_added_headers_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_option_registered": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "documented"
+   },
+   "s1_docstrings": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "8 new test functions"
+   },
+   "s2_query_keys_400": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": ""
+   },
+   "s2_internal_exempt": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": ""
+   },
+   "s2_option_registered": {
+    "category": "present",
+    "session": 2,
+    "pass": true,
+    "note": "documented"
+   },
+   "s2_docstrings": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "12 new test functions"
+   },
+   "s2_spdx": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s3_404_problem": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": ""
+   },
+   "s3_default_header_limit": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": ""
+   },
+   "s3_docstrings_untold": {
+    "category": "habit",
+    "session": 3,
+    "pass": true,
+    "note": "7 new test functions"
+   },
+   "s3_spdx_untold": {
+    "category": "decision",
+    "session": 3,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s4_deprecation_header": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": ""
+   },
+   "s4_added_headers_deprecation": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": ""
+   },
+   "s4_route_option_registered": {
+    "category": "present",
+    "session": 4,
+    "pass": true,
+    "note": "documented"
+   },
+   "s4_docstrings_untold": {
+    "category": "habit",
+    "session": 4,
+    "pass": true,
+    "note": "14 new test functions"
+   },
+   "s4_spdx_untold": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": "3 new files"
+   },
+   "s4_gone_410": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": ""
+   },
+   "s4_gone_new_domain": {
+    "category": "superseded",
+    "session": 4,
+    "pass": true,
+    "note": ""
+   },
+   "s4_limit_new_path": {
+    "category": "stale",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 5,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s5_429_problem": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": ""
+   },
+   "s5_429_new_domain": {
+    "category": "superseded",
+    "session": 5,
+    "pass": false,
+    "note": " \"https://errors.acme.io/\")\n    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 9, in is_problem\n    if base: assert body[\"type\"].startswith(base), body[\"type\"]\n                    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^\nAssertionError: https://errors.acme.dev/rate-limited"
+   },
+   "s5_added_headers_ratelimit": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": ""
+   },
+   "s5_route_option_registered": {
+    "category": "present",
+    "session": 5,
+    "pass": true,
+    "note": "documented"
+   },
+   "s5_docs_rate_limit": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "docs row"
+   },
+   "s5_docstrings_untold": {
+    "category": "habit",
+    "session": 5,
+    "pass": true,
+    "note": "15 new test functions"
+   },
+   "s5_spdx_untold": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": "4 new files"
+   },
+   "s6_slow_warning": {
+    "category": "told",
+    "session": 6,
+    "pass": true,
+    "note": ""
+   },
+   "s6_option_registered": {
+    "category": "present",
+    "session": 6,
+    "pass": true,
+    "note": "documented"
+   },
+   "s6_docstrings_untold": {
+    "category": "habit",
+    "session": 6,
+    "pass": true,
+    "note": "9 new test functions"
+   },
+   "s6_spdx_untold": {
+    "category": "decision",
+    "session": 6,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s6_cli_plain_error": {
+    "category": "adjacent",
+    "session": 6,
+    "pass": true,
+    "note": "exit=2 stderr=\"acme: cannot import nope.missing: No module named 'nope'\""
+   },
+   "s7_request_id": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": ""
+   },
+   "s7_added_headers_request_id": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": ""
+   },
+   "s7_max_body_413": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": ""
+   },
+   "s7_413_new_domain": {
+    "category": "superseded",
+    "session": 7,
+    "pass": true,
+    "note": ""
+   },
+   "s7_option_registered": {
+    "category": "present",
+    "session": 7,
+    "pass": true,
+    "note": "documented"
+   },
+   "s7_changelog": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "- `max_body_bytes` app option (default `0`, no limit); larger request bodies answer 413 (`payload-too-large`) before the"
+   },
+   "s7_docstrings_untold": {
+    "category": "habit",
+    "session": 7,
+    "pass": true,
+    "note": "12 new test functions"
+   },
+   "s7_spdx_untold": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": "3 new files"
+   },
+   "s8_cors_header": {
+    "category": "told",
+    "session": 8,
+    "pass": true,
+    "note": ""
+   },
+   "s8_added_headers_cors": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": ""
+   },
+   "s8_option_registered": {
+    "category": "present",
+    "session": 8,
+    "pass": true,
+    "note": "documented"
+   },
+   "s8_changelog_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": true,
+    "note": "- `cors_origins` app option; listed origins get `Access-Control-Allow-Origin`."
+   },
+   "s8_limit_new_path_untold": {
+    "category": "stale",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 8,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s8_docstrings_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": true,
+    "note": "9 new test functions"
+   },
+   "s8_spdx_untold": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s8_suite_lesson_kept": {
+    "category": "lesson",
+    "session": 8,
+    "pass": true,
+    "note": "0 team-suite runs without ACME_TEAM_SUITE=1 in sessions 2-8"
+   }
+  },
+  "cost_usd": 1.766,
+  "steps": 164,
+  "tokens": {
+   "input_tokens": 224,
+   "cache_creation_input_tokens": 298398,
+   "cache_read_input_tokens": 3881208,
+   "output_tokens": 59375
+  }
+ },
+ {
+  "arm": "pathrule",
+  "trial": "13",
+  "complete": true,
+  "checks": {
+   "s1_deadline_504": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_deadline_problem_format": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_added_headers_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": ""
+   },
+   "s1_option_registered": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "documented"
+   },
+   "s1_docstrings": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "6 new test functions"
+   },
+   "s2_query_keys_400": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": ""
+   },
+   "s2_internal_exempt": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": ""
+   },
+   "s2_option_registered": {
+    "category": "present",
+    "session": 2,
+    "pass": true,
+    "note": "documented"
+   },
+   "s2_docstrings": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "9 new test functions"
+   },
+   "s2_spdx": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s3_404_problem": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": ""
+   },
+   "s3_default_header_limit": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": ""
+   },
+   "s3_docstrings_untold": {
+    "category": "habit",
+    "session": 3,
+    "pass": true,
+    "note": "7 new test functions"
+   },
+   "s3_spdx_untold": {
+    "category": "decision",
+    "session": 3,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s4_deprecation_header": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": ""
+   },
+   "s4_added_headers_deprecation": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": ""
+   },
+   "s4_route_option_registered": {
+    "category": "present",
+    "session": 4,
+    "pass": true,
+    "note": "documented"
+   },
+   "s4_docstrings_untold": {
+    "category": "habit",
+    "session": 4,
+    "pass": true,
+    "note": "16 new test functions"
+   },
+   "s4_spdx_untold": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": "3 new files"
+   },
+   "s4_gone_410": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": ""
+   },
+   "s4_gone_new_domain": {
+    "category": "superseded",
+    "session": 4,
+    "pass": true,
+    "note": ""
+   },
+   "s4_limit_new_path": {
+    "category": "stale",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 5,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s5_429_problem": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": ""
+   },
+   "s5_429_new_domain": {
+    "category": "superseded",
+    "session": 5,
+    "pass": true,
+    "note": ""
+   },
+   "s5_added_headers_ratelimit": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": ""
+   },
+   "s5_route_option_registered": {
+    "category": "present",
+    "session": 5,
+    "pass": true,
+    "note": "documented"
+   },
+   "s5_docs_rate_limit": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "docs row"
+   },
+   "s5_docstrings_untold": {
+    "category": "habit",
+    "session": 5,
+    "pass": true,
+    "note": "11 new test functions"
+   },
+   "s5_spdx_untold": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": "3 new files"
+   },
+   "s6_slow_warning": {
+    "category": "told",
+    "session": 6,
+    "pass": true,
+    "note": ""
+   },
+   "s6_option_registered": {
+    "category": "present",
+    "session": 6,
+    "pass": true,
+    "note": "documented"
+   },
+   "s6_docstrings_untold": {
+    "category": "habit",
+    "session": 6,
+    "pass": true,
+    "note": "8 new test functions"
+   },
+   "s6_spdx_untold": {
+    "category": "decision",
+    "session": 6,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s6_cli_plain_error": {
+    "category": "adjacent",
+    "session": 6,
+    "pass": true,
+    "note": "exit=2 stderr=\"acme: cannot import nope.missing: No module named 'nope'\""
+   },
+   "s7_request_id": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": ""
+   },
+   "s7_added_headers_request_id": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": ""
+   },
+   "s7_max_body_413": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": ""
+   },
+   "s7_413_new_domain": {
+    "category": "superseded",
+    "session": 7,
+    "pass": true,
+    "note": ""
+   },
+   "s7_option_registered": {
+    "category": "present",
+    "session": 7,
+    "pass": true,
+    "note": "documented"
+   },
+   "s7_changelog": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "- `max_body_bytes` app option; larger request bodies answer 413 (`payload-too-large`) before the handler runs.\n- Every r"
+   },
+   "s7_docstrings_untold": {
+    "category": "habit",
+    "session": 7,
+    "pass": true,
+    "note": "11 new test functions"
+   },
+   "s7_spdx_untold": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": "3 new files"
+   },
+   "s8_cors_header": {
+    "category": "told",
+    "session": 8,
+    "pass": true,
+    "note": ""
+   },
+   "s8_added_headers_cors": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": ""
+   },
+   "s8_option_registered": {
+    "category": "present",
+    "session": 8,
+    "pass": true,
+    "note": "documented"
+   },
+   "s8_changelog_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": true,
+    "note": "- `cors_origins` app option; listed origins get `Access-Control-Allow-Origin`."
+   },
+   "s8_limit_new_path_untold": {
+    "category": "stale",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 8,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s8_docstrings_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": true,
+    "note": "9 new test functions"
+   },
+   "s8_spdx_untold": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s8_suite_lesson_kept": {
+    "category": "lesson",
+    "session": 8,
+    "pass": true,
+    "note": "0 team-suite runs without ACME_TEAM_SUITE=1 in sessions 2-8"
+   }
+  },
+  "cost_usd": 1.689,
+  "steps": 158,
+  "tokens": {
+   "input_tokens": 228,
+   "cache_creation_input_tokens": 280404,
+   "cache_read_input_tokens": 3897950,
+   "output_tokens": 55507
+  }
+ }
+]

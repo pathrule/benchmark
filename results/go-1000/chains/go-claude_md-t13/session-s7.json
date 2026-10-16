@@ -1,0 +1,204 @@
+{
+  "sessionId": "fae8ad38-87d1-4b1d-afa8-41719983c69d",
+  "name": "S7-request-ids",
+  "rows": [
+    {
+      "s": 7,
+      "t": 1,
+      "exit": 0,
+      "wallMs": 28935,
+      "apiMs": 26483,
+      "cost": 0.15337119999999999,
+      "usage": {
+        "input_tokens": 12,
+        "cache_creation_input_tokens": 41516,
+        "cache_read_input_tokens": 272272,
+        "output_tokens": 2233,
+        "output_tokens_details": {
+          "thinking_tokens": 325
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 41516
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 6,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 5
+      }
+    },
+    {
+      "s": 7,
+      "t": 2,
+      "exit": 0,
+      "wallMs": 15735,
+      "apiMs": 40328,
+      "cost": 0.03055559999999999,
+      "usage": {
+        "input_tokens": 4,
+        "cache_creation_input_tokens": 1751,
+        "cache_read_input_tokens": 110801,
+        "output_tokens": 1509,
+        "output_tokens_details": {
+          "thinking_tokens": 103
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1751
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 2,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 1
+      }
+    },
+    {
+      "s": 7,
+      "t": 3,
+      "exit": 0,
+      "wallMs": 37420,
+      "apiMs": 73871,
+      "cost": 0.09788870000000002,
+      "usage": {
+        "input_tokens": 12,
+        "cache_creation_input_tokens": 10127,
+        "cache_read_input_tokens": 366472,
+        "output_tokens": 3590,
+        "output_tokens_details": {
+          "thinking_tokens": 568
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 10127
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 7,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 5,
+        "Edit": 1
+      }
+    },
+    {
+      "s": 7,
+      "t": 4,
+      "exit": 0,
+      "wallMs": 13063,
+      "apiMs": 84520,
+      "cost": 0.03205930000000001,
+      "usage": {
+        "input_tokens": 6,
+        "cache_creation_input_tokens": 2150,
+        "cache_read_input_tokens": 203423,
+        "output_tokens": 633,
+        "output_tokens_details": {
+          "thinking_tokens": 201
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 2150
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 3,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 2
+      }
+    }
+  ],
+  "checks": {
+    "session": 7,
+    "checks": {
+      "s7_request_id": {
+        "category": "told",
+        "session": 7,
+        "pass": true,
+        "note": "ok  \tacme.example/toolkit/api\t0.375s"
+      },
+      "s7_added_headers_request_id": {
+        "category": "decision",
+        "session": 7,
+        "pass": true,
+        "note": "ok  \tacme.example/toolkit/api\t0.384s"
+      },
+      "s7_max_body_413": {
+        "category": "told",
+        "session": 7,
+        "pass": true,
+        "note": "ok  \tacme.example/toolkit/api\t0.391s"
+      },
+      "s7_413_new_domain": {
+        "category": "superseded",
+        "session": 7,
+        "pass": true,
+        "note": "ok  \tacme.example/toolkit/api\t0.393s"
+      },
+      "s7_option_registered": {
+        "category": "present",
+        "session": 7,
+        "pass": true,
+        "note": "documented"
+      },
+      "s7_changelog": {
+        "category": "told",
+        "session": 7,
+        "pass": true,
+        "note": "- `MaxBodyBytes` app option; oversized bodies answer 413 (`payload-too-large`) in the problem format.\n- Every response c"
+      },
+      "s7_test_comments_untold": {
+        "category": "habit",
+        "session": 7,
+        "pass": true,
+        "note": "9 new test functions"
+      },
+      "s7_spdx_untold": {
+        "category": "decision",
+        "session": 7,
+        "pass": true,
+        "note": "3 new files"
+      }
+    }
+  }
+}

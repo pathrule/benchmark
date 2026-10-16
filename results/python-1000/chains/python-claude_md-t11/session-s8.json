@@ -1,0 +1,209 @@
+{
+  "sessionId": "80b2b048-afe3-4747-870d-69b564a4c72c",
+  "name": "S8-cors",
+  "rows": [
+    {
+      "s": 8,
+      "t": 1,
+      "exit": 0,
+      "wallMs": 22853,
+      "apiMs": 22290,
+      "cost": 0.15866280000000002,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 44355,
+        "cache_read_input_tokens": 225453,
+        "output_tokens": 2521,
+        "output_tokens_details": {
+          "thinking_tokens": 412
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 44355
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 8,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Read": 3,
+        "Glob": 1,
+        "Bash": 3
+      }
+    },
+    {
+      "s": 8,
+      "t": 2,
+      "exit": 0,
+      "wallMs": 13194,
+      "apiMs": 34980,
+      "cost": 0.033390100000000006,
+      "usage": {
+        "input_tokens": 4,
+        "cache_creation_input_tokens": 2081,
+        "cache_read_input_tokens": 116596,
+        "output_tokens": 1652,
+        "output_tokens_details": {
+          "thinking_tokens": 101
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 2081
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 2,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 1
+      }
+    },
+    {
+      "s": 8,
+      "t": 3,
+      "exit": 0,
+      "wallMs": 13359,
+      "apiMs": 47609,
+      "cost": 0.06922020000000001,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 10611,
+        "cache_read_input_tokens": 327927,
+        "output_tokens": 988,
+        "output_tokens_details": {
+          "thinking_tokens": 93
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 10611
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 5,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 4
+      }
+    },
+    {
+      "s": 8,
+      "t": 4,
+      "exit": 0,
+      "wallMs": 5968,
+      "apiMs": 53232,
+      "cost": 0.013387900000000008,
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 398,
+        "cache_read_input_tokens": 70689,
+        "output_tokens": 532,
+        "output_tokens_details": {
+          "thinking_tokens": 90
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 398
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 1,
+      "subtype": "success",
+      "isError": false,
+      "tools": {}
+    }
+  ],
+  "checks": {
+    "session": 8,
+    "checks": {
+      "s8_cors_header": {
+        "category": "told",
+        "session": 8,
+        "pass": true,
+        "note": ""
+      },
+      "s8_added_headers_cors": {
+        "category": "decision",
+        "session": 8,
+        "pass": true,
+        "note": ""
+      },
+      "s8_option_registered": {
+        "category": "present",
+        "session": 8,
+        "pass": true,
+        "note": "documented"
+      },
+      "s8_changelog_untold": {
+        "category": "habit",
+        "session": 8,
+        "pass": false,
+        "note": ""
+      },
+      "s8_limit_new_path_untold": {
+        "category": "stale",
+        "session": 8,
+        "pass": true,
+        "note": "ok"
+      },
+      "s8_abstains_on_undecided_limits": {
+        "category": "abstention",
+        "session": 8,
+        "pass": true,
+        "note": "asks or says undecided"
+      },
+      "s8_docstrings_untold": {
+        "category": "habit",
+        "session": 8,
+        "pass": true,
+        "note": "8 new test functions"
+      },
+      "s8_spdx_untold": {
+        "category": "decision",
+        "session": 8,
+        "pass": true,
+        "note": "2 new files"
+      },
+      "s8_suite_lesson_kept": {
+        "category": "lesson",
+        "session": 8,
+        "pass": false,
+        "note": "13 team-suite runs without ACME_TEAM_SUITE=1 in sessions 2-8"
+      }
+    }
+  }
+}

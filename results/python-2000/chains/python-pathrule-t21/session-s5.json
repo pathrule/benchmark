@@ -1,0 +1,204 @@
+{
+  "sessionId": "c34a4be0-cf08-43ec-9234-33f3ac823408",
+  "name": "S5-rate-limits",
+  "rows": [
+    {
+      "s": 5,
+      "t": 1,
+      "exit": 0,
+      "wallMs": 7235,
+      "apiMs": 5854,
+      "cost": 0.0303745,
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 8865,
+        "cache_read_input_tokens": 13780,
+        "output_tokens": 683,
+        "output_tokens_details": {
+          "thinking_tokens": 71
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 8865
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 1,
+      "subtype": "success",
+      "isError": false,
+      "tools": {}
+    },
+    {
+      "s": 5,
+      "t": 2,
+      "exit": 0,
+      "wallMs": 36618,
+      "apiMs": 39684,
+      "cost": 0.1337667,
+      "usage": {
+        "input_tokens": 12,
+        "cache_creation_input_tokens": 23277,
+        "cache_read_input_tokens": 207102,
+        "output_tokens": 5484,
+        "output_tokens_details": {
+          "thinking_tokens": 573
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 23277
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 14,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Read": 9,
+        "Bash": 2,
+        "ToolSearch": 1,
+        "mcp__pathrule__pathrule_write_memory": 1
+      }
+    },
+    {
+      "s": 5,
+      "t": 3,
+      "exit": 0,
+      "wallMs": 12647,
+      "apiMs": 50709,
+      "cost": 0.041481199999999996,
+      "usage": {
+        "input_tokens": 4,
+        "cache_creation_input_tokens": 5850,
+        "cache_read_input_tokens": 96082,
+        "output_tokens": 1724,
+        "output_tokens_details": {
+          "thinking_tokens": 157
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 5850
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 2,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 1
+      }
+    },
+    {
+      "s": 5,
+      "t": 4,
+      "exit": 0,
+      "wallMs": 14780,
+      "apiMs": 63510,
+      "cost": 0.04511369999999998,
+      "usage": {
+        "input_tokens": 8,
+        "cache_creation_input_tokens": 3318,
+        "cache_read_input_tokens": 212927,
+        "output_tokens": 1551,
+        "output_tokens_details": {
+          "thinking_tokens": 51
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 3318
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 4,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 3
+      }
+    }
+  ],
+  "checks": {
+    "session": 5,
+    "checks": {
+      "s5_abstains_on_undecided_limits": {
+        "category": "abstention",
+        "session": 5,
+        "pass": true,
+        "note": "asks or says undecided"
+      },
+      "s5_429_problem": {
+        "category": "told",
+        "session": 5,
+        "pass": true,
+        "note": ""
+      },
+      "s5_429_new_domain": {
+        "category": "superseded",
+        "session": 5,
+        "pass": true,
+        "note": ""
+      },
+      "s5_added_headers_ratelimit": {
+        "category": "decision",
+        "session": 5,
+        "pass": true,
+        "note": ""
+      },
+      "s5_route_option_registered": {
+        "category": "present",
+        "session": 5,
+        "pass": true,
+        "note": "documented"
+      },
+      "s5_docs_rate_limit": {
+        "category": "told",
+        "session": 5,
+        "pass": true,
+        "note": "docs row"
+      },
+      "s5_docstrings_untold": {
+        "category": "habit",
+        "session": 5,
+        "pass": true,
+        "note": "13 new test functions"
+      },
+      "s5_spdx_untold": {
+        "category": "decision",
+        "session": 5,
+        "pass": true,
+        "note": "3 new files"
+      }
+    }
+  }
+}

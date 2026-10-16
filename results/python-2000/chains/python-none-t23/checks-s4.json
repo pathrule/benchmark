@@ -1,0 +1,53 @@
+{
+  "session": 4,
+  "checks": {
+    "s4_deprecation_header": {
+      "category": "told",
+      "session": 4,
+      "pass": true,
+      "note": ""
+    },
+    "s4_added_headers_deprecation": {
+      "category": "decision",
+      "session": 4,
+      "pass": false,
+      "note": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    from acme.headers import ADDED_HEADERS; assert 'Deprecation' in ADDED_HEADERS, ADDED_HEADERS\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nModuleNotFoundError: No module named 'acme.headers'"
+    },
+    "s4_route_option_registered": {
+      "category": "present",
+      "session": 4,
+      "pass": true,
+      "note": "documented"
+    },
+    "s4_docstrings_untold": {
+      "category": "habit",
+      "session": 4,
+      "pass": false,
+      "note": "tests/test_deprecation.py:test_header_carries_the_date has no docstring"
+    },
+    "s4_spdx_untold": {
+      "category": "decision",
+      "session": 4,
+      "pass": false,
+      "note": "tests/test_deprecation.py lacks the SPDX line"
+    },
+    "s4_gone_410": {
+      "category": "told",
+      "session": 4,
+      "pass": true,
+      "note": ""
+    },
+    "s4_gone_new_domain": {
+      "category": "superseded",
+      "session": 4,
+      "pass": false,
+      "note": "lem(gone, \"gone\", \"https://errors.acme.io/\")\n    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 9, in is_problem\n    if base: assert body[\"type\"].startswith(base), body[\"type\"]\n                    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^\nAssertionError: https://errors.acme.dev/gone"
+    },
+    "s4_limit_new_path": {
+      "category": "stale",
+      "session": 4,
+      "pass": true,
+      "note": "ok"
+    }
+  }
+}

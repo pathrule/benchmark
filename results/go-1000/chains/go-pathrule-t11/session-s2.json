@@ -1,0 +1,193 @@
+{
+  "sessionId": "1d25aba8-82fd-4047-98e8-933bfb33a788",
+  "name": "S2-max-query-keys",
+  "rows": [
+    {
+      "s": 2,
+      "t": 1,
+      "exit": 0,
+      "wallMs": 40390,
+      "apiMs": 35139,
+      "cost": 0.13516750000000002,
+      "usage": {
+        "input_tokens": 14,
+        "cache_creation_input_tokens": 30048,
+        "cache_read_input_tokens": 228395,
+        "output_tokens": 3718,
+        "output_tokens_details": {
+          "thinking_tokens": 301
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 30048
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 18,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Read": 8,
+        "Glob": 1,
+        "Edit": 5,
+        "Bash": 1,
+        "ToolSearch": 1,
+        "mcp__pathrule__pathrule_write_memory": 1
+      }
+    },
+    {
+      "s": 2,
+      "t": 2,
+      "exit": 0,
+      "wallMs": 19515,
+      "apiMs": 50691,
+      "cost": 0.04762179999999999,
+      "usage": {
+        "input_tokens": 4,
+        "cache_creation_input_tokens": 7167,
+        "cache_read_input_tokens": 91763,
+        "output_tokens": 2052,
+        "output_tokens_details": {
+          "thinking_tokens": 78
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 7167
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 3,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Write": 1,
+        "Bash": 1
+      }
+    },
+    {
+      "s": 2,
+      "t": 3,
+      "exit": 0,
+      "wallMs": 24168,
+      "apiMs": 70929,
+      "cost": 0.06491999999999998,
+      "usage": {
+        "input_tokens": 6,
+        "cache_creation_input_tokens": 9215,
+        "cache_read_input_tokens": 161005,
+        "output_tokens": 2577,
+        "output_tokens_details": {
+          "thinking_tokens": 174
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 9215
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 9,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Edit": 5,
+        "Bash": 1,
+        "mcp__pathrule__pathrule_write_memory": 2
+      }
+    },
+    {
+      "s": 2,
+      "t": 4,
+      "exit": 0,
+      "wallMs": 12096,
+      "apiMs": 79948,
+      "cost": 0.029098099999999988,
+      "usage": {
+        "input_tokens": 4,
+        "cache_creation_input_tokens": 4130,
+        "cache_read_input_tokens": 124351,
+        "output_tokens": 633,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 4130
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 2,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 1
+      }
+    }
+  ],
+  "checks": {
+    "session": 2,
+    "checks": {
+      "s2_query_keys_400": {
+        "category": "told",
+        "session": 2,
+        "pass": true,
+        "note": "ok  \tacme.example/toolkit/api\t0.377s"
+      },
+      "s2_internal_exempt": {
+        "category": "told",
+        "session": 2,
+        "pass": true,
+        "note": "ok  \tacme.example/toolkit/api\t0.399s"
+      },
+      "s2_option_registered": {
+        "category": "present",
+        "session": 2,
+        "pass": true,
+        "note": "documented"
+      },
+      "s2_test_comments": {
+        "category": "told",
+        "session": 2,
+        "pass": true,
+        "note": "7 new test functions"
+      },
+      "s2_spdx": {
+        "category": "told",
+        "session": 2,
+        "pass": true,
+        "note": "1 new files"
+      }
+    }
+  }
+}

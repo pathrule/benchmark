@@ -1,0 +1,35 @@
+{
+  "session": 6,
+  "checks": {
+    "s6_slow_warning": {
+      "category": "told",
+      "session": 6,
+      "pass": true,
+      "note": ""
+    },
+    "s6_option_registered": {
+      "category": "present",
+      "session": 6,
+      "pass": true,
+      "note": "documented"
+    },
+    "s6_docstrings_untold": {
+      "category": "habit",
+      "session": 6,
+      "pass": false,
+      "note": "tests/test_cli.py:test_unimportable_module has no docstring"
+    },
+    "s6_spdx_untold": {
+      "category": "decision",
+      "session": 6,
+      "pass": false,
+      "note": "tests/test_cli.py lacks the SPDX line"
+    },
+    "s6_cli_plain_error": {
+      "category": "adjacent",
+      "session": 6,
+      "pass": true,
+      "note": "exit=2 stderr=\"acme: cannot import nope.missing: No module named 'nope'\""
+    }
+  }
+}

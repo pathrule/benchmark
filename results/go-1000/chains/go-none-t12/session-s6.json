@@ -1,0 +1,189 @@
+{
+  "sessionId": "41957451-4f92-494d-b33c-b545e5cbf1ea",
+  "name": "S6-slow-request-warning",
+  "rows": [
+    {
+      "s": 6,
+      "t": 1,
+      "exit": 0,
+      "wallMs": 24327,
+      "apiMs": 21387,
+      "cost": 0.0607728,
+      "usage": {
+        "input_tokens": 16,
+        "cache_creation_input_tokens": 9938,
+        "cache_read_input_tokens": 148358,
+        "output_tokens": 2106,
+        "output_tokens_details": {
+          "thinking_tokens": 142
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 9938
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 12,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Grep": 2,
+        "Read": 3,
+        "Edit": 5,
+        "Bash": 1
+      }
+    },
+    {
+      "s": 6,
+      "t": 2,
+      "exit": 0,
+      "wallMs": 11786,
+      "apiMs": 31295,
+      "cost": 0.0238733,
+      "usage": {
+        "input_tokens": 6,
+        "cache_creation_input_tokens": 1913,
+        "cache_read_input_tokens": 70388,
+        "output_tokens": 1204,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1913
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 4,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 2,
+        "Write": 1
+      }
+    },
+    {
+      "s": 6,
+      "t": 3,
+      "exit": 0,
+      "wallMs": 11192,
+      "apiMs": 39848,
+      "cost": 0.020185800000000004,
+      "usage": {
+        "input_tokens": 6,
+        "cache_creation_input_tokens": 1902,
+        "cache_read_input_tokens": 76288,
+        "output_tokens": 779,
+        "output_tokens_details": {
+          "thinking_tokens": 92
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1902
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 3,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 2
+      }
+    },
+    {
+      "s": 6,
+      "t": 4,
+      "exit": 0,
+      "wallMs": 10605,
+      "apiMs": 48867,
+      "cost": 0.018332600000000004,
+      "usage": {
+        "input_tokens": 6,
+        "cache_creation_input_tokens": 1034,
+        "cache_read_input_tokens": 81356,
+        "output_tokens": 760,
+        "output_tokens_details": {
+          "thinking_tokens": 247
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1034
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 3,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 2
+      }
+    }
+  ],
+  "checks": {
+    "session": 6,
+    "checks": {
+      "s6_slow_warning": {
+        "category": "told",
+        "session": 6,
+        "pass": true,
+        "note": "ok  \tacme.example/toolkit/api\t0.579s"
+      },
+      "s6_option_registered": {
+        "category": "present",
+        "session": 6,
+        "pass": true,
+        "note": "documented"
+      },
+      "s6_test_comments_untold": {
+        "category": "habit",
+        "session": 6,
+        "pass": false,
+        "note": "api/slow_test.go: no comment above func TestSlowRequestWarnLogsMethodAndPath"
+      },
+      "s6_spdx_untold": {
+        "category": "decision",
+        "session": 6,
+        "pass": false,
+        "note": "api/slow_test.go lacks the SPDX line"
+      },
+      "s6_cli_plain_error": {
+        "category": "adjacent",
+        "session": 6,
+        "pass": true,
+        "note": "exit=2 stderr='acme: unknown limit \"nope\"' stdout=''"
+      }
+    }
+  }
+}

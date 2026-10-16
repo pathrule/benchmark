@@ -19,7 +19,37 @@ tests and structural checks, whether what was said earlier reached later work. N
 
 ## Results
 
-RESULTS_TABLE
+Memory probes passed, out of 26 (mean over chains [min–max]); `present` 8/8 and `told` 19/19 in every arm and
+every chain, so neither channel costs the agent what the prompt asked. Three chains an arm (five for the
+CLAUDE.md arm at Python 1,000). Cost is a chain of 8 sessions × 4 turns at Claude Code's own accounting.
+
+| Condition | none | claude_md | pathrule | pathrule − claude_md, 95% CI | cost none | cost claude_md | cost pathrule | pathrule / claude_md |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Python, 500 items | 4.7 | 22.3 [21–24] | 25.0 [24–26] | +2.6 [+0.8, +4.9] | $1.30 | $2.06 | $1.70 | 0.82 |
+| Python, 1,000 items | 4.3 | 20.8 [15–23] | 25.0 [24–26] | +4.2 [+1.6, +7.3] | $1.30 | $2.62 | $1.71 | 0.65 |
+| Python, 2,000 items | 4.0 | 22.3 [20–24] | 25.3 [25–26] | +3.1 [+0.3, +6.0] | $1.31 | $3.89 | $1.76 | 0.45 |
+| Go, 1,000 items | 4.7 | 24.7 [24–26] | 25.3 [25–26] | +0.8 [+0.0, +1.6] | $1.29 | $2.75 | $1.91 | 0.70 |
+
+Where Pathrule leads: the person's own words. Habits stated once ("every test function starts with a
+one-line docstring") reach later sessions 6.3 to 7 of 7 in the Pathrule chains and 4.6 to 6.3 in the
+CLAUDE.md chains; a lesson a failing command taught (`ACME_TEAM_SUITE=1`) is kept in 8 of 9 Pathrule
+chains in Python and in 0 of 11 CLAUDE.md chains (both keep it in Go); decisions stated in prompts are
+applied 10/10 in three conditions of four (9.7 at 500) against 9.6 to 10. Where the two tie: the seeded
+team knowledge (`present`), which both carry in full, and abstention. Where both miss: `superseded`, a
+new error type written with the domain the team moved away from, fails in about one chain of three in
+both arms; the miss is an omission (the agent leaves a default in place), not a wrong value. Cost: the
+CLAUDE.md arm reads its files whole on every step, so its cost grows with the knowledge base ($2.06 →
+$3.89 from 500 to 2,000 items); Pathrule's root file stays at 6k characters and the rest is delivered
+per prompt, so its cost stays flat ($1.70 → $1.76).
+
+Two probes `none` passes by construction: `stale` (a teammate moved a file; an agent with no knowledge
+has nothing to be misled by) and `adjacent` (a rule for one package is not applied to another). They
+measure not being misled, and the memory arms are the ones at risk.
+
+Chains ran with Claude Code 2.1.301 and claude-sonnet-5-5 on 2026-10-16/17. The `pathrule` chains ran
+the open-source CLI from commit `202a28db5` of pathrule/pathrule, local mode. The CLAUDE.md chains at
+Python 1,000 (five) and Go 1,000 (three) were run earlier the same day on the same sealed fixture,
+checks and knowledge files; every other chain was run for this publication (`results/<group>/PROVENANCE.md`).
 
 Read `results/<group>/RESULTS.md` for each condition: passes by category, the paired difference with its
 95% interval, cost and steps a chain, and every probe's pass rate. `results/<group>/chains/` holds each

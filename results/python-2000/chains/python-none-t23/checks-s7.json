@@ -1,0 +1,53 @@
+{
+  "session": 7,
+  "checks": {
+    "s7_request_id": {
+      "category": "told",
+      "session": 7,
+      "pass": true,
+      "note": ""
+    },
+    "s7_added_headers_request_id": {
+      "category": "decision",
+      "session": 7,
+      "pass": false,
+      "note": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    from acme.headers import ADDED_HEADERS; assert 'X-Request-Id' in ADDED_HEADERS, ADDED_HEADERS\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nModuleNotFoundError: No module named 'acme.headers'"
+    },
+    "s7_max_body_413": {
+      "category": "told",
+      "session": 7,
+      "pass": true,
+      "note": ""
+    },
+    "s7_413_new_domain": {
+      "category": "superseded",
+      "session": 7,
+      "pass": false,
+      "note": "//errors.acme.io/\")\n    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 9, in is_problem\n    if base: assert body[\"type\"].startswith(base), body[\"type\"]\n                    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^\nAssertionError: https://errors.acme.dev/payload-too-large"
+    },
+    "s7_option_registered": {
+      "category": "present",
+      "session": 7,
+      "pass": true,
+      "note": "documented"
+    },
+    "s7_changelog": {
+      "category": "told",
+      "session": 7,
+      "pass": true,
+      "note": "- `max_body_bytes` app option; larger request bodies answer 413 (`payload-too-large`) before the handler runs. `0` (defa"
+    },
+    "s7_docstrings_untold": {
+      "category": "habit",
+      "session": 7,
+      "pass": false,
+      "note": "tests/test_body_limit.py:test_default_is_unlimited has no docstring"
+    },
+    "s7_spdx_untold": {
+      "category": "decision",
+      "session": 7,
+      "pass": false,
+      "note": "tests/test_body_limit.py lacks the SPDX line"
+    }
+  }
+}

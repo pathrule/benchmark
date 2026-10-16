@@ -1,0 +1,186 @@
+{
+  "sessionId": "6dcaa8bd-c4b7-44c3-8ee7-e8ebd81b7f41",
+  "name": "S6-slow-request-warning",
+  "rows": [
+    {
+      "s": 6,
+      "t": 1,
+      "exit": 0,
+      "wallMs": 23481,
+      "apiMs": 22615,
+      "cost": 0.1487636,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 41416,
+        "cache_read_input_tokens": 215936,
+        "output_tokens": 2361,
+        "output_tokens_details": {
+          "thinking_tokens": 170
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 41416
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 7,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Read": 2,
+        "Bash": 4
+      }
+    },
+    {
+      "s": 6,
+      "t": 2,
+      "exit": 0,
+      "wallMs": 15861,
+      "apiMs": 37793,
+      "cost": 0.04195019999999999,
+      "usage": {
+        "input_tokens": 6,
+        "cache_creation_input_tokens": 2308,
+        "cache_read_input_tokens": 167382,
+        "output_tokens": 1943,
+        "output_tokens_details": {
+          "thinking_tokens": 164
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 2308
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 3,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 2
+      }
+    },
+    {
+      "s": 6,
+      "t": 3,
+      "exit": 0,
+      "wallMs": 17730,
+      "apiMs": 54832,
+      "cost": 0.05192600000000003,
+      "usage": {
+        "input_tokens": 6,
+        "cache_creation_input_tokens": 4221,
+        "cache_read_input_tokens": 174815,
+        "output_tokens": 2388,
+        "output_tokens_details": {
+          "thinking_tokens": 231
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 4221
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 3,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 2
+      }
+    },
+    {
+      "s": 6,
+      "t": 4,
+      "exit": 0,
+      "wallMs": 10919,
+      "apiMs": 65153,
+      "cost": 0.03839959999999998,
+      "usage": {
+        "input_tokens": 8,
+        "cache_creation_input_tokens": 1931,
+        "cache_read_input_tokens": 249361,
+        "output_tokens": 862,
+        "output_tokens_details": {
+          "thinking_tokens": 137
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1931
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 4,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 3
+      }
+    }
+  ],
+  "checks": {
+    "session": 6,
+    "checks": {
+      "s6_slow_warning": {
+        "category": "told",
+        "session": 6,
+        "pass": true,
+        "note": ""
+      },
+      "s6_option_registered": {
+        "category": "present",
+        "session": 6,
+        "pass": true,
+        "note": "documented"
+      },
+      "s6_docstrings_untold": {
+        "category": "habit",
+        "session": 6,
+        "pass": true,
+        "note": "11 new test functions"
+      },
+      "s6_spdx_untold": {
+        "category": "decision",
+        "session": 6,
+        "pass": true,
+        "note": "2 new files"
+      },
+      "s6_cli_plain_error": {
+        "category": "adjacent",
+        "session": 6,
+        "pass": true,
+        "note": "exit=2 stderr=\"acme: cannot import module nope.missing: No module named 'nope'\""
+      }
+    }
+  }
+}

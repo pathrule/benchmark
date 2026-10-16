@@ -1,0 +1,204 @@
+{
+  "sessionId": "ccffbf89-9baa-47cd-9fc6-e07f2067c726",
+  "name": "S5-rate-limits",
+  "rows": [
+    {
+      "s": 5,
+      "t": 1,
+      "exit": 0,
+      "wallMs": 12459,
+      "apiMs": 12057,
+      "cost": 0.032794,
+      "usage": {
+        "input_tokens": 6,
+        "cache_creation_input_tokens": 7068,
+        "cache_read_input_tokens": 47320,
+        "output_tokens": 1038,
+        "output_tokens_details": {
+          "thinking_tokens": 104
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 7068
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 4,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 2,
+        "Grep": 1
+      }
+    },
+    {
+      "s": 5,
+      "t": 2,
+      "exit": 0,
+      "wallMs": 28515,
+      "apiMs": 37923,
+      "cost": 0.06287790000000001,
+      "usage": {
+        "input_tokens": 6,
+        "cache_creation_input_tokens": 6912,
+        "cache_read_input_tokens": 64759,
+        "output_tokens": 3911,
+        "output_tokens_details": {
+          "thinking_tokens": 272
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 6912
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 3,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 2
+      }
+    },
+    {
+      "s": 5,
+      "t": 3,
+      "exit": 0,
+      "wallMs": 27817,
+      "apiMs": 61606,
+      "cost": 0.052187700000000004,
+      "usage": {
+        "input_tokens": 4,
+        "cache_creation_input_tokens": 3898,
+        "cache_read_input_tokens": 54747,
+        "output_tokens": 3696,
+        "output_tokens_details": {
+          "thinking_tokens": 305
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 3898
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 2,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 1
+      }
+    },
+    {
+      "s": 5,
+      "t": 4,
+      "exit": 0,
+      "wallMs": 20334,
+      "apiMs": 77282,
+      "cost": 0.033989200000000025,
+      "usage": {
+        "input_tokens": 6,
+        "cache_creation_input_tokens": 2687,
+        "cache_read_input_tokens": 94897,
+        "output_tokens": 1777,
+        "output_tokens_details": {
+          "thinking_tokens": 74
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 2687
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 3,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 2
+      }
+    }
+  ],
+  "checks": {
+    "session": 5,
+    "checks": {
+      "s5_abstains_on_undecided_limits": {
+        "category": "abstention",
+        "session": 5,
+        "pass": false,
+        "note": "no abstention in the reply"
+      },
+      "s5_429_problem": {
+        "category": "told",
+        "session": 5,
+        "pass": true,
+        "note": "ok  \tacme.example/toolkit/api\t0.376s"
+      },
+      "s5_429_new_domain": {
+        "category": "superseded",
+        "session": 5,
+        "pass": false,
+        "note": "--- FAIL: TestBench (0.00s)\n    zz_bench_hidden_test.go:56: type \"https://errors.acme.dev/rate-limited\" does not start with \"https://errors.acme.io/\"\nFAIL\nFAIL\tacme.example/toolkit/api\t0.381s\nFAIL"
+      },
+      "s5_added_headers_ratelimit": {
+        "category": "decision",
+        "session": 5,
+        "pass": false,
+        "note": "FAIL\tacme.example/toolkit/api [build failed]\nFAIL\n# acme.example/toolkit/api [acme.example/toolkit/api.test]\napi/zz_bench_hidden_test.go:45:19: undefined: AddedHeaders"
+      },
+      "s5_route_option_registered": {
+        "category": "present",
+        "session": 5,
+        "pass": true,
+        "note": "documented"
+      },
+      "s5_docs_rate_limit": {
+        "category": "told",
+        "session": 5,
+        "pass": true,
+        "note": "docs row"
+      },
+      "s5_test_comments_untold": {
+        "category": "habit",
+        "session": 5,
+        "pass": false,
+        "note": "api/ratelimit_more_test.go: no comment above func TestParseRateLimit"
+      },
+      "s5_spdx_untold": {
+        "category": "decision",
+        "session": 5,
+        "pass": false,
+        "note": "api/ratelimit.go lacks the SPDX line"
+      }
+    }
+  }
+}

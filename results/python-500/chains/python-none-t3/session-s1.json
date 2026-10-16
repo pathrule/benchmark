@@ -1,0 +1,196 @@
+{
+  "sessionId": "188d1b80-28f3-4572-9e75-21e6a0f3ac97",
+  "name": "S1-request-deadline",
+  "rows": [
+    {
+      "s": 1,
+      "t": 1,
+      "exit": 0,
+      "wallMs": 41272,
+      "apiMs": 39335,
+      "cost": 0.1032593,
+      "usage": {
+        "input_tokens": 18,
+        "cache_creation_input_tokens": 13282,
+        "cache_read_input_tokens": 189583,
+        "output_tokens": 5106,
+        "output_tokens_details": {
+          "thinking_tokens": 531
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 13282
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 18,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Grep": 2,
+        "Glob": 1,
+        "Read": 10,
+        "Bash": 4
+      }
+    },
+    {
+      "s": 1,
+      "t": 2,
+      "exit": 0,
+      "wallMs": 10109,
+      "apiMs": 48716,
+      "cost": 0.02147700000000001,
+      "usage": {
+        "input_tokens": 4,
+        "cache_creation_input_tokens": 1668,
+        "cache_read_input_tokens": 53290,
+        "output_tokens": 1197,
+        "output_tokens_details": {
+          "thinking_tokens": 107
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 1668
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 2,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 1
+      }
+    },
+    {
+      "s": 1,
+      "t": 3,
+      "exit": 0,
+      "wallMs": 18393,
+      "apiMs": 66328,
+      "cost": 0.04016299999999999,
+      "usage": {
+        "input_tokens": 8,
+        "cache_creation_input_tokens": 3554,
+        "cache_read_input_tokens": 116520,
+        "output_tokens": 1961,
+        "output_tokens_details": {
+          "thinking_tokens": 391
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 3554
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 5,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Read": 2,
+        "Grep": 1,
+        "Bash": 1
+      }
+    },
+    {
+      "s": 1,
+      "t": 4,
+      "exit": 0,
+      "wallMs": 8599,
+      "apiMs": 74057,
+      "cost": 0.016439999999999982,
+      "usage": {
+        "input_tokens": 4,
+        "cache_creation_input_tokens": 956,
+        "cache_read_input_tokens": 63620,
+        "output_tokens": 768,
+        "output_tokens_details": {
+          "thinking_tokens": 194
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 956
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 2,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 1
+      }
+    }
+  ],
+  "checks": {
+    "session": 1,
+    "checks": {
+      "s1_deadline_504": {
+        "category": "told",
+        "session": 1,
+        "pass": true,
+        "note": ""
+      },
+      "s1_deadline_problem_format": {
+        "category": "present",
+        "session": 1,
+        "pass": true,
+        "note": ""
+      },
+      "s1_retry_after": {
+        "category": "told",
+        "session": 1,
+        "pass": true,
+        "note": ""
+      },
+      "s1_added_headers_retry_after": {
+        "category": "told",
+        "session": 1,
+        "pass": true,
+        "note": ""
+      },
+      "s1_option_registered": {
+        "category": "present",
+        "session": 1,
+        "pass": true,
+        "note": "documented"
+      },
+      "s1_docstrings": {
+        "category": "told",
+        "session": 1,
+        "pass": true,
+        "note": "6 new test functions"
+      }
+    }
+  }
+}

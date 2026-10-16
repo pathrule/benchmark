@@ -1,0 +1,53 @@
+{
+  "session": 5,
+  "checks": {
+    "s5_abstains_on_undecided_limits": {
+      "category": "abstention",
+      "session": 5,
+      "pass": true,
+      "note": "asks or says undecided"
+    },
+    "s5_429_problem": {
+      "category": "told",
+      "session": 5,
+      "pass": true,
+      "note": ""
+    },
+    "s5_429_new_domain": {
+      "category": "superseded",
+      "session": 5,
+      "pass": true,
+      "note": ""
+    },
+    "s5_added_headers_ratelimit": {
+      "category": "decision",
+      "session": 5,
+      "pass": true,
+      "note": ""
+    },
+    "s5_route_option_registered": {
+      "category": "present",
+      "session": 5,
+      "pass": true,
+      "note": "documented"
+    },
+    "s5_docs_rate_limit": {
+      "category": "told",
+      "session": 5,
+      "pass": true,
+      "note": "docs row"
+    },
+    "s5_docstrings_untold": {
+      "category": "habit",
+      "session": 5,
+      "pass": true,
+      "note": "13 new test functions"
+    },
+    "s5_spdx_untold": {
+      "category": "decision",
+      "session": 5,
+      "pass": true,
+      "note": "3 new files"
+    }
+  }
+}

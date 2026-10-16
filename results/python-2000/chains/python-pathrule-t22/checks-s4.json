@@ -1,0 +1,53 @@
+{
+  "session": 4,
+  "checks": {
+    "s4_deprecation_header": {
+      "category": "told",
+      "session": 4,
+      "pass": true,
+      "note": ""
+    },
+    "s4_added_headers_deprecation": {
+      "category": "decision",
+      "session": 4,
+      "pass": true,
+      "note": ""
+    },
+    "s4_route_option_registered": {
+      "category": "present",
+      "session": 4,
+      "pass": true,
+      "note": "documented"
+    },
+    "s4_docstrings_untold": {
+      "category": "habit",
+      "session": 4,
+      "pass": true,
+      "note": "15 new test functions"
+    },
+    "s4_spdx_untold": {
+      "category": "decision",
+      "session": 4,
+      "pass": true,
+      "note": "3 new files"
+    },
+    "s4_gone_410": {
+      "category": "told",
+      "session": 4,
+      "pass": true,
+      "note": ""
+    },
+    "s4_gone_new_domain": {
+      "category": "superseded",
+      "session": 4,
+      "pass": false,
+      "note": "lem(gone, \"gone\", \"https://errors.acme.io/\")\n    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 9, in is_problem\n    if base: assert body[\"type\"].startswith(base), body[\"type\"]\n                    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^\nAssertionError: https://errors.acme.dev/gone"
+    },
+    "s4_limit_new_path": {
+      "category": "stale",
+      "session": 4,
+      "pass": true,
+      "note": "ok"
+    }
+  }
+}

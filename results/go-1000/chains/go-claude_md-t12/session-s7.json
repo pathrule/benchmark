@@ -1,0 +1,203 @@
+{
+  "sessionId": "a8a20b64-33de-417f-af9b-0f4e8c1d701b",
+  "name": "S7-request-ids",
+  "rows": [
+    {
+      "s": 7,
+      "t": 1,
+      "exit": 0,
+      "wallMs": 28379,
+      "apiMs": 24922,
+      "cost": 0.16163419999999998,
+      "usage": {
+        "input_tokens": 12,
+        "cache_creation_input_tokens": 42530,
+        "cache_read_input_tokens": 269952,
+        "output_tokens": 2829,
+        "output_tokens_details": {
+          "thinking_tokens": 383
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 42530
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 6,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 5
+      }
+    },
+    {
+      "s": 7,
+      "t": 2,
+      "exit": 0,
+      "wallMs": 14494,
+      "apiMs": 37564,
+      "cost": 0.0335685,
+      "usage": {
+        "input_tokens": 4,
+        "cache_creation_input_tokens": 2078,
+        "cache_read_input_tokens": 112955,
+        "output_tokens": 1707,
+        "output_tokens_details": {
+          "thinking_tokens": 179
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 2078
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 2,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 1
+      }
+    },
+    {
+      "s": 7,
+      "t": 3,
+      "exit": 0,
+      "wallMs": 32403,
+      "apiMs": 64488,
+      "cost": 0.07719720000000005,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 4567,
+        "cache_read_input_tokens": 300397,
+        "output_tokens": 3572,
+        "output_tokens_details": {
+          "thinking_tokens": 494
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 4567
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 5,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 4
+      }
+    },
+    {
+      "s": 7,
+      "t": 4,
+      "exit": 0,
+      "wallMs": 8182,
+      "apiMs": 71068,
+      "cost": 0.020409500000000025,
+      "usage": {
+        "input_tokens": 4,
+        "cache_creation_input_tokens": 861,
+        "cache_read_input_tokens": 126290,
+        "output_tokens": 562,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 861
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 2,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 1
+      }
+    }
+  ],
+  "checks": {
+    "session": 7,
+    "checks": {
+      "s7_request_id": {
+        "category": "told",
+        "session": 7,
+        "pass": true,
+        "note": "ok  \tacme.example/toolkit/api\t0.455s"
+      },
+      "s7_added_headers_request_id": {
+        "category": "decision",
+        "session": 7,
+        "pass": true,
+        "note": "ok  \tacme.example/toolkit/api\t0.383s"
+      },
+      "s7_max_body_413": {
+        "category": "told",
+        "session": 7,
+        "pass": true,
+        "note": "ok  \tacme.example/toolkit/api\t0.385s"
+      },
+      "s7_413_new_domain": {
+        "category": "superseded",
+        "session": 7,
+        "pass": false,
+        "note": "--- FAIL: TestBench (0.00s)\n    zz_bench_hidden_test.go:54: type \"https://errors.acme.dev/payload-too-large\" does not start with \"https://errors.acme.io/\"\nFAIL\nFAIL\tacme.example/toolkit/api\t0.408s\nFAIL"
+      },
+      "s7_option_registered": {
+        "category": "present",
+        "session": 7,
+        "pass": true,
+        "note": "documented"
+      },
+      "s7_changelog": {
+        "category": "told",
+        "session": 7,
+        "pass": true,
+        "note": "- `MaxBodyBytes` app option; larger request bodies answer 413 (`payload-too-large`).\n\n- Every response carries `X-Reques"
+      },
+      "s7_test_comments_untold": {
+        "category": "habit",
+        "session": 7,
+        "pass": true,
+        "note": "11 new test functions"
+      },
+      "s7_spdx_untold": {
+        "category": "decision",
+        "session": 7,
+        "pass": true,
+        "note": "4 new files"
+      }
+    }
+  }
+}

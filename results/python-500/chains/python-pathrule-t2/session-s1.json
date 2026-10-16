@@ -1,0 +1,199 @@
+{
+  "sessionId": "4b7e81e7-610b-4378-b2c0-73356a0776f8",
+  "name": "S1-request-deadline",
+  "rows": [
+    {
+      "s": 1,
+      "t": 1,
+      "exit": 0,
+      "wallMs": 35712,
+      "apiMs": 32415,
+      "cost": 0.12733460000000002,
+      "usage": {
+        "input_tokens": 16,
+        "cache_creation_input_tokens": 26494,
+        "cache_read_input_tokens": 232276,
+        "output_tokens": 3784,
+        "output_tokens_details": {
+          "thinking_tokens": 313
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 26494
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 13,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 5,
+        "ToolSearch": 1,
+        "mcp__pathrule__pathrule_get_context": 1,
+        "Read": 3,
+        "mcp__pathrule__pathrule_remember_preference": 1,
+        "mcp__pathrule__pathrule_write_memory": 1
+      }
+    },
+    {
+      "s": 1,
+      "t": 2,
+      "exit": 0,
+      "wallMs": 11624,
+      "apiMs": 41820,
+      "cost": 0.0322924,
+      "usage": {
+        "input_tokens": 4,
+        "cache_creation_input_tokens": 5141,
+        "cache_read_input_tokens": 81519,
+        "output_tokens": 1128,
+        "output_tokens_details": {
+          "thinking_tokens": 62
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 5141
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 2,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 1
+      }
+    },
+    {
+      "s": 1,
+      "t": 3,
+      "exit": 0,
+      "wallMs": 20647,
+      "apiMs": 60666,
+      "cost": 0.05752690000000002,
+      "usage": {
+        "input_tokens": 8,
+        "cache_creation_input_tokens": 6688,
+        "cache_read_input_tokens": 185909,
+        "output_tokens": 2220,
+        "output_tokens_details": {
+          "thinking_tokens": 271
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 6688
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 5,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 1,
+        "mcp__pathrule__pathrule_write_memory": 1,
+        "ToolSearch": 1,
+        "mcp__pathrule__pathrule_update_memory": 1
+      }
+    },
+    {
+      "s": 1,
+      "t": 4,
+      "exit": 0,
+      "wallMs": 9401,
+      "apiMs": 67853,
+      "cost": 0.0273022,
+      "usage": {
+        "input_tokens": 4,
+        "cache_creation_input_tokens": 4332,
+        "cache_read_input_tokens": 104842,
+        "output_tokens": 598,
+        "output_tokens_details": {
+          "thinking_tokens": 164
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 4332
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 2,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Bash": 1
+      }
+    }
+  ],
+  "checks": {
+    "session": 1,
+    "checks": {
+      "s1_deadline_504": {
+        "category": "told",
+        "session": 1,
+        "pass": true,
+        "note": ""
+      },
+      "s1_deadline_problem_format": {
+        "category": "present",
+        "session": 1,
+        "pass": true,
+        "note": ""
+      },
+      "s1_retry_after": {
+        "category": "told",
+        "session": 1,
+        "pass": true,
+        "note": ""
+      },
+      "s1_added_headers_retry_after": {
+        "category": "told",
+        "session": 1,
+        "pass": true,
+        "note": ""
+      },
+      "s1_option_registered": {
+        "category": "present",
+        "session": 1,
+        "pass": true,
+        "note": "documented"
+      },
+      "s1_docstrings": {
+        "category": "told",
+        "session": 1,
+        "pass": true,
+        "note": "4 new test functions"
+      }
+    }
+  }
+}

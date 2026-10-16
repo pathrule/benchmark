@@ -1,0 +1,10 @@
+{
+  "lang": "go",
+  "arm": "claude_md",
+  "trial": "21",
+  "model": "claude-sonnet-5-5",
+  "knowledge": "team-scale-1000.json",
+  "pathrule": "8cf01f347",
+  "claude": "2.1.301 (Claude Code)",
+  "startedAt": "2026-10-16T08:03:56.133Z"
+}

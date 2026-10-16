@@ -1,0 +1,10 @@
+{
+  "lang": "python",
+  "arm": "claude_md",
+  "trial": "45",
+  "model": "claude-sonnet-5-5",
+  "knowledge": "team-scale-1000.json",
+  "pathrule": "8cf01f347",
+  "claude": "2.1.301 (Claude Code)",
+  "startedAt": "2026-10-16T07:54:30.219Z"
+}
