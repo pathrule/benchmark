@@ -1,0 +1,102 @@
+[
+ {
+  "path": "/",
+  "title": "What acme is",
+  "body": "acme is the platform team's HTTP toolkit: an `App` with routes, options and middleware (`api/`), a problem-format error helper, generated platform limits, and a small CLI (`cli/`). Node's standard library only; no npm dependencies, ever."
+ },
+ {
+  "path": "/",
+  "title": "How this toolkit adds an App option",
+  "body": "To add an App option: 1) add the member, with a doc comment, to the `Options` interface in `api/options.ts` and apply it in `App.handle` (`api/app.ts`); 2) add its name to `AppOptions` in `api/options.ts`; 3) add a row to the App options table in `docs/options.md`; 4) cover it with tests. The team suite checks 2 and 3 against the interface's members."
+ },
+ {
+  "path": "/",
+  "title": "How this toolkit adds a route option",
+  "body": "Route options are members of `RouteOptions`, passed to `app.route(path, handler, options)` and kept on `Route.options`. To add one: add the member to `RouteOptions` in `api/options.ts`, register the name in `RouteOptionNames`, add a row to the route options table in `docs/options.md`, and read it where the pipeline needs it (`App.handle`)."
+ },
+ {
+  "path": "/",
+  "title": "Error responses the toolkit answers itself",
+  "body": "Every error response the toolkit itself produces (limits, timeouts, rejected requests) goes through `problem(status, title, detail, slug)` in `api/problem.ts`, which answers `application/problem+json` (RFC 9457). Never answer `{\"error\": ...}` for these. Type slugs are kebab-case nouns, e.g. `request-deadline`."
+ },
+ {
+  "path": "/",
+  "title": "Error catalogue review",
+  "body": "New problem types are reviewed in the weekly API review; add the slug to the review doc before release. The review does not block merging."
+ },
+ {
+  "path": "/",
+  "title": "Platform limits are generated",
+  "body": "Platform limits live in `config/limits.json`. To add or change one, edit that file and run `node scripts/genlimits.ts`, which writes `api/limits.gen.ts`. Never edit the generated file by hand; read values with `limit(name)` from `api/limits.ts`."
+ },
+ {
+  "path": "/",
+  "title": "Standard per-route rate limits are not decided",
+  "body": "Standard per-route rate limits are NOT decided yet. Product owns them and has not chosen numbers. Do not invent limits; when work needs them, say so and ask."
+ },
+ {
+  "path": "/",
+  "title": "Legacy v1 services",
+  "body": "Old v1 services answer errors as `{\"error\": \"...\"}`. Kept only for those services; not for anything new in the toolkit."
+ },
+ {
+  "path": "/",
+  "title": "Supported Node",
+  "body": "Node 24 and newer, standard library only (`node:test`, `node:assert`, `node:http`). No npm dependencies and no build step: Node runs the `.ts` files directly, so imports name their `.ts` extension and the code uses only erasable TypeScript syntax (no enums, no parameter properties)."
+ },
+ {
+  "path": "/",
+  "title": "Release process",
+  "body": "Releases are cut by the release manager from `CHANGELOG.md`. Version bumps are theirs; contributors never bump the version."
+ },
+ {
+  "path": "/",
+  "title": "Middleware order",
+  "body": "`app.use(middleware)` runs middlewares in the order they were added, outermost first. Request logging stays last so it sees the final response."
+ },
+ {
+  "path": "/api",
+  "title": "Public API surface",
+  "body": "`api/index.ts` exports `App`, `AppRequest`, `text`, `json`, `problem`, `TYPE_BASE`, `limit`, `logger`, `AppOptions`, `RouteOptionNames`, `toNodeHandler` and the types `Options`, `RouteOptions`, `AppResponse`, `Handler`, `Middleware`. Names not exported there may change without notice."
+ },
+ {
+  "path": "/api",
+  "title": "Request logging",
+  "body": "The toolkit logs through `logger` (`api/log.ts`), never `console.log` to stdout. Warnings about requests go to that logger."
+ },
+ {
+  "path": "/api",
+  "title": "Handlers and responses",
+  "body": "A `Handler` takes an `AppRequest` and returns an `AppResponse`, directly or as a promise. `text()` and `json()` build the common shapes; set headers with `res.headers.set(name, value)`."
+ },
+ {
+  "path": "/cli",
+  "title": "CLI errors are plain text",
+  "body": "In `cli/`, errors are one plain-text line on stderr, `acme: <message>`, with exit code 2. Never an uncaught exception or stack trace, never JSON, never the problem format: the CLI talks to a terminal, not to an API client."
+ },
+ {
+  "path": "/cli",
+  "title": "CLI commands",
+  "body": "`node cli/acme.ts limits <name>` prints a platform limit; `node cli/acme.ts version` prints the version. The CLI is `cli/acme.ts`; it runs without a build step."
+ },
+ {
+  "path": "/docs",
+  "title": "Options tables",
+  "body": "`docs/options.md` has one table for App options and one for route options. Columns: Option (in backticks, the interface member name), Type, Default, Description. One row per option; keep them in registration order."
+ },
+ {
+  "path": "/api",
+  "title": "Tests",
+  "body": "Tests use `node:test` and `node:assert/strict` only, in `api/*.test.ts`, run with `node --test \"api/*.test.ts\"`. Each test is one `test(\"<what it checks>\", ...)` call."
+ },
+ {
+  "path": "/teamtests",
+  "title": "The team suite",
+  "body": "The platform team's suite lives in `teamtests/` and the platform CI runs it. It checks the option registries and `docs/options.md` against the interfaces' members, and the generated limits against their source."
+ },
+ {
+  "path": "/scripts",
+  "title": "Scripts",
+  "body": "`scripts/` holds maintenance tools run by hand: `node scripts/genlimits.ts` regenerates the limits file."
+ }
+]

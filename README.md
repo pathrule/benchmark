@@ -12,7 +12,7 @@ Three arms, the same agent (Claude Code, claude-sonnet-5-5), the same prompts, t
 | `claude_md` | Per-folder CLAUDE.md files seeded with the team's knowledge, kept current by the agent, plus Claude Code's auto memory. |
 | `pathrule` | The same items as path-scoped memories in a local Pathrule store (the open-source CLI, local mode, no Cloud, no model). |
 
-Eight sessions of four turns on a small Python (or Go) toolkit. Knowledge enters only through the person's
+Eight sessions of four turns on a small Python, Go or TypeScript toolkit. Knowledge enters only through the person's
 prompts and the seeded items: a habit, team decisions, a changed decision, a lesson a failing command
 teaches, a teammate's commit that makes an item stale. Probes in session 3 to 8 check, with executable
 tests and structural checks, whether what was said earlier reached later work. No model judges anything.
@@ -66,14 +66,15 @@ git clone https://github.com/pathrule/pathrule && cd pathrule && pnpm install &&
 git clone https://github.com/pathrule/benchmark && cd benchmark
 export ANTHROPIC_API_KEY=...            # Claude Code's key; a chain costs about $1.3 to $3.6
 export PR_SRC=../pathrule               # the pathrule arm runs the CLI and MCP server from this checkout
-PRB3_KNOWLEDGE=team-scale-1000.json node harness/run-chain.mjs python pathrule 1
+PRB3_KNOWLEDGE=team-scale-1000.json node harness/run-chain.mjs python pathrule 1   # or go, typescript
 python3 harness/collect.py runs python python-1000 1 pathrule
 ```
 
 `harness/run-batch.py <jobs-file> <parallel>` runs a list of chains; `PROTOCOL.md` says what is fixed,
 what each arm gets and how results are reported; `DESIGN.md` says why the benchmark has this shape;
-`SEAL.txt` holds the SHA-256 of every file a run depends on. Claude Code 2.1 and Node 24 are what the
-published chains ran with.
+`SEAL.txt` holds the SHA-256 of every file a run depends on. Claude Code 2.1, Python 3, Go 1.22+ and
+Node 24 are what the published chains ran with; the TypeScript fixture needs Node 24 (it runs the `.ts`
+files directly).
 
 ## What it does not measure
 

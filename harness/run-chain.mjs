@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // One PathruleBench v3 chain = one language x one arm x one trial: 8 sessions x 4 turns.
-//   node run-chain.mjs <python|go> <none|oracle|claude_md|pathrule> <trial> [--sessions 1,2,...]
+//   node run-chain.mjs <python|go|typescript> <none|oracle|claude_md|pathrule> <trial> [--sessions 1,2,...]
 // Every session starts from the scenario's repository state (the fixture plus the teammate overlays due
 // by then), never from the agent's previous output. Only memory carries over: CLAUDE.md files and Claude's
 // auto memory (claude_md), the Pathrule store (pathrule), nothing (none, oracle). Turns inside a session

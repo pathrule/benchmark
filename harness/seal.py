@@ -10,7 +10,7 @@ import sys
 
 root = sys.argv[1]
 paths = []
-for lang in ("python", "go"):
+for lang in ("python", "go", "typescript"):
     for sub in ("fixture", "overlays", "checks", "knowledge"):
         for dirpath, _, files in os.walk(os.path.join(root, lang, sub)):
             paths += [os.path.join(dirpath, f) for f in files if "__pycache__" not in dirpath]

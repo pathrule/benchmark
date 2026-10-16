@@ -19,12 +19,12 @@ Real-repository runs swing by trial, cost more and let one early deviation chang
 So: every session starts from the scenario's fixed repository state, never from the agent's own previous
 output, and a check in session 5 measures whether what was said in sessions 1 to 4 reached session 5 and
 nothing else. The repositories are small, realistic, standard-library-only projects (no installs, no
-caches). Three trials per arm, paired per probe, bootstrap intervals; no model judge, every check is
+caches; the TypeScript one runs on Node 24 without a build step). Three trials per arm, paired per probe, bootstrap intervals; no model judge, every check is
 executable or structural.
 
 ## Scenario
 
-8 sessions x 4 turns, one scenario, worded per language. Knowledge enters only through the person's
+8 sessions x 4 turns, one scenario, worded for each of three languages (Python, Go, TypeScript). Knowledge enters only through the person's
 prompts (a habit, a team decision, a change of decision, a lesson a failing command teaches) and the
 seeded team knowledge. Probes, by category:
 

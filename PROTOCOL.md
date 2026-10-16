@@ -31,6 +31,11 @@
 
 ## Conditions
 
+Three languages, one scenario worded for each: Python (`python/`, unittest, a `cli/` package), Go (`go/`,
+the `testing` package, `cmd/acme`) and TypeScript (`typescript/`, `node:test` on Node 24, which runs the
+`.ts` files without a build step, `cli/acme.ts`). Each has its own fixture, checks, seeded knowledge and
+oracle; the probes are the same 53 (26 memory, 8 present, 19 told) in each.
+
 `PRB3_KNOWLEDGE` selects the knowledge file both memory arms receive: `team-scale-500.json`,
 `team-scale-1000.json`, `team-scale-2000.json`. Each is `team.json` (the 20 items the probes need) plus
 decision-log entries a platform team accumulates, written deterministically by `knowledge/gen-scale.py`

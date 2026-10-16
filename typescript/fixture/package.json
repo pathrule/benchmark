@@ -1,0 +1,13 @@
+{
+  "name": "acme",
+  "version": "0.4.0",
+  "private": true,
+  "type": "module",
+  "description": "The platform team's HTTP toolkit. No dependencies; Node 24 runs the TypeScript directly.",
+  "scripts": {
+    "test": "node --test \"api/*.test.ts\"",
+    "teamtests": "node --test \"teamtests/*.test.ts\"",
+    "genlimits": "node scripts/genlimits.ts"
+  },
+  "engines": { "node": ">=24" }
+}
