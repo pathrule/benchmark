@@ -1,0 +1,200 @@
+{
+  "sessionId": "bcaaeb7d-745f-471f-9058-fb01b5f5ea5f",
+  "name": "S1-request-deadline",
+  "rows": [
+    {
+      "s": 1,
+      "t": 1,
+      "exit": 0,
+      "wallMs": 31603,
+      "apiMs": 29539,
+      "cost": 0.1366049,
+      "usage": {
+        "input_tokens": 10,
+        "cache_creation_input_tokens": 32320,
+        "cache_read_input_tokens": 168049,
+        "output_tokens": 3898,
+        "output_tokens_details": {
+          "thinking_tokens": 199
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 32320
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 18,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Read": 7,
+        "Bash": 2,
+        "Edit": 8
+      }
+    },
+    {
+      "s": 1,
+      "t": 2,
+      "exit": 0,
+      "wallMs": 13788,
+      "apiMs": 42584,
+      "cost": 0.03995509999999999,
+      "usage": {
+        "input_tokens": 6,
+        "cache_creation_input_tokens": 3224,
+        "cache_read_input_tokens": 136731,
+        "output_tokens": 1821,
+        "output_tokens_details": {
+          "thinking_tokens": 112
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 3224
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 5,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Write": 1,
+        "Read": 1,
+        "Edit": 1,
+        "Bash": 1
+      }
+    },
+    {
+      "s": 1,
+      "t": 3,
+      "exit": 0,
+      "wallMs": 21548,
+      "apiMs": 63352,
+      "cost": 0.058938099999999966,
+      "usage": {
+        "input_tokens": 8,
+        "cache_creation_input_tokens": 5096,
+        "cache_read_input_tokens": 198521,
+        "output_tokens": 2633,
+        "output_tokens_details": {
+          "thinking_tokens": 407
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 5096
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 12,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Read": 2,
+        "Bash": 2,
+        "Write": 1,
+        "Edit": 6
+      }
+    },
+    {
+      "s": 1,
+      "t": 4,
+      "exit": 0,
+      "wallMs": 10040,
+      "apiMs": 72597,
+      "cost": 0.032874100000000045,
+      "usage": {
+        "input_tokens": 6,
+        "cache_creation_input_tokens": 2770,
+        "cache_read_input_tokens": 161371,
+        "output_tokens": 980,
+        "output_tokens_details": {
+          "thinking_tokens": 96
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 2770
+        },
+        "inference_geo": "global",
+        "iterations": [],
+        "speed": "standard",
+        "fallback_credit": null
+      },
+      "steps": 4,
+      "subtype": "success",
+      "isError": false,
+      "tools": {
+        "Read": 2,
+        "Bash": 1
+      }
+    }
+  ],
+  "checks": {
+    "session": 1,
+    "checks": {
+      "s1_deadline_504": {
+        "category": "told",
+        "session": 1,
+        "pass": true,
+        "note": "ok"
+      },
+      "s1_deadline_problem_format": {
+        "category": "present",
+        "session": 1,
+        "pass": true,
+        "note": "ok"
+      },
+      "s1_retry_after": {
+        "category": "told",
+        "session": 1,
+        "pass": true,
+        "note": "ok"
+      },
+      "s1_added_headers_retry_after": {
+        "category": "told",
+        "session": 1,
+        "pass": true,
+        "note": "ok"
+      },
+      "s1_option_registered": {
+        "category": "present",
+        "session": 1,
+        "pass": true,
+        "note": "documented"
+      },
+      "s1_test_comments": {
+        "category": "told",
+        "session": 1,
+        "pass": true,
+        "note": "4 new tests"
+      }
+    }
+  }
+}

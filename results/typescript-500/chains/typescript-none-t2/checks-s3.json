@@ -1,0 +1,29 @@
+{
+  "session": 3,
+  "checks": {
+    "s3_404_problem": {
+      "category": "told",
+      "session": 3,
+      "pass": true,
+      "note": "ok"
+    },
+    "s3_default_header_limit": {
+      "category": "told",
+      "session": 3,
+      "pass": true,
+      "note": "ok"
+    },
+    "s3_test_comments_untold": {
+      "category": "habit",
+      "session": 3,
+      "pass": false,
+      "note": "api/notfound.test.ts: no comment above test 'the default 404 is a problem response wi'"
+    },
+    "s3_spdx_untold": {
+      "category": "decision",
+      "session": 3,
+      "pass": false,
+      "note": "api/notfound.test.ts lacks the SPDX line"
+    }
+  }
+}

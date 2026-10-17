@@ -1,0 +1,53 @@
+{
+  "session": 7,
+  "checks": {
+    "s7_request_id": {
+      "category": "told",
+      "session": 7,
+      "pass": true,
+      "note": "ok"
+    },
+    "s7_added_headers_request_id": {
+      "category": "decision",
+      "session": 7,
+      "pass": false,
+      "note": "zz_bench_hidden.test.ts\n      at finalizeResolution (node:internal/modules/esm/resolve:275:11)\n      at moduleResolve (node:internal/modules/esm/resolve:866:10)\n      at defaultResolve (node:internal/modules/esm/resolve:992:11)\n      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)"
+    },
+    "s7_max_body_413": {
+      "category": "told",
+      "session": 7,
+      "pass": true,
+      "note": "ok"
+    },
+    "s7_413_new_domain": {
+      "category": "superseded",
+      "session": 7,
+      "pass": false,
+      "note": "ench_hidden.test.ts:16:20)\n      at TestContext.<anonymous> (file:///private/tmp/prbpub/runs/typescript-none-t2/repo/api/zz_bench_hidden.test.ts:26:1)\n      at async Test.run (node:internal/test_runner/test:1110:7)\n      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {"
+    },
+    "s7_option_registered": {
+      "category": "present",
+      "session": 7,
+      "pass": true,
+      "note": "documented"
+    },
+    "s7_changelog": {
+      "category": "told",
+      "session": 7,
+      "pass": true,
+      "note": "- `maxBodyBytes` app option; larger request bodies answer 413 (`payload-too-large`) before the handler runs.\n- Every res"
+    },
+    "s7_test_comments_untold": {
+      "category": "habit",
+      "session": 7,
+      "pass": false,
+      "note": "api/bodylimit.test.ts: no comment above test 'a body over the limit answers 413 in pro'"
+    },
+    "s7_spdx_untold": {
+      "category": "decision",
+      "session": 7,
+      "pass": false,
+      "note": "api/bodylimit.test.ts lacks the SPDX line"
+    }
+  }
+}

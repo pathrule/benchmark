@@ -1,0 +1,53 @@
+{
+  "session": 7,
+  "checks": {
+    "s7_request_id": {
+      "category": "told",
+      "session": 7,
+      "pass": true,
+      "note": "ok"
+    },
+    "s7_added_headers_request_id": {
+      "category": "decision",
+      "session": 7,
+      "pass": true,
+      "note": "ok"
+    },
+    "s7_max_body_413": {
+      "category": "told",
+      "session": 7,
+      "pass": true,
+      "note": "ok"
+    },
+    "s7_413_new_domain": {
+      "category": "superseded",
+      "session": 7,
+      "pass": true,
+      "note": "ok"
+    },
+    "s7_option_registered": {
+      "category": "present",
+      "session": 7,
+      "pass": true,
+      "note": "documented"
+    },
+    "s7_changelog": {
+      "category": "told",
+      "session": 7,
+      "pass": true,
+      "note": "- `maxBodyBytes` app option; larger bodies answer 413 (`payload-too-large`) before the handler runs.\n- Every response ca"
+    },
+    "s7_test_comments_untold": {
+      "category": "habit",
+      "session": 7,
+      "pass": true,
+      "note": "14 new tests"
+    },
+    "s7_spdx_untold": {
+      "category": "decision",
+      "session": 7,
+      "pass": true,
+      "note": "3 new files"
+    }
+  }
+}

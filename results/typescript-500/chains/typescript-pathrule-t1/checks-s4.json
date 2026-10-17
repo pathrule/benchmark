@@ -1,0 +1,53 @@
+{
+  "session": 4,
+  "checks": {
+    "s4_deprecation_header": {
+      "category": "told",
+      "session": 4,
+      "pass": true,
+      "note": "ok"
+    },
+    "s4_added_headers_deprecation": {
+      "category": "decision",
+      "session": 4,
+      "pass": true,
+      "note": "ok"
+    },
+    "s4_route_option_registered": {
+      "category": "present",
+      "session": 4,
+      "pass": true,
+      "note": "documented"
+    },
+    "s4_test_comments_untold": {
+      "category": "habit",
+      "session": 4,
+      "pass": true,
+      "note": "15 new tests"
+    },
+    "s4_spdx_untold": {
+      "category": "decision",
+      "session": 4,
+      "pass": true,
+      "note": "3 new files"
+    },
+    "s4_gone_410": {
+      "category": "told",
+      "session": 4,
+      "pass": true,
+      "note": "ok"
+    },
+    "s4_gone_new_domain": {
+      "category": "superseded",
+      "session": 4,
+      "pass": false,
+      "note": "_hidden.test.ts:16:20)\n      at TestContext.<anonymous> (file:///private/tmp/prbpub/runs/typescript-pathrule-t1/repo/api/zz_bench_hidden.test.ts:27:1)\n      at async Test.run (node:internal/test_runner/test:1110:7)\n      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {"
+    },
+    "s4_limit_new_path": {
+      "category": "stale",
+      "session": 4,
+      "pass": true,
+      "note": "ok"
+    }
+  }
+}

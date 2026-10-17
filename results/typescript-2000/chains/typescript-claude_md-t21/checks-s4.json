@@ -1,0 +1,53 @@
+{
+  "session": 4,
+  "checks": {
+    "s4_deprecation_header": {
+      "category": "told",
+      "session": 4,
+      "pass": true,
+      "note": "ok"
+    },
+    "s4_added_headers_deprecation": {
+      "category": "decision",
+      "session": 4,
+      "pass": true,
+      "note": "ok"
+    },
+    "s4_route_option_registered": {
+      "category": "present",
+      "session": 4,
+      "pass": true,
+      "note": "documented"
+    },
+    "s4_test_comments_untold": {
+      "category": "habit",
+      "session": 4,
+      "pass": false,
+      "note": "api/deprecation.test.ts: no comment above test 'a deprecated route answers a Deprecation'"
+    },
+    "s4_spdx_untold": {
+      "category": "decision",
+      "session": 4,
+      "pass": true,
+      "note": "3 new files"
+    },
+    "s4_gone_410": {
+      "category": "told",
+      "session": 4,
+      "pass": true,
+      "note": "ok"
+    },
+    "s4_gone_new_domain": {
+      "category": "superseded",
+      "session": 4,
+      "pass": true,
+      "note": "ok"
+    },
+    "s4_limit_new_path": {
+      "category": "stale",
+      "session": 4,
+      "pass": true,
+      "note": "ok"
+    }
+  }
+}

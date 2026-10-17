@@ -1,0 +1,59 @@
+{
+  "session": 8,
+  "checks": {
+    "s8_cors_header": {
+      "category": "told",
+      "session": 8,
+      "pass": true,
+      "note": "ok"
+    },
+    "s8_added_headers_cors": {
+      "category": "decision",
+      "session": 8,
+      "pass": false,
+      "note": "zz_bench_hidden.test.ts\n      at finalizeResolution (node:internal/modules/esm/resolve:275:11)\n      at moduleResolve (node:internal/modules/esm/resolve:866:10)\n      at defaultResolve (node:internal/modules/esm/resolve:992:11)\n      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)"
+    },
+    "s8_option_registered": {
+      "category": "present",
+      "session": 8,
+      "pass": true,
+      "note": "documented"
+    },
+    "s8_changelog_untold": {
+      "category": "habit",
+      "session": 8,
+      "pass": false,
+      "note": ""
+    },
+    "s8_limit_new_path_untold": {
+      "category": "stale",
+      "session": 8,
+      "pass": true,
+      "note": "ok"
+    },
+    "s8_abstains_on_undecided_limits": {
+      "category": "abstention",
+      "session": 8,
+      "pass": false,
+      "note": "no abstention in the reply"
+    },
+    "s8_test_comments_untold": {
+      "category": "habit",
+      "session": 8,
+      "pass": false,
+      "note": "api/cors.test.ts: no comment above test 'an allowed origin is echoed in Access-Co'"
+    },
+    "s8_spdx_untold": {
+      "category": "decision",
+      "session": 8,
+      "pass": false,
+      "note": "api/cors.test.ts lacks the SPDX line"
+    },
+    "s8_suite_lesson_kept": {
+      "category": "lesson",
+      "session": 8,
+      "pass": false,
+      "note": "9 team-suite runs without ACME_TEAM_SUITE=1 in sessions 2-8"
+    }
+  }
+}

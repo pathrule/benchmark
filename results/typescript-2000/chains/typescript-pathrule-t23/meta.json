@@ -1,0 +1,16 @@
+{
+  "lang": "typescript",
+  "arm": "pathrule",
+  "trial": "23",
+  "model": "claude-sonnet-5-5",
+  "knowledge": "team-scale-2000.json",
+  "sessions": "sessions.json",
+  "pathrule": "202a28db5",
+  "claude": "2.1.302 (Claude Code)",
+  "startedAt": "2026-10-17T00:07:27.921Z",
+  "seed": {
+    "workspace": "c8b07b40-dcbb-43af-bf3c-86c39d066357",
+    "memories": 2000,
+    "atoms": 2000
+  }
+}

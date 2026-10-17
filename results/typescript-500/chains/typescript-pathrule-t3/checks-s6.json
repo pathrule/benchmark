@@ -1,0 +1,35 @@
+{
+  "session": 6,
+  "checks": {
+    "s6_slow_warning": {
+      "category": "told",
+      "session": 6,
+      "pass": true,
+      "note": "ok"
+    },
+    "s6_option_registered": {
+      "category": "present",
+      "session": 6,
+      "pass": true,
+      "note": "documented"
+    },
+    "s6_test_comments_untold": {
+      "category": "habit",
+      "session": 6,
+      "pass": true,
+      "note": "5 new tests"
+    },
+    "s6_spdx_untold": {
+      "category": "decision",
+      "session": 6,
+      "pass": true,
+      "note": "2 new files"
+    },
+    "s6_cli_plain_error": {
+      "category": "adjacent",
+      "session": 6,
+      "pass": true,
+      "note": "exit=2 stderr='acme: unknown limit \"nope\"' stdout=''"
+    }
+  }
+}

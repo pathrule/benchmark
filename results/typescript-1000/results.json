@@ -1,0 +1,2999 @@
+[
+ {
+  "arm": "none",
+  "trial": "11",
+  "complete": true,
+  "checks": {
+   "s1_deadline_504": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok"
+   },
+   "s1_deadline_problem_format": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "ok"
+   },
+   "s1_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok"
+   },
+   "s1_added_headers_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok"
+   },
+   "s1_option_registered": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "documented"
+   },
+   "s1_test_comments": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "4 new tests"
+   },
+   "s2_query_keys_400": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "ok"
+   },
+   "s2_internal_exempt": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "ok"
+   },
+   "s2_option_registered": {
+    "category": "present",
+    "session": 2,
+    "pass": true,
+    "note": "documented"
+   },
+   "s2_test_comments": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "7 new tests"
+   },
+   "s2_spdx": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s3_404_problem": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": "ok"
+   },
+   "s3_default_header_limit": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": "ok"
+   },
+   "s3_test_comments_untold": {
+    "category": "habit",
+    "session": 3,
+    "pass": false,
+    "note": "api/notfound.test.ts: no comment above test 'the default 404 is a problem+json respon'"
+   },
+   "s3_spdx_untold": {
+    "category": "decision",
+    "session": 3,
+    "pass": false,
+    "note": "api/notfound.test.ts lacks the SPDX line"
+   },
+   "s4_deprecation_header": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s4_added_headers_deprecation": {
+    "category": "decision",
+    "session": 4,
+    "pass": false,
+    "note": "zz_bench_hidden.test.ts\n      at finalizeResolution (node:internal/modules/esm/resolve:275:11)\n      at moduleResolve (node:internal/modules/esm/resolve:866:10)\n      at defaultResolve (node:internal/modules/esm/resolve:992:11)\n      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)"
+   },
+   "s4_route_option_registered": {
+    "category": "present",
+    "session": 4,
+    "pass": true,
+    "note": "documented"
+   },
+   "s4_test_comments_untold": {
+    "category": "habit",
+    "session": 4,
+    "pass": false,
+    "note": "api/deprecation.test.ts: no comment above test 'a deprecated route carries the Deprecati'"
+   },
+   "s4_spdx_untold": {
+    "category": "decision",
+    "session": 4,
+    "pass": false,
+    "note": "api/deprecation.test.ts lacks the SPDX line"
+   },
+   "s4_gone_410": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s4_gone_new_domain": {
+    "category": "superseded",
+    "session": 4,
+    "pass": false,
+    "note": "nch_hidden.test.ts:16:20)\n      at TestContext.<anonymous> (file:///private/tmp/prbpub/runs/typescript-none-t11/repo/api/zz_bench_hidden.test.ts:27:1)\n      at async Test.run (node:internal/test_runner/test:1110:7)\n      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {"
+   },
+   "s4_limit_new_path": {
+    "category": "stale",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 5,
+    "pass": false,
+    "note": "no abstention in the reply"
+   },
+   "s5_429_problem": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_429_new_domain": {
+    "category": "superseded",
+    "session": 5,
+    "pass": false,
+    "note": "nch_hidden.test.ts:16:20)\n      at TestContext.<anonymous> (file:///private/tmp/prbpub/runs/typescript-none-t11/repo/api/zz_bench_hidden.test.ts:27:1)\n      at async Test.run (node:internal/test_runner/test:1110:7)\n      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {"
+   },
+   "s5_added_headers_ratelimit": {
+    "category": "decision",
+    "session": 5,
+    "pass": false,
+    "note": "zz_bench_hidden.test.ts\n      at finalizeResolution (node:internal/modules/esm/resolve:275:11)\n      at moduleResolve (node:internal/modules/esm/resolve:866:10)\n      at defaultResolve (node:internal/modules/esm/resolve:992:11)\n      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)"
+   },
+   "s5_route_option_registered": {
+    "category": "present",
+    "session": 5,
+    "pass": true,
+    "note": "documented"
+   },
+   "s5_docs_rate_limit": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "docs row"
+   },
+   "s5_test_comments_untold": {
+    "category": "habit",
+    "session": 5,
+    "pass": false,
+    "note": "api/ratelimit.test.ts: no comment above test 'requests within the limit pass and count'"
+   },
+   "s5_spdx_untold": {
+    "category": "decision",
+    "session": 5,
+    "pass": false,
+    "note": "api/ratelimit.test.ts lacks the SPDX line"
+   },
+   "s6_slow_warning": {
+    "category": "told",
+    "session": 6,
+    "pass": true,
+    "note": "ok"
+   },
+   "s6_option_registered": {
+    "category": "present",
+    "session": 6,
+    "pass": true,
+    "note": "documented"
+   },
+   "s6_test_comments_untold": {
+    "category": "habit",
+    "session": 6,
+    "pass": false,
+    "note": "api/slow.test.ts: no comment above test 'a request slower than slowRequestWarn lo'"
+   },
+   "s6_spdx_untold": {
+    "category": "decision",
+    "session": 6,
+    "pass": false,
+    "note": "api/slow.test.ts lacks the SPDX line"
+   },
+   "s6_cli_plain_error": {
+    "category": "adjacent",
+    "session": 6,
+    "pass": true,
+    "note": "exit=2 stderr='acme: unknown limit \"nope\"' stdout=''"
+   },
+   "s7_request_id": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "ok"
+   },
+   "s7_added_headers_request_id": {
+    "category": "decision",
+    "session": 7,
+    "pass": false,
+    "note": "zz_bench_hidden.test.ts\n      at finalizeResolution (node:internal/modules/esm/resolve:275:11)\n      at moduleResolve (node:internal/modules/esm/resolve:866:10)\n      at defaultResolve (node:internal/modules/esm/resolve:992:11)\n      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)"
+   },
+   "s7_max_body_413": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "ok"
+   },
+   "s7_413_new_domain": {
+    "category": "superseded",
+    "session": 7,
+    "pass": false,
+    "note": "nch_hidden.test.ts:16:20)\n      at TestContext.<anonymous> (file:///private/tmp/prbpub/runs/typescript-none-t11/repo/api/zz_bench_hidden.test.ts:26:1)\n      at async Test.run (node:internal/test_runner/test:1110:7)\n      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {"
+   },
+   "s7_option_registered": {
+    "category": "present",
+    "session": 7,
+    "pass": true,
+    "note": "documented"
+   },
+   "s7_changelog": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "- `maxBodyBytes` app option; larger request bodies answer 413 (`payload-too-large`) before the handler runs.\n- Every res"
+   },
+   "s7_test_comments_untold": {
+    "category": "habit",
+    "session": 7,
+    "pass": false,
+    "note": "api/bodylimit.test.ts: no comment above test 'a body over maxBodyBytes answers 413 in '"
+   },
+   "s7_spdx_untold": {
+    "category": "decision",
+    "session": 7,
+    "pass": false,
+    "note": "api/bodylimit.test.ts lacks the SPDX line"
+   },
+   "s8_cors_header": {
+    "category": "told",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_added_headers_cors": {
+    "category": "decision",
+    "session": 8,
+    "pass": false,
+    "note": "zz_bench_hidden.test.ts\n      at finalizeResolution (node:internal/modules/esm/resolve:275:11)\n      at moduleResolve (node:internal/modules/esm/resolve:866:10)\n      at defaultResolve (node:internal/modules/esm/resolve:992:11)\n      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)"
+   },
+   "s8_option_registered": {
+    "category": "present",
+    "session": 8,
+    "pass": true,
+    "note": "documented"
+   },
+   "s8_changelog_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": false,
+    "note": ""
+   },
+   "s8_limit_new_path_untold": {
+    "category": "stale",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 8,
+    "pass": false,
+    "note": "no abstention in the reply"
+   },
+   "s8_test_comments_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": false,
+    "note": "api/cors.test.ts: no comment above test 'allowed origin is echoed'"
+   },
+   "s8_spdx_untold": {
+    "category": "decision",
+    "session": 8,
+    "pass": false,
+    "note": "api/cors.test.ts lacks the SPDX line"
+   },
+   "s8_suite_lesson_kept": {
+    "category": "lesson",
+    "session": 8,
+    "pass": false,
+    "note": "5 team-suite runs without ACME_TEAM_SUITE=1 in sessions 2-8"
+   }
+  },
+  "cost_usd": 1.177,
+  "steps": 160,
+  "tokens": {
+   "input_tokens": 226,
+   "cache_creation_input_tokens": 150254,
+   "cache_read_input_tokens": 2606522,
+   "output_tokens": 51095
+  }
+ },
+ {
+  "arm": "none",
+  "trial": "12",
+  "complete": true,
+  "checks": {
+   "s1_deadline_504": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok"
+   },
+   "s1_deadline_problem_format": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "ok"
+   },
+   "s1_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok"
+   },
+   "s1_added_headers_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok"
+   },
+   "s1_option_registered": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "documented"
+   },
+   "s1_test_comments": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "4 new tests"
+   },
+   "s2_query_keys_400": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "ok"
+   },
+   "s2_internal_exempt": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "ok"
+   },
+   "s2_option_registered": {
+    "category": "present",
+    "session": 2,
+    "pass": true,
+    "note": "documented"
+   },
+   "s2_test_comments": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "8 new tests"
+   },
+   "s2_spdx": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s3_404_problem": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": "ok"
+   },
+   "s3_default_header_limit": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": "ok"
+   },
+   "s3_test_comments_untold": {
+    "category": "habit",
+    "session": 3,
+    "pass": false,
+    "note": "api/notfound.test.ts: no comment above test 'an unknown path answers a not-found prob'"
+   },
+   "s3_spdx_untold": {
+    "category": "decision",
+    "session": 3,
+    "pass": false,
+    "note": "api/notfound.test.ts lacks the SPDX line"
+   },
+   "s4_deprecation_header": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s4_added_headers_deprecation": {
+    "category": "decision",
+    "session": 4,
+    "pass": false,
+    "note": "zz_bench_hidden.test.ts\n      at finalizeResolution (node:internal/modules/esm/resolve:275:11)\n      at moduleResolve (node:internal/modules/esm/resolve:866:10)\n      at defaultResolve (node:internal/modules/esm/resolve:992:11)\n      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)"
+   },
+   "s4_route_option_registered": {
+    "category": "present",
+    "session": 4,
+    "pass": true,
+    "note": "documented"
+   },
+   "s4_test_comments_untold": {
+    "category": "habit",
+    "session": 4,
+    "pass": false,
+    "note": "api/deprecation.test.ts: no comment above test 'deprecatedSince adds a Deprecation heade'"
+   },
+   "s4_spdx_untold": {
+    "category": "decision",
+    "session": 4,
+    "pass": false,
+    "note": "api/deprecation.test.ts lacks the SPDX line"
+   },
+   "s4_gone_410": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s4_gone_new_domain": {
+    "category": "superseded",
+    "session": 4,
+    "pass": false,
+    "note": "nch_hidden.test.ts:16:20)\n      at TestContext.<anonymous> (file:///private/tmp/prbpub/runs/typescript-none-t12/repo/api/zz_bench_hidden.test.ts:27:1)\n      at async Test.run (node:internal/test_runner/test:1110:7)\n      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {"
+   },
+   "s4_limit_new_path": {
+    "category": "stale",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 5,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s5_429_problem": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_429_new_domain": {
+    "category": "superseded",
+    "session": 5,
+    "pass": false,
+    "note": "nch_hidden.test.ts:16:20)\n      at TestContext.<anonymous> (file:///private/tmp/prbpub/runs/typescript-none-t12/repo/api/zz_bench_hidden.test.ts:27:1)\n      at async Test.run (node:internal/test_runner/test:1110:7)\n      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {"
+   },
+   "s5_added_headers_ratelimit": {
+    "category": "decision",
+    "session": 5,
+    "pass": false,
+    "note": "zz_bench_hidden.test.ts\n      at finalizeResolution (node:internal/modules/esm/resolve:275:11)\n      at moduleResolve (node:internal/modules/esm/resolve:866:10)\n      at defaultResolve (node:internal/modules/esm/resolve:992:11)\n      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)"
+   },
+   "s5_route_option_registered": {
+    "category": "present",
+    "session": 5,
+    "pass": true,
+    "note": "documented"
+   },
+   "s5_docs_rate_limit": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "docs row"
+   },
+   "s5_test_comments_untold": {
+    "category": "habit",
+    "session": 5,
+    "pass": false,
+    "note": "api/ratelimit.test.ts: no comment above test 'parses n/unit specs'"
+   },
+   "s5_spdx_untold": {
+    "category": "decision",
+    "session": 5,
+    "pass": false,
+    "note": "api/ratelimit.test.ts lacks the SPDX line"
+   },
+   "s6_slow_warning": {
+    "category": "told",
+    "session": 6,
+    "pass": true,
+    "note": "ok"
+   },
+   "s6_option_registered": {
+    "category": "present",
+    "session": 6,
+    "pass": true,
+    "note": "documented"
+   },
+   "s6_test_comments_untold": {
+    "category": "habit",
+    "session": 6,
+    "pass": false,
+    "note": "api/slowrequest.test.ts: no comment above test 'a request slower than slowRequestWarn lo'"
+   },
+   "s6_spdx_untold": {
+    "category": "decision",
+    "session": 6,
+    "pass": false,
+    "note": "api/slowrequest.test.ts lacks the SPDX line"
+   },
+   "s6_cli_plain_error": {
+    "category": "adjacent",
+    "session": 6,
+    "pass": true,
+    "note": "exit=2 stderr='acme: unknown limit \"nope\"' stdout=''"
+   },
+   "s7_request_id": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "ok"
+   },
+   "s7_added_headers_request_id": {
+    "category": "decision",
+    "session": 7,
+    "pass": false,
+    "note": "zz_bench_hidden.test.ts\n      at finalizeResolution (node:internal/modules/esm/resolve:275:11)\n      at moduleResolve (node:internal/modules/esm/resolve:866:10)\n      at defaultResolve (node:internal/modules/esm/resolve:992:11)\n      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)"
+   },
+   "s7_max_body_413": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "ok"
+   },
+   "s7_413_new_domain": {
+    "category": "superseded",
+    "session": 7,
+    "pass": false,
+    "note": "nch_hidden.test.ts:16:20)\n      at TestContext.<anonymous> (file:///private/tmp/prbpub/runs/typescript-none-t12/repo/api/zz_bench_hidden.test.ts:26:1)\n      at async Test.run (node:internal/test_runner/test:1110:7)\n      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {"
+   },
+   "s7_option_registered": {
+    "category": "present",
+    "session": 7,
+    "pass": true,
+    "note": "documented"
+   },
+   "s7_changelog": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "- `maxBodyBytes` app option; requests with a larger body answer 413 (`payload-too-large`) before the handler runs.\n- Eve"
+   },
+   "s7_test_comments_untold": {
+    "category": "habit",
+    "session": 7,
+    "pass": false,
+    "note": "api/request-id.test.ts: no comment above test \"the request's own X-Request-Id is echoed\""
+   },
+   "s7_spdx_untold": {
+    "category": "decision",
+    "session": 7,
+    "pass": false,
+    "note": "api/request-id.test.ts lacks the SPDX line"
+   },
+   "s8_cors_header": {
+    "category": "told",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_added_headers_cors": {
+    "category": "decision",
+    "session": 8,
+    "pass": false,
+    "note": "zz_bench_hidden.test.ts\n      at finalizeResolution (node:internal/modules/esm/resolve:275:11)\n      at moduleResolve (node:internal/modules/esm/resolve:866:10)\n      at defaultResolve (node:internal/modules/esm/resolve:992:11)\n      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)"
+   },
+   "s8_option_registered": {
+    "category": "present",
+    "session": 8,
+    "pass": true,
+    "note": "documented"
+   },
+   "s8_changelog_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": false,
+    "note": ""
+   },
+   "s8_limit_new_path_untold": {
+    "category": "stale",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 8,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s8_test_comments_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": false,
+    "note": "api/cors.test.ts: no comment above test 'a listed origin is echoed in Access-Cont'"
+   },
+   "s8_spdx_untold": {
+    "category": "decision",
+    "session": 8,
+    "pass": false,
+    "note": "api/cors.test.ts lacks the SPDX line"
+   },
+   "s8_suite_lesson_kept": {
+    "category": "lesson",
+    "session": 8,
+    "pass": false,
+    "note": "4 team-suite runs without ACME_TEAM_SUITE=1 in sessions 2-8"
+   }
+  },
+  "cost_usd": 1.22,
+  "steps": 161,
+  "tokens": {
+   "input_tokens": 230,
+   "cache_creation_input_tokens": 154817,
+   "cache_read_input_tokens": 2675754,
+   "output_tokens": 52815
+  }
+ },
+ {
+  "arm": "none",
+  "trial": "13",
+  "complete": true,
+  "checks": {
+   "s1_deadline_504": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok"
+   },
+   "s1_deadline_problem_format": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "ok"
+   },
+   "s1_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok"
+   },
+   "s1_added_headers_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok"
+   },
+   "s1_option_registered": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "documented"
+   },
+   "s1_test_comments": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "5 new tests"
+   },
+   "s2_query_keys_400": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "ok"
+   },
+   "s2_internal_exempt": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "ok"
+   },
+   "s2_option_registered": {
+    "category": "present",
+    "session": 2,
+    "pass": true,
+    "note": "documented"
+   },
+   "s2_test_comments": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "9 new tests"
+   },
+   "s2_spdx": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s3_404_problem": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": "ok"
+   },
+   "s3_default_header_limit": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": "ok"
+   },
+   "s3_test_comments_untold": {
+    "category": "habit",
+    "session": 3,
+    "pass": false,
+    "note": "api/notfound.test.ts: no comment above test 'the default 404 is a problem response wi'"
+   },
+   "s3_spdx_untold": {
+    "category": "decision",
+    "session": 3,
+    "pass": false,
+    "note": "api/notfound.test.ts lacks the SPDX line"
+   },
+   "s4_deprecation_header": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s4_added_headers_deprecation": {
+    "category": "decision",
+    "session": 4,
+    "pass": false,
+    "note": "zz_bench_hidden.test.ts\n      at finalizeResolution (node:internal/modules/esm/resolve:275:11)\n      at moduleResolve (node:internal/modules/esm/resolve:866:10)\n      at defaultResolve (node:internal/modules/esm/resolve:992:11)\n      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)"
+   },
+   "s4_route_option_registered": {
+    "category": "present",
+    "session": 4,
+    "pass": true,
+    "note": "documented"
+   },
+   "s4_test_comments_untold": {
+    "category": "habit",
+    "session": 4,
+    "pass": false,
+    "note": "api/deprecation.test.ts: no comment above test 'a deprecated route carries the Deprecati'"
+   },
+   "s4_spdx_untold": {
+    "category": "decision",
+    "session": 4,
+    "pass": false,
+    "note": "api/deprecation.test.ts lacks the SPDX line"
+   },
+   "s4_gone_410": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s4_gone_new_domain": {
+    "category": "superseded",
+    "session": 4,
+    "pass": false,
+    "note": "nch_hidden.test.ts:16:20)\n      at TestContext.<anonymous> (file:///private/tmp/prbpub/runs/typescript-none-t13/repo/api/zz_bench_hidden.test.ts:27:1)\n      at async Test.run (node:internal/test_runner/test:1110:7)\n      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {"
+   },
+   "s4_limit_new_path": {
+    "category": "stale",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 5,
+    "pass": false,
+    "note": "no abstention in the reply"
+   },
+   "s5_429_problem": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_429_new_domain": {
+    "category": "superseded",
+    "session": 5,
+    "pass": false,
+    "note": "nch_hidden.test.ts:16:20)\n      at TestContext.<anonymous> (file:///private/tmp/prbpub/runs/typescript-none-t13/repo/api/zz_bench_hidden.test.ts:27:1)\n      at async Test.run (node:internal/test_runner/test:1110:7)\n      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {"
+   },
+   "s5_added_headers_ratelimit": {
+    "category": "decision",
+    "session": 5,
+    "pass": false,
+    "note": "zz_bench_hidden.test.ts\n      at finalizeResolution (node:internal/modules/esm/resolve:275:11)\n      at moduleResolve (node:internal/modules/esm/resolve:866:10)\n      at defaultResolve (node:internal/modules/esm/resolve:992:11)\n      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)"
+   },
+   "s5_route_option_registered": {
+    "category": "present",
+    "session": 5,
+    "pass": true,
+    "note": "documented"
+   },
+   "s5_docs_rate_limit": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "docs row"
+   },
+   "s5_test_comments_untold": {
+    "category": "habit",
+    "session": 5,
+    "pass": false,
+    "note": "api/ratelimit.test.ts: no comment above test 'parseRateLimit reads count and unit'"
+   },
+   "s5_spdx_untold": {
+    "category": "decision",
+    "session": 5,
+    "pass": false,
+    "note": "api/ratelimit.test.ts lacks the SPDX line"
+   },
+   "s6_slow_warning": {
+    "category": "told",
+    "session": 6,
+    "pass": true,
+    "note": "ok"
+   },
+   "s6_option_registered": {
+    "category": "present",
+    "session": 6,
+    "pass": true,
+    "note": "documented"
+   },
+   "s6_test_comments_untold": {
+    "category": "habit",
+    "session": 6,
+    "pass": false,
+    "note": "api/slowrequest.test.ts: no comment above test 'a request slower than slowRequestWarn lo'"
+   },
+   "s6_spdx_untold": {
+    "category": "decision",
+    "session": 6,
+    "pass": false,
+    "note": "api/slowrequest.test.ts lacks the SPDX line"
+   },
+   "s6_cli_plain_error": {
+    "category": "adjacent",
+    "session": 6,
+    "pass": true,
+    "note": "exit=2 stderr='acme: unknown limit \"nope\"' stdout=''"
+   },
+   "s7_request_id": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "ok"
+   },
+   "s7_added_headers_request_id": {
+    "category": "decision",
+    "session": 7,
+    "pass": false,
+    "note": "zz_bench_hidden.test.ts\n      at finalizeResolution (node:internal/modules/esm/resolve:275:11)\n      at moduleResolve (node:internal/modules/esm/resolve:866:10)\n      at defaultResolve (node:internal/modules/esm/resolve:992:11)\n      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)"
+   },
+   "s7_max_body_413": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "ok"
+   },
+   "s7_413_new_domain": {
+    "category": "superseded",
+    "session": 7,
+    "pass": false,
+    "note": "nch_hidden.test.ts:16:20)\n      at TestContext.<anonymous> (file:///private/tmp/prbpub/runs/typescript-none-t13/repo/api/zz_bench_hidden.test.ts:26:1)\n      at async Test.run (node:internal/test_runner/test:1110:7)\n      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {"
+   },
+   "s7_option_registered": {
+    "category": "present",
+    "session": 7,
+    "pass": true,
+    "note": "documented"
+   },
+   "s7_changelog": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "- `maxBodyBytes` app option; larger request bodies answer 413 (`payload-too-large`) before the handler runs.\n- Every res"
+   },
+   "s7_test_comments_untold": {
+    "category": "habit",
+    "session": 7,
+    "pass": false,
+    "note": "api/bodylimit.test.ts: no comment above test 'a body over the limit answers 413 in pro'"
+   },
+   "s7_spdx_untold": {
+    "category": "decision",
+    "session": 7,
+    "pass": false,
+    "note": "api/bodylimit.test.ts lacks the SPDX line"
+   },
+   "s8_cors_header": {
+    "category": "told",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_added_headers_cors": {
+    "category": "decision",
+    "session": 8,
+    "pass": false,
+    "note": "zz_bench_hidden.test.ts\n      at finalizeResolution (node:internal/modules/esm/resolve:275:11)\n      at moduleResolve (node:internal/modules/esm/resolve:866:10)\n      at defaultResolve (node:internal/modules/esm/resolve:992:11)\n      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)"
+   },
+   "s8_option_registered": {
+    "category": "present",
+    "session": 8,
+    "pass": true,
+    "note": "documented"
+   },
+   "s8_changelog_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": false,
+    "note": ""
+   },
+   "s8_limit_new_path_untold": {
+    "category": "stale",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 8,
+    "pass": false,
+    "note": "no abstention in the reply"
+   },
+   "s8_test_comments_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": false,
+    "note": "api/cors.test.ts: no comment above test 'listed origin is echoed in Access-Contro'"
+   },
+   "s8_spdx_untold": {
+    "category": "decision",
+    "session": 8,
+    "pass": false,
+    "note": "api/cors.test.ts lacks the SPDX line"
+   },
+   "s8_suite_lesson_kept": {
+    "category": "lesson",
+    "session": 8,
+    "pass": false,
+    "note": "7 team-suite runs without ACME_TEAM_SUITE=1 in sessions 2-8"
+   }
+  },
+  "cost_usd": 1.278,
+  "steps": 170,
+  "tokens": {
+   "input_tokens": 238,
+   "cache_creation_input_tokens": 158077,
+   "cache_read_input_tokens": 2779393,
+   "output_tokens": 57225
+  }
+ },
+ {
+  "arm": "claude_md",
+  "trial": "11",
+  "complete": true,
+  "checks": {
+   "s1_deadline_504": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok"
+   },
+   "s1_deadline_problem_format": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "ok"
+   },
+   "s1_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok"
+   },
+   "s1_added_headers_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok"
+   },
+   "s1_option_registered": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "documented"
+   },
+   "s1_test_comments": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "5 new tests"
+   },
+   "s2_query_keys_400": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "ok"
+   },
+   "s2_internal_exempt": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "ok"
+   },
+   "s2_option_registered": {
+    "category": "present",
+    "session": 2,
+    "pass": true,
+    "note": "documented"
+   },
+   "s2_test_comments": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "9 new tests"
+   },
+   "s2_spdx": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s3_404_problem": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": "ok"
+   },
+   "s3_default_header_limit": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": "ok"
+   },
+   "s3_test_comments_untold": {
+    "category": "habit",
+    "session": 3,
+    "pass": true,
+    "note": "6 new tests"
+   },
+   "s3_spdx_untold": {
+    "category": "decision",
+    "session": 3,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s4_deprecation_header": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s4_added_headers_deprecation": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s4_route_option_registered": {
+    "category": "present",
+    "session": 4,
+    "pass": true,
+    "note": "documented"
+   },
+   "s4_test_comments_untold": {
+    "category": "habit",
+    "session": 4,
+    "pass": true,
+    "note": "13 new tests"
+   },
+   "s4_spdx_untold": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": "3 new files"
+   },
+   "s4_gone_410": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s4_gone_new_domain": {
+    "category": "superseded",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s4_limit_new_path": {
+    "category": "stale",
+    "session": 4,
+    "pass": false,
+    "note": "config/limits/limits.json has deprecation-window-days=None"
+   },
+   "s5_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 5,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s5_429_problem": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_429_new_domain": {
+    "category": "superseded",
+    "session": 5,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_added_headers_ratelimit": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_route_option_registered": {
+    "category": "present",
+    "session": 5,
+    "pass": true,
+    "note": "documented"
+   },
+   "s5_docs_rate_limit": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "docs row"
+   },
+   "s5_test_comments_untold": {
+    "category": "habit",
+    "session": 5,
+    "pass": true,
+    "note": "17 new tests"
+   },
+   "s5_spdx_untold": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": "4 new files"
+   },
+   "s6_slow_warning": {
+    "category": "told",
+    "session": 6,
+    "pass": true,
+    "note": "ok"
+   },
+   "s6_option_registered": {
+    "category": "present",
+    "session": 6,
+    "pass": true,
+    "note": "documented"
+   },
+   "s6_test_comments_untold": {
+    "category": "habit",
+    "session": 6,
+    "pass": true,
+    "note": "5 new tests"
+   },
+   "s6_spdx_untold": {
+    "category": "decision",
+    "session": 6,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s6_cli_plain_error": {
+    "category": "adjacent",
+    "session": 6,
+    "pass": true,
+    "note": "exit=2 stderr='acme: unknown limit \"nope\"' stdout=''"
+   },
+   "s7_request_id": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "ok"
+   },
+   "s7_added_headers_request_id": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": "ok"
+   },
+   "s7_max_body_413": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "ok"
+   },
+   "s7_413_new_domain": {
+    "category": "superseded",
+    "session": 7,
+    "pass": true,
+    "note": "ok"
+   },
+   "s7_option_registered": {
+    "category": "present",
+    "session": 7,
+    "pass": true,
+    "note": "documented"
+   },
+   "s7_changelog": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "- `maxBodyBytes` app option; larger request bodies answer 413 (`payload-too-large`).\n- Every response carries `X-Request"
+   },
+   "s7_test_comments_untold": {
+    "category": "habit",
+    "session": 7,
+    "pass": true,
+    "note": "11 new tests"
+   },
+   "s7_spdx_untold": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s8_cors_header": {
+    "category": "told",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_added_headers_cors": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_option_registered": {
+    "category": "present",
+    "session": 8,
+    "pass": true,
+    "note": "documented"
+   },
+   "s8_changelog_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": false,
+    "note": ""
+   },
+   "s8_limit_new_path_untold": {
+    "category": "stale",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 8,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s8_test_comments_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": true,
+    "note": "7 new tests"
+   },
+   "s8_spdx_untold": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s8_suite_lesson_kept": {
+    "category": "lesson",
+    "session": 8,
+    "pass": false,
+    "note": "13 team-suite runs without ACME_TEAM_SUITE=1 in sessions 2-8"
+   }
+  },
+  "cost_usd": 2.687,
+  "steps": 183,
+  "tokens": {
+   "input_tokens": 238,
+   "cache_creation_input_tokens": 523487,
+   "cache_read_input_tokens": 6821840,
+   "output_tokens": 65360
+  }
+ },
+ {
+  "arm": "claude_md",
+  "trial": "12",
+  "complete": true,
+  "checks": {
+   "s1_deadline_504": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok"
+   },
+   "s1_deadline_problem_format": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "ok"
+   },
+   "s1_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok"
+   },
+   "s1_added_headers_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok"
+   },
+   "s1_option_registered": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "documented"
+   },
+   "s1_test_comments": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "6 new tests"
+   },
+   "s2_query_keys_400": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "ok"
+   },
+   "s2_internal_exempt": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "ok"
+   },
+   "s2_option_registered": {
+    "category": "present",
+    "session": 2,
+    "pass": true,
+    "note": "documented"
+   },
+   "s2_test_comments": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "7 new tests"
+   },
+   "s2_spdx": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s3_404_problem": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": "ok"
+   },
+   "s3_default_header_limit": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": "ok"
+   },
+   "s3_test_comments_untold": {
+    "category": "habit",
+    "session": 3,
+    "pass": true,
+    "note": "8 new tests"
+   },
+   "s3_spdx_untold": {
+    "category": "decision",
+    "session": 3,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s4_deprecation_header": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s4_added_headers_deprecation": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s4_route_option_registered": {
+    "category": "present",
+    "session": 4,
+    "pass": true,
+    "note": "documented"
+   },
+   "s4_test_comments_untold": {
+    "category": "habit",
+    "session": 4,
+    "pass": true,
+    "note": "14 new tests"
+   },
+   "s4_spdx_untold": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": "3 new files"
+   },
+   "s4_gone_410": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s4_gone_new_domain": {
+    "category": "superseded",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s4_limit_new_path": {
+    "category": "stale",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 5,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s5_429_problem": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_429_new_domain": {
+    "category": "superseded",
+    "session": 5,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_added_headers_ratelimit": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_route_option_registered": {
+    "category": "present",
+    "session": 5,
+    "pass": true,
+    "note": "documented"
+   },
+   "s5_docs_rate_limit": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "docs row"
+   },
+   "s5_test_comments_untold": {
+    "category": "habit",
+    "session": 5,
+    "pass": true,
+    "note": "16 new tests"
+   },
+   "s5_spdx_untold": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": "4 new files"
+   },
+   "s6_slow_warning": {
+    "category": "told",
+    "session": 6,
+    "pass": true,
+    "note": "ok"
+   },
+   "s6_option_registered": {
+    "category": "present",
+    "session": 6,
+    "pass": true,
+    "note": "documented"
+   },
+   "s6_test_comments_untold": {
+    "category": "habit",
+    "session": 6,
+    "pass": true,
+    "note": "9 new tests"
+   },
+   "s6_spdx_untold": {
+    "category": "decision",
+    "session": 6,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s6_cli_plain_error": {
+    "category": "adjacent",
+    "session": 6,
+    "pass": true,
+    "note": "exit=2 stderr='acme: unknown limit \"nope\"' stdout=''"
+   },
+   "s7_request_id": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "ok"
+   },
+   "s7_added_headers_request_id": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": "ok"
+   },
+   "s7_max_body_413": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "ok"
+   },
+   "s7_413_new_domain": {
+    "category": "superseded",
+    "session": 7,
+    "pass": true,
+    "note": "ok"
+   },
+   "s7_option_registered": {
+    "category": "present",
+    "session": 7,
+    "pass": true,
+    "note": "documented"
+   },
+   "s7_changelog": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "- `maxBodyBytes` app option; larger request bodies answer 413 `payload-too-large`.\n- Every response carries an `X-Reques"
+   },
+   "s7_test_comments_untold": {
+    "category": "habit",
+    "session": 7,
+    "pass": true,
+    "note": "11 new tests"
+   },
+   "s7_spdx_untold": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": "3 new files"
+   },
+   "s8_cors_header": {
+    "category": "told",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_added_headers_cors": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_option_registered": {
+    "category": "present",
+    "session": 8,
+    "pass": true,
+    "note": "documented"
+   },
+   "s8_changelog_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": false,
+    "note": ""
+   },
+   "s8_limit_new_path_untold": {
+    "category": "stale",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 8,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s8_test_comments_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": true,
+    "note": "10 new tests"
+   },
+   "s8_spdx_untold": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s8_suite_lesson_kept": {
+    "category": "lesson",
+    "session": 8,
+    "pass": false,
+    "note": "9 team-suite runs without ACME_TEAM_SUITE=1 in sessions 2-8"
+   }
+  },
+  "cost_usd": 2.76,
+  "steps": 160,
+  "tokens": {
+   "input_tokens": 248,
+   "cache_creation_input_tokens": 530056,
+   "cache_read_input_tokens": 7232197,
+   "output_tokens": 67068
+  }
+ },
+ {
+  "arm": "claude_md",
+  "trial": "13",
+  "complete": true,
+  "checks": {
+   "s1_deadline_504": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok"
+   },
+   "s1_deadline_problem_format": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "ok"
+   },
+   "s1_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok"
+   },
+   "s1_added_headers_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok"
+   },
+   "s1_option_registered": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "documented"
+   },
+   "s1_test_comments": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "3 new tests"
+   },
+   "s2_query_keys_400": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "ok"
+   },
+   "s2_internal_exempt": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "ok"
+   },
+   "s2_option_registered": {
+    "category": "present",
+    "session": 2,
+    "pass": true,
+    "note": "documented"
+   },
+   "s2_test_comments": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "7 new tests"
+   },
+   "s2_spdx": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s3_404_problem": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": "ok"
+   },
+   "s3_default_header_limit": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": "ok"
+   },
+   "s3_test_comments_untold": {
+    "category": "habit",
+    "session": 3,
+    "pass": false,
+    "note": "api/not-found.test.ts: no comment above test 'an unknown path answers a 404 problem'"
+   },
+   "s3_spdx_untold": {
+    "category": "decision",
+    "session": 3,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s4_deprecation_header": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s4_added_headers_deprecation": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s4_route_option_registered": {
+    "category": "present",
+    "session": 4,
+    "pass": true,
+    "note": "documented"
+   },
+   "s4_test_comments_untold": {
+    "category": "habit",
+    "session": 4,
+    "pass": false,
+    "note": "api/deprecation.test.ts: no comment above test 'a deprecated route answers a Deprecation'"
+   },
+   "s4_spdx_untold": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": "3 new files"
+   },
+   "s4_gone_410": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s4_gone_new_domain": {
+    "category": "superseded",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s4_limit_new_path": {
+    "category": "stale",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 5,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s5_429_problem": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_429_new_domain": {
+    "category": "superseded",
+    "session": 5,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_added_headers_ratelimit": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_route_option_registered": {
+    "category": "present",
+    "session": 5,
+    "pass": true,
+    "note": "documented"
+   },
+   "s5_docs_rate_limit": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "docs row"
+   },
+   "s5_test_comments_untold": {
+    "category": "habit",
+    "session": 5,
+    "pass": false,
+    "note": "api/ratelimit.test.ts: no comment above test 'X-RateLimit-Remaining counts down with e'"
+   },
+   "s5_spdx_untold": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s6_slow_warning": {
+    "category": "told",
+    "session": 6,
+    "pass": true,
+    "note": "ok"
+   },
+   "s6_option_registered": {
+    "category": "present",
+    "session": 6,
+    "pass": true,
+    "note": "documented"
+   },
+   "s6_test_comments_untold": {
+    "category": "habit",
+    "session": 6,
+    "pass": false,
+    "note": "api/slow-request.test.ts: no comment above test 'a request slower than slowRequestWarn lo'"
+   },
+   "s6_spdx_untold": {
+    "category": "decision",
+    "session": 6,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s6_cli_plain_error": {
+    "category": "adjacent",
+    "session": 6,
+    "pass": true,
+    "note": "exit=2 stderr='acme: unknown limit \"nope\"' stdout=''"
+   },
+   "s7_request_id": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "ok"
+   },
+   "s7_added_headers_request_id": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": "ok"
+   },
+   "s7_max_body_413": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "ok"
+   },
+   "s7_413_new_domain": {
+    "category": "superseded",
+    "session": 7,
+    "pass": true,
+    "note": "ok"
+   },
+   "s7_option_registered": {
+    "category": "present",
+    "session": 7,
+    "pass": true,
+    "note": "documented"
+   },
+   "s7_changelog": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "- `maxBodyBytes` app option; larger request bodies answer 413 (`payload-too-large`) before the handler runs.\n- Every res"
+   },
+   "s7_test_comments_untold": {
+    "category": "habit",
+    "session": 7,
+    "pass": false,
+    "note": "api/body-size.test.ts: no comment above test 'a body over maxBodyBytes answers 413 in '"
+   },
+   "s7_spdx_untold": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": "3 new files"
+   },
+   "s8_cors_header": {
+    "category": "told",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_added_headers_cors": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_option_registered": {
+    "category": "present",
+    "session": 8,
+    "pass": true,
+    "note": "documented"
+   },
+   "s8_changelog_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": true,
+    "note": "- `corsOrigins` app option; listed origins get `Access-Control-Allow-Origin`."
+   },
+   "s8_limit_new_path_untold": {
+    "category": "stale",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 8,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s8_test_comments_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": false,
+    "note": "api/cors.test.ts: no comment above test 'a listed origin gets Access-Control-Allo'"
+   },
+   "s8_spdx_untold": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s8_suite_lesson_kept": {
+    "category": "lesson",
+    "session": 8,
+    "pass": false,
+    "note": "9 team-suite runs without ACME_TEAM_SUITE=1 in sessions 2-8"
+   }
+  },
+  "cost_usd": 2.582,
+  "steps": 153,
+  "tokens": {
+   "input_tokens": 226,
+   "cache_creation_input_tokens": 518538,
+   "cache_read_input_tokens": 6390848,
+   "output_tokens": 60799
+  }
+ },
+ {
+  "arm": "pathrule",
+  "trial": "11",
+  "complete": true,
+  "checks": {
+   "s1_deadline_504": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok"
+   },
+   "s1_deadline_problem_format": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "ok"
+   },
+   "s1_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok"
+   },
+   "s1_added_headers_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok"
+   },
+   "s1_option_registered": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "documented"
+   },
+   "s1_test_comments": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "4 new tests"
+   },
+   "s2_query_keys_400": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "ok"
+   },
+   "s2_internal_exempt": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "ok"
+   },
+   "s2_option_registered": {
+    "category": "present",
+    "session": 2,
+    "pass": true,
+    "note": "documented"
+   },
+   "s2_test_comments": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "8 new tests"
+   },
+   "s2_spdx": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s3_404_problem": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": "ok"
+   },
+   "s3_default_header_limit": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": "ok"
+   },
+   "s3_test_comments_untold": {
+    "category": "habit",
+    "session": 3,
+    "pass": true,
+    "note": "6 new tests"
+   },
+   "s3_spdx_untold": {
+    "category": "decision",
+    "session": 3,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s4_deprecation_header": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s4_added_headers_deprecation": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s4_route_option_registered": {
+    "category": "present",
+    "session": 4,
+    "pass": true,
+    "note": "documented"
+   },
+   "s4_test_comments_untold": {
+    "category": "habit",
+    "session": 4,
+    "pass": true,
+    "note": "12 new tests"
+   },
+   "s4_spdx_untold": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": "3 new files"
+   },
+   "s4_gone_410": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s4_gone_new_domain": {
+    "category": "superseded",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s4_limit_new_path": {
+    "category": "stale",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 5,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s5_429_problem": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_429_new_domain": {
+    "category": "superseded",
+    "session": 5,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_added_headers_ratelimit": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_route_option_registered": {
+    "category": "present",
+    "session": 5,
+    "pass": true,
+    "note": "documented"
+   },
+   "s5_docs_rate_limit": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "docs row"
+   },
+   "s5_test_comments_untold": {
+    "category": "habit",
+    "session": 5,
+    "pass": true,
+    "note": "12 new tests"
+   },
+   "s5_spdx_untold": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s6_slow_warning": {
+    "category": "told",
+    "session": 6,
+    "pass": true,
+    "note": "ok"
+   },
+   "s6_option_registered": {
+    "category": "present",
+    "session": 6,
+    "pass": true,
+    "note": "documented"
+   },
+   "s6_test_comments_untold": {
+    "category": "habit",
+    "session": 6,
+    "pass": true,
+    "note": "5 new tests"
+   },
+   "s6_spdx_untold": {
+    "category": "decision",
+    "session": 6,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s6_cli_plain_error": {
+    "category": "adjacent",
+    "session": 6,
+    "pass": true,
+    "note": "exit=2 stderr='acme: unknown limit \"nope\"' stdout=''"
+   },
+   "s7_request_id": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "ok"
+   },
+   "s7_added_headers_request_id": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": "ok"
+   },
+   "s7_max_body_413": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "ok"
+   },
+   "s7_413_new_domain": {
+    "category": "superseded",
+    "session": 7,
+    "pass": true,
+    "note": "ok"
+   },
+   "s7_option_registered": {
+    "category": "present",
+    "session": 7,
+    "pass": true,
+    "note": "documented"
+   },
+   "s7_changelog": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "- `maxBodyBytes` app option; larger request bodies answer 413 (`payload-too-large`) before the handler runs.\n- Every res"
+   },
+   "s7_test_comments_untold": {
+    "category": "habit",
+    "session": 7,
+    "pass": false,
+    "note": "api/problem.test.ts: no comment above test 'a legacy slug keeps its .dev type URI'"
+   },
+   "s7_spdx_untold": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": "3 new files"
+   },
+   "s8_cors_header": {
+    "category": "told",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_added_headers_cors": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_option_registered": {
+    "category": "present",
+    "session": 8,
+    "pass": true,
+    "note": "documented"
+   },
+   "s8_changelog_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": true,
+    "note": "- `corsOrigins` app option; a listed `Origin` is echoed in `Access-Control-Allow-Origin`."
+   },
+   "s8_limit_new_path_untold": {
+    "category": "stale",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 8,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s8_test_comments_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": true,
+    "note": "8 new tests"
+   },
+   "s8_spdx_untold": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s8_suite_lesson_kept": {
+    "category": "lesson",
+    "session": 8,
+    "pass": false,
+    "note": "3 team-suite runs without ACME_TEAM_SUITE=1 in sessions 2-8"
+   }
+  },
+  "cost_usd": 1.808,
+  "steps": 169,
+  "tokens": {
+   "input_tokens": 254,
+   "cache_creation_input_tokens": 287457,
+   "cache_read_input_tokens": 4434521,
+   "output_tokens": 61219
+  }
+ },
+ {
+  "arm": "pathrule",
+  "trial": "12",
+  "complete": true,
+  "checks": {
+   "s1_deadline_504": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok"
+   },
+   "s1_deadline_problem_format": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "ok"
+   },
+   "s1_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok"
+   },
+   "s1_added_headers_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok"
+   },
+   "s1_option_registered": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "documented"
+   },
+   "s1_test_comments": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "4 new tests"
+   },
+   "s2_query_keys_400": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "ok"
+   },
+   "s2_internal_exempt": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "ok"
+   },
+   "s2_option_registered": {
+    "category": "present",
+    "session": 2,
+    "pass": true,
+    "note": "documented"
+   },
+   "s2_test_comments": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "8 new tests"
+   },
+   "s2_spdx": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s3_404_problem": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": "ok"
+   },
+   "s3_default_header_limit": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": "ok"
+   },
+   "s3_test_comments_untold": {
+    "category": "habit",
+    "session": 3,
+    "pass": true,
+    "note": "5 new tests"
+   },
+   "s3_spdx_untold": {
+    "category": "decision",
+    "session": 3,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s4_deprecation_header": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s4_added_headers_deprecation": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s4_route_option_registered": {
+    "category": "present",
+    "session": 4,
+    "pass": true,
+    "note": "documented"
+   },
+   "s4_test_comments_untold": {
+    "category": "habit",
+    "session": 4,
+    "pass": true,
+    "note": "12 new tests"
+   },
+   "s4_spdx_untold": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s4_gone_410": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s4_gone_new_domain": {
+    "category": "superseded",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s4_limit_new_path": {
+    "category": "stale",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 5,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s5_429_problem": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_429_new_domain": {
+    "category": "superseded",
+    "session": 5,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_added_headers_ratelimit": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_route_option_registered": {
+    "category": "present",
+    "session": 5,
+    "pass": true,
+    "note": "documented"
+   },
+   "s5_docs_rate_limit": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "docs row"
+   },
+   "s5_test_comments_untold": {
+    "category": "habit",
+    "session": 5,
+    "pass": true,
+    "note": "12 new tests"
+   },
+   "s5_spdx_untold": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s6_slow_warning": {
+    "category": "told",
+    "session": 6,
+    "pass": true,
+    "note": "ok"
+   },
+   "s6_option_registered": {
+    "category": "present",
+    "session": 6,
+    "pass": true,
+    "note": "documented"
+   },
+   "s6_test_comments_untold": {
+    "category": "habit",
+    "session": 6,
+    "pass": true,
+    "note": "5 new tests"
+   },
+   "s6_spdx_untold": {
+    "category": "decision",
+    "session": 6,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s6_cli_plain_error": {
+    "category": "adjacent",
+    "session": 6,
+    "pass": true,
+    "note": "exit=2 stderr='acme: unknown limit \"nope\"' stdout=''"
+   },
+   "s7_request_id": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "ok"
+   },
+   "s7_added_headers_request_id": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": "ok"
+   },
+   "s7_max_body_413": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "ok"
+   },
+   "s7_413_new_domain": {
+    "category": "superseded",
+    "session": 7,
+    "pass": true,
+    "note": "ok"
+   },
+   "s7_option_registered": {
+    "category": "present",
+    "session": 7,
+    "pass": true,
+    "note": "documented"
+   },
+   "s7_changelog": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "- `maxBodyBytes` app option; larger request bodies answer 413 (`payload-too-large`).\n\n- Every response carries an `X-Req"
+   },
+   "s7_test_comments_untold": {
+    "category": "habit",
+    "session": 7,
+    "pass": true,
+    "note": "11 new tests"
+   },
+   "s7_spdx_untold": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": "3 new files"
+   },
+   "s8_cors_header": {
+    "category": "told",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_added_headers_cors": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_option_registered": {
+    "category": "present",
+    "session": 8,
+    "pass": true,
+    "note": "documented"
+   },
+   "s8_changelog_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": true,
+    "note": "- `corsOrigins` app option; a listed `Origin` is echoed in `Access-Control-Allow-Origin`."
+   },
+   "s8_limit_new_path_untold": {
+    "category": "stale",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 8,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s8_test_comments_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": true,
+    "note": "8 new tests"
+   },
+   "s8_spdx_untold": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s8_suite_lesson_kept": {
+    "category": "lesson",
+    "session": 8,
+    "pass": true,
+    "note": "0 team-suite runs without ACME_TEAM_SUITE=1 in sessions 2-8"
+   }
+  },
+  "cost_usd": 2.06,
+  "steps": 192,
+  "tokens": {
+   "input_tokens": 266,
+   "cache_creation_input_tokens": 333170,
+   "cache_read_input_tokens": 5157933,
+   "output_tokens": 66924
+  }
+ },
+ {
+  "arm": "pathrule",
+  "trial": "13",
+  "complete": true,
+  "checks": {
+   "s1_deadline_504": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok"
+   },
+   "s1_deadline_problem_format": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "ok"
+   },
+   "s1_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok"
+   },
+   "s1_added_headers_retry_after": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "ok"
+   },
+   "s1_option_registered": {
+    "category": "present",
+    "session": 1,
+    "pass": true,
+    "note": "documented"
+   },
+   "s1_test_comments": {
+    "category": "told",
+    "session": 1,
+    "pass": true,
+    "note": "5 new tests"
+   },
+   "s2_query_keys_400": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "ok"
+   },
+   "s2_internal_exempt": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "ok"
+   },
+   "s2_option_registered": {
+    "category": "present",
+    "session": 2,
+    "pass": true,
+    "note": "documented"
+   },
+   "s2_test_comments": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "9 new tests"
+   },
+   "s2_spdx": {
+    "category": "told",
+    "session": 2,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s3_404_problem": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": "ok"
+   },
+   "s3_default_header_limit": {
+    "category": "told",
+    "session": 3,
+    "pass": true,
+    "note": "ok"
+   },
+   "s3_test_comments_untold": {
+    "category": "habit",
+    "session": 3,
+    "pass": true,
+    "note": "6 new tests"
+   },
+   "s3_spdx_untold": {
+    "category": "decision",
+    "session": 3,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s4_deprecation_header": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s4_added_headers_deprecation": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s4_route_option_registered": {
+    "category": "present",
+    "session": 4,
+    "pass": true,
+    "note": "documented"
+   },
+   "s4_test_comments_untold": {
+    "category": "habit",
+    "session": 4,
+    "pass": true,
+    "note": "11 new tests"
+   },
+   "s4_spdx_untold": {
+    "category": "decision",
+    "session": 4,
+    "pass": true,
+    "note": "3 new files"
+   },
+   "s4_gone_410": {
+    "category": "told",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s4_gone_new_domain": {
+    "category": "superseded",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s4_limit_new_path": {
+    "category": "stale",
+    "session": 4,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 5,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s5_429_problem": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_429_new_domain": {
+    "category": "superseded",
+    "session": 5,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_added_headers_ratelimit": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": "ok"
+   },
+   "s5_route_option_registered": {
+    "category": "present",
+    "session": 5,
+    "pass": true,
+    "note": "documented"
+   },
+   "s5_docs_rate_limit": {
+    "category": "told",
+    "session": 5,
+    "pass": true,
+    "note": "docs row"
+   },
+   "s5_test_comments_untold": {
+    "category": "habit",
+    "session": 5,
+    "pass": true,
+    "note": "15 new tests"
+   },
+   "s5_spdx_untold": {
+    "category": "decision",
+    "session": 5,
+    "pass": true,
+    "note": "3 new files"
+   },
+   "s6_slow_warning": {
+    "category": "told",
+    "session": 6,
+    "pass": true,
+    "note": "ok"
+   },
+   "s6_option_registered": {
+    "category": "present",
+    "session": 6,
+    "pass": true,
+    "note": "documented"
+   },
+   "s6_test_comments_untold": {
+    "category": "habit",
+    "session": 6,
+    "pass": true,
+    "note": "5 new tests"
+   },
+   "s6_spdx_untold": {
+    "category": "decision",
+    "session": 6,
+    "pass": true,
+    "note": "1 new files"
+   },
+   "s6_cli_plain_error": {
+    "category": "adjacent",
+    "session": 6,
+    "pass": true,
+    "note": "exit=2 stderr='acme: unknown limit \"nope\"' stdout=''"
+   },
+   "s7_request_id": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "ok"
+   },
+   "s7_added_headers_request_id": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": "ok"
+   },
+   "s7_max_body_413": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "ok"
+   },
+   "s7_413_new_domain": {
+    "category": "superseded",
+    "session": 7,
+    "pass": true,
+    "note": "ok"
+   },
+   "s7_option_registered": {
+    "category": "present",
+    "session": 7,
+    "pass": true,
+    "note": "documented"
+   },
+   "s7_changelog": {
+    "category": "told",
+    "session": 7,
+    "pass": true,
+    "note": "- `maxBodyBytes` app option; larger bodies answer 413 (`payload-too-large`) before the handler runs.\n- Every response ca"
+   },
+   "s7_test_comments_untold": {
+    "category": "habit",
+    "session": 7,
+    "pass": true,
+    "note": "14 new tests"
+   },
+   "s7_spdx_untold": {
+    "category": "decision",
+    "session": 7,
+    "pass": true,
+    "note": "3 new files"
+   },
+   "s8_cors_header": {
+    "category": "told",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_added_headers_cors": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_option_registered": {
+    "category": "present",
+    "session": 8,
+    "pass": true,
+    "note": "documented"
+   },
+   "s8_changelog_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": true,
+    "note": "- `corsOrigins` app option; a request whose `Origin` is listed gets `Access-Control-Allow-Origin`."
+   },
+   "s8_limit_new_path_untold": {
+    "category": "stale",
+    "session": 8,
+    "pass": true,
+    "note": "ok"
+   },
+   "s8_abstains_on_undecided_limits": {
+    "category": "abstention",
+    "session": 8,
+    "pass": true,
+    "note": "asks or says undecided"
+   },
+   "s8_test_comments_untold": {
+    "category": "habit",
+    "session": 8,
+    "pass": true,
+    "note": "9 new tests"
+   },
+   "s8_spdx_untold": {
+    "category": "decision",
+    "session": 8,
+    "pass": true,
+    "note": "2 new files"
+   },
+   "s8_suite_lesson_kept": {
+    "category": "lesson",
+    "session": 8,
+    "pass": false,
+    "note": "2 team-suite runs without ACME_TEAM_SUITE=1 in sessions 2-8"
+   }
+  },
+  "cost_usd": 1.721,
+  "steps": 150,
+  "tokens": {
+   "input_tokens": 232,
+   "cache_creation_input_tokens": 276516,
+   "cache_read_input_tokens": 3882611,
+   "output_tokens": 60088
+  }
+ }
+]
