@@ -70,7 +70,7 @@ chain's checks and session rows.
 ## Reproduce
 
 ```
-git clone https://github.com/pathrule/pathrule && cd pathrule && pnpm install && pnpm natives:node && cd ..
+git clone https://github.com/pathrule/pathrule && cd pathrule && pnpm install && cd ..
 git clone https://github.com/pathrule/benchmark && cd benchmark
 export ANTHROPIC_API_KEY=...            # Claude Code's key; a chain costs about $1.3 to $3.6
 export PR_SRC=../pathrule               # the pathrule arm runs the CLI and MCP server from this checkout
