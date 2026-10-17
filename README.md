@@ -59,8 +59,7 @@ has nothing to be misled by) and `adjacent` (a rule for one package is not appli
 measure not being misled, and the memory arms are the ones at risk.
 
 Chains ran with Claude Code 2.1.301 and 2.1.302 (each chain's `meta.json` says which) and
-claude-sonnet-5-5 on 2026-10-16/17. The `pathrule` chains ran the open-source CLI from commit `202a28db5`
-of pathrule/pathrule, local mode. The CLAUDE.md chains at Python 1,000 (five) and Go 1,000 (three) were
+claude-sonnet-5-5 on 2026-10-16/17. The `pathrule` chains ran the open-source CLI in local mode from the source released as pathrule/pathrule v1.0.0 (`@pathrule/cli` 1.0.0); each chain's `meta.json` records the authors' source commit, `202a28db5`, from which v1.0.0's open packages were built. The CLAUDE.md chains at Python 1,000 (five) and Go 1,000 (three) were
 run earlier on 2026-10-16 on the same sealed fixture, checks and knowledge files; every other chain was
 run for this publication (`results/<group>/PROVENANCE.md`).
 
