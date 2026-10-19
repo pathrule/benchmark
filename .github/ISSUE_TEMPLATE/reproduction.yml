@@ -1,0 +1,61 @@
+name: Reproduction report
+description: You ran one or more chains. Tell us what you got.
+title: "repro: "
+labels: ["reproduction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reproducing PathruleBench. Reports that match the published results are as useful as reports that do not.
+  - type: dropdown
+    id: condition
+    attributes:
+      label: Condition
+      options:
+        - Python, 500 items
+        - Python, 1,000 items
+        - Python, 2,000 items
+        - Go, 500 items
+        - Go, 1,000 items
+        - Go, 2,000 items
+        - TypeScript, 500 items
+        - TypeScript, 1,000 items
+        - TypeScript, 2,000 items
+        - A condition not published yet
+    validations:
+      required: true
+  - type: dropdown
+    id: arms
+    attributes:
+      label: Arms you ran
+      multiple: true
+      options:
+        - none
+        - claude_md
+        - pathrule
+    validations:
+      required: true
+  - type: textarea
+    id: results
+    attributes:
+      label: What you got
+      description: Memory probes passed, cost a chain and anything else you compared, next to the published figures.
+    validations:
+      required: true
+  - type: textarea
+    id: versions
+    attributes:
+      label: Versions
+      description: The benchmark commit, the Pathrule commit (`PR_SRC`), the Claude Code version and the model.
+      placeholder: |
+        benchmark: <commit>
+        pathrule: <commit>
+        Claude Code: 2.1.x
+        model: claude-sonnet-5-5
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Chain output
+      description: Attach or link the raw output (`runs/<lang>/<arm>-t<n>/`). Transcripts can hold your prompts and file paths, so check them first.

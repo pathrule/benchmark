@@ -1,0 +1,44 @@
+name: Harness bug
+description: The harness crashes, miscounts or aggregates differently from the published results.
+title: "bug: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: The command you ran and the files it read.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, and the versions of Node.js, Python, Go and Claude Code.
+      placeholder: |
+        OS: macOS 15
+        Node.js: 24.x
+        Python: 3.12
+        Go: 1.22
+        Claude Code: 2.1.x
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or output
+      description: Remove your API key and anything private first.
+      render: shell
