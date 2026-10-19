@@ -44,6 +44,12 @@
   <b>Gemessen mit</b>  Claude Code · claude-sonnet-5-5 · Python · Go · TypeScript · 500 bis 2000 Einträge
 </p>
 
+<p align="center">
+  <a href="https://github.com/pathrule/pathrule"><img alt="Pathrule on GitHub: pathrule/pathrule" src="https://img.shields.io/badge/GitHub-pathrule%2Fpathrule-1f7a4c?style=for-the-badge&logo=github&logoColor=white"></a>
+  <br>
+  <sub>Pathrule ist die hier gemessene Open-Source-Wissensschicht. Sieh dir an, was sie deinen Agents gibt, und probier sie in deinem eigenen Repository aus.</sub>
+</p>
+
 <a id="results"></a>
 
 ## Ergebnisse

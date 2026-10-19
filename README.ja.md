@@ -44,6 +44,12 @@
   <b>測定環境</b>  Claude Code · claude-sonnet-5-5 · Python · Go · TypeScript · 500〜2,000 項目
 </p>
 
+<p align="center">
+  <a href="https://github.com/pathrule/pathrule"><img alt="Pathrule on GitHub: pathrule/pathrule" src="https://img.shields.io/badge/GitHub-pathrule%2Fpathrule-1f7a4c?style=for-the-badge&logo=github&logoColor=white"></a>
+  <br>
+  <sub>Pathrule は、ここで測定したオープンソースのナレッジレイヤーです。エージェントに何をもたらすかを確かめて、あなたのリポジトリで試してください。</sub>
+</p>
+
 <a id="results"></a>
 
 ## 結果

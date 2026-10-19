@@ -44,6 +44,12 @@
   <b>Ölçüldüğü ortam</b>  Claude Code · claude-sonnet-5-5 · Python · Go · TypeScript · 500 ile 2000 kayıt arası
 </p>
 
+<p align="center">
+  <a href="https://github.com/pathrule/pathrule"><img alt="Pathrule on GitHub: pathrule/pathrule" src="https://img.shields.io/badge/GitHub-pathrule%2Fpathrule-1f7a4c?style=for-the-badge&logo=github&logoColor=white"></a>
+  <br>
+  <sub>Pathrule, burada ölçülen açık kaynak bilgi katmanı. Ajanlarına ne kazandırdığını gör, kendi reponda dene.</sub>
+</p>
+
 <a id="results"></a>
 
 ## Sonuçlar

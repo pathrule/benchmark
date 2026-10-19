@@ -44,6 +44,12 @@
   <b>Medido con</b>  Claude Code · claude-sonnet-5-5 · Python · Go · TypeScript · de 500 a 2000 elementos
 </p>
 
+<p align="center">
+  <a href="https://github.com/pathrule/pathrule"><img alt="Pathrule on GitHub: pathrule/pathrule" src="https://img.shields.io/badge/GitHub-pathrule%2Fpathrule-1f7a4c?style=for-the-badge&logo=github&logoColor=white"></a>
+  <br>
+  <sub>Pathrule es la capa de conocimiento de código abierto que se mide aquí. Mira lo que les da a tus agentes y pruébalo en tu propio repositorio.</sub>
+</p>
+
 <a id="results"></a>
 
 ## Resultados
